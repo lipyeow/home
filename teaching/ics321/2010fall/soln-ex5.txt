@@ -1,0 +1,97 @@
+For part c) also check if your decomposition is lossless join and dependency preserving.
+
+
+1a) 
+
+F  = { C->D,C->A,B->C }
+C+ = { A,C,D}
+B+ = { A,B,C,D}
+
+B is a key.
+
+1b)
+
+not in BCNF, because of C->AD
+not in 3NF, because of  C->AD
+
+1c) 
+
+One possible answer:
+
+S1 = {ACD}, S2 = {BC} 
+
+S1 intersect S2 = {C} and C -> S1, hence lossless-join
+
+dependency preserving because F_S1 U F_S2 = F
+
+2a)
+
+F = {B->C, D->A}
+
+BD+ = {ABCD}
+
+BD is a key.
+
+2b)
+
+not in BCNF because of B->C
+not in 3NF  because of B->C
+
+2c)
+
+S1 = {BC}, S2 = {AD}, S3 = {BD}
+
+Chase test confirms lossless join
+Dependency preserving because ( {B->C} U {D->A} ) + = F+
+
+3a) 
+F = { ABC->D, D->A}
+
+key: ABC
+
+3b)
+
+not in BCNF because of D->A
+in 3NF, since A is part of a key 
+
+3c) 
+
+S1={AD}, S2={BCD}
+
+lossless join because intersection is a key to S1
+not dependency preserving
+
+4a)
+
+key: A
+
+4b)
+
+not in BCNF because of BC->D
+not in 3NF
+
+4c)
+
+S1={BCD}, S2={ABC}
+
+lossless join since intersection is key for S1
+dependency preserving.
+
+5a)
+
+AB -> CD hence AB is key
+
+C -> A
+BC -> AB (aug B)  hence BC is also key
+
+D->B
+AD -> AB (aug A) hence AD is also key
+
+C->A
+CD->AD (aug D) hence CD is also key
+
+5b)
+
+not in BCNF because LHS of C->A is not a superkey
+in 3NF because RHS of C->A and  D ->B are part of keys
+

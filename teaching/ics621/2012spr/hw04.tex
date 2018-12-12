@@ -1,0 +1,101 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\setlength{\textwidth}{6.5in}     
+\setlength{\oddsidemargin}{0in}  
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{8.5in} 
+\setlength{\topmargin}{0in}   
+\setlength{\headheight}{14pt} 
+\setlength{\headsep}{10pt}   
+%\setlength{\footskip}{0in}
+
+%------------------------------------------------
+\newcommand{\homework}[2]{
+\setcounter{section}{#1}
+\section*{ICS621 Homework {\thesection}: {#2} }
+{\markboth{#2}{#2}}
+}
+%------------------------------------------------
+
+
+ \addtolength{\parskip}{\baselineskip}
+\begin{document}
+
+% Enter the Homework number and title as arguments to
+% homework
+\homework{4}{AVL Trees {\it or} Josephus Permutation}
+
+\noindent Choose one of the following.
+
+\noindent
+\textbf{Problem 13-3 from CLRS.} 
+An \textbf{AVL tree} is a binary search tree that is height
+balanced: for each node $x$, the heights of the left
+and right subtrees of $x$ differ by at most 1. To implement
+an AVL tree, we maintain an extra attribute in each node:
+$x.h$ is the height of node $x$. As for any other binary
+search tree $T$, we assume that $T.root$ points to the root
+node.
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+%--------------------------------------
+\item Prove that an AVL tree with $n$ nodes has height
+$O(\lg n)$. (\textit{Hint:} Prove that an AVL tree of height
+$h$ has at least $F_h$ nodes, where $F_h$ is the $h$th
+Fibonacci number.)
+%--------------------------------------
+\item To insert into an AVL tree, we first place a node into
+the appropriate place in binary search tree order.
+Afterward, the tree might no longer be height balanced.
+Specifically, the heights of the left and right children of
+some node might differ by 2. Describe a procedure
+\textsc{Balance($x$)}, which takes a subtree rooted at $x$
+whose left and right children are height balanced and have
+heights that differ by at most 2, i.e., $|x.right.h -
+x.left.h| \leq 2$, and alters the subtree rooted at $x$ to
+be height balanced. (\textit{Hint:} Use rotations.)
+%--------------------------------------
+\item Using part (b), describe a recursive procedure
+\textsc{AVL-Insert($x,z$)} that takes a node $x$ within an
+AVL tree and a newly created node $z$ (whose key has already
+been filled in), and adds $z$ to the subtree rooted at $x$,
+maintaining the property that $x$ is the root of an AVL
+tree. As in \textsc{Tree-Insert} from Section~12.3, assume
+that $z.key$ has already been filled in and that
+$z.left=\text{NIL}$ and $z.right=\text{NIL}$; also assume
+that $z.h=0$. Thus, to insert the node $z$ into the AVL tree
+$T$, we call \textsc{AVL-Insert($T.root, z$)}.
+%--------------------------------------
+\item Show that \textsc{AVL-Insert}, run on an $n$-node AVL
+tree, takes $O(\lg n)$ time and performs $O(1)$ rotations.
+\end{enumerate}
+
+\noindent
+\textbf{Problem 14-2 from CLRS.} 
+We define the \textbf{Josephus problem} as follows. Suppose
+that $n$ people form a circle and that we are given a
+positive integer $m \leq n$. Beginning with a designated
+first person, we proceed around the circle, removing every
+$m$th person. After each person is removed, counting
+continues around the circle that remains. This process
+continues until we have removed all $n$ people. The order in
+which the people are removed from the circle defines the
+\textbf{$(n,m)$-Josephus permutation} of the integers
+$1,2,\ldots,n$. For example, the $(7,3)$-Josephus
+permutation is $\langle3,6,2,7,5,1,4\rangle$. 
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+\item Suppose that $m$ is a constant. Describe an
+$O(n)$-time algorithm that, given integer $n$, outputs the
+$(n,m)$-Josephus permutation.
+\item Suppose that $m$ is not a constant. Describe an $O(n
+\lg n)$-time algorithm that, given integers $n$ and $m$,
+outpus the 
+$(n,m)$-Josephus permutation.
+\end{enumerate}
+
+\end{document}

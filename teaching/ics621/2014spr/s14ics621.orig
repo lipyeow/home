@@ -1,0 +1,34 @@
+1;Mon Jan 13;Course Organization;Ch 1.;
+1;Wed Jan 15;Sorting;Ch 2-4;vid:www.educreations.com/course/lesson/view/asymptotics/15613630/:Asymptotics. vid:www.educreations.com/course/lesson/view/sorting-1-selection-sort/15614192/:SelectionSort. vid:www.educreations.com/course/lesson/view/sorting-1-insertion-sort/15715271/:InsertionSort. vid:www.educreations.com/course/lesson/view/sorting-1-merge-sort/15718845/:MergeSort. vid:www.educreations.com/course/lesson/view/sorting-1-solving-recurrence-relations/15719504/:Reccurences. Problems 2-2 and 2-4.
+2;Mon Jan 20; MLK Holiday;;
+2;Wed Jan 22;Sorting;Ch.6;vid:www.educreations.com/course/lesson/view/sorting-2a-heaps/15947318/:Heaps. vid:www.educreations.com/course/lesson/view/sorting-2b-heapsort/15947314/:HeapSort. Problem 6-3. link:hw01.pdf:hw01 (pdf). link:hw01.tex:(tex).
+3;Mon Jan 27;Sorting;Ch.7;vid:www.educreations.com/course/lesson/view/sorting-3a-quicksort/15948738/:Quicksort. vid:www.educreations.com/course/lesson/view/sorting-3b-worst-case-quicksort/15949111/:Worst Case. vid:www.educreations.com/course/lesson/view/sorting-3c-avg-case-analysis-of-quicksort/15949927/:Avg Case. Problems 7-5, 7-6.
+3;Wed Jan 29;Sorting;Ch.8;vid:www.educreations.com/course/lesson/view/sorting-4a-lower-bounds/16000877/:Lower Bounds. vid:www.educreations.com/course/lesson/view/sorting-4b-counting-sort/16168017/:Counting Sort. vid:www.educreations.com/course/lesson/view/sorting-4c-radix-sort/16169338/:Radix Sort. vid:www.educreations.com/course/lesson/view/sorting-4d-bucket-sort/16171914/:Bucket Sort. Problems 8-2, 8-3.
+4;Mon Feb 3;Order Statistics & Binary Search Trees;Ch.9,12;vid:www.educreations.com/course/lesson/view/order-stats-1-min-max/16178101/:Min Max. vid:www.educreations.com/course/lesson/view/order-stats-2-partition-using-median-or-medians/16178769/:Partition. vid:www.educreations.com/course/lesson/view/order-stats-3-median-of-medians-quicksort/16178987/:Median of medians. 
+4;Wed Feb 5;Red-black Trees & Interval Trees;Ch.13,14;vid:www.educreations.com/course/lesson/view/binary-search-trees/16179324/:Binary Search Trees. vid:www.educreations.com/course/lesson/view/red-black-trees/16179927/:Red Black Trees. vid:www.educreations.com/course/lesson/view/order-statistic-rbt/16180433/:Order Stats Tree. vid:www.educreations.com/course/lesson/view/interval-trees/16180743/:Interval trees. link:hw02.pdf:hw02 (pdf). link:hw02.tex:(tex).
+5;Mon Feb 10;Amortized Analysis;Ch.17; vid:www.educreations.com/course/lesson/view/amortized-analysis-1-aggregate-mtd/16183375/:Amortized Analysis. vid:www.educreations.com/course/lesson/view/amortized-analysis-2-aggregate-mtd-on-binary-count/16183487/:Aggregate Mtd. vid:www.educreations.com/course/lesson/view/amortized-analysis-3-accounting-mtd/16183561/:Acct Mtd. vid:www.educreations.com/course/lesson/view/amortized-analysis-4-potential-mtd/16183642/:Potential Mtd. vid:www.educreations.com/course/lesson/view/amortized-analysis-5-dynamic-tables/16183820/:Dynamic Tables. Problems 17-1, 17-2.
+5;Wed Feb 12;Binomial Heaps;;vid:www.educreations.com/course/lesson/view/binomial-heaps-1/16313804/:Binomial Heaps 1. vid:www.educreations.com/course/lesson/view/binomial-heaps-2/16314171/:Binomial Heaps 2. vid:www.educreations.com/course/lesson/view/binomial-heaps-3/16314783/:Binomial Heaps 3. link:binomialheaps.pdf:notes (pdf).
+6;Mon Feb 17;President's Day Holiday;;
+6;Wed Feb 19;Fibonacci Heaps;Ch.19;vid:www.educreations.com/course/lesson/view/fibonacci-heaps-1/17262962/:Fib Heaps 1. vid:www.educreations.com/course/lesson/view/fibonacci-heaps-2-extractmin/17263854/:Fib Heaps 2. vid:www.educreations.com/course/lesson/view/fibonacci-heaps-3-analysis-of-extractmin/17264469/:Fib Heaps 3. vid:www.educreations.com/course/lesson/view/fibonacci-heaps-4-decreasekey/17266614/:Fib Heaps 4. vid:www.educreations.com/course/lesson/view/fibonacci-heaps-5-max-degree/17267414/:Fib Heaps 5. Problem 19-3, 19-4.
+7;Mon Feb 24;Dynamic Programming;Ch.15;vid:www.educreations.com/course/lesson/view/dynamic-programming-1-sssp/17530252/:DP1. vid:www.educreations.com/course/lesson/view/dynamic-programming-2-sssp-with-dp/17542061/:DP2. vid:www.educreations.com/course/lesson/view/dynamic-programming-3-matrix-chain/17542609/:DP3. Problem 15-2.
+7;Wed Feb 26;Greedy Algorithms;Ch.16;vid:www.educreations.com/course/lesson/view/greedy-algorithms-1-scheduling-activities/17581181/:Scheduling 1. vid:www.educreations.com/course/lesson/view/greedy-algorithms-2-greedy-choice/17581403/:Scheduling 2. vid:www.educreations.com/course/lesson/view/greedy-algorithms-3-knapsack/17627513/:Knapsack. Problem 16-1. link:./hw03.pdf:hw03(pdf). link:./hw03.tex:(tex).
+8;Mon Mar 3;Hashing;Ch.11;vid:www.educreations.com/course/lesson/view/hashing-1-the-dictionary-problem/17711453/:Hashing 1. vid:www.educreations.com/course/lesson/view/hashing-2-chaining/17725002/: Hashing 2. vid:www.educreations.com/course/lesson/view/hashing-3-open-addressing/17865477/: Hashing 3. Problem 11-1.
+8;Wed Mar 5;Hashing;Ch.11;
+9;Mon Mar 10;Graph Algorithms:BFS,DFS,SCC,MST;Ch.22-23;
+9;Wed Mar 12;;;
+10;Mon Mar 17;;;
+10;Wed Mar 19;;;
+11;Mon Mar 24; Spring Recess;;
+11;Wed Mar 26; Spring Recess;;
+12;Mon Mar 31;;;
+12;Wed Apr 2;;;
+13;Mon Apr 7;;;
+13;Wed Apr 9;;;
+14;Mon Apr 14;;;
+14;Wed Apr 16;;;
+15;Mon Apr 21;;;
+15;Wed Apr 23;;;
+16;Mon Apr 28;;;
+16;Wed Apr 30;;;
+17;Mon May 5;Project Presentations;;
+17;Wed May 7;Project Presentations;;

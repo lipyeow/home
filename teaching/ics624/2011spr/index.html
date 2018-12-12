@@ -1,0 +1,762 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Welcome to the ICS 624 Course Webpage!</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 624 Advance Data Management (Spring 2011)</h1>
+
+<p><i>The original ICS624s11 website was accidentally deleted. This is an approximate reconstruction. </i></p>
+
+<h2>General Information</h2>
+<ul>
+<li>Class Meets: Mon and Wed 3pm - 4:15 pm Room KUY 303
+</li>
+<li>Final Exam : None.
+</li>
+<li>Instructor : <a href="http://www2.hawaii.edu/~lipyeow">Lipyeow Lim</a>
+</li>
+<li>Office Hours : Time TBA POST 303 E or by appointment 808-956-3495
+</li>
+<li>
+No Textbooks are required for this course. Readings will be drawn from a range
+of papers published in top data management conferences. Students without any
+background in data management should consider reading (parts of) the following two
+references: 
+<ul>
+   <li><a href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf">Architecture of a Database System</a> </li> gives a good overview of database technology.
+<li><a href="http://nlp.stanford.edu/IR-book/">Introduction to Information Retrieval</a> </li> is an online textbook on information retrieval.
+</ul>
+</li>
+<li><b>Student Learning Outcomes</b>: At the end of this class, the successful
+student would 
+   <ul>
+   <li>have gained a broad understanding of the research issues in a range of
+data management topics including 
+Big Data, Data warehousing, Parallel databases, Map-reduce 
+Query optimization, IR and Web Search, Computer Games, Streaming
+systems, XML Data, Graph Data and ontologies, Data Integration, Data Mining,
+Energy Efficiency.
+   </li>
+   <li>have gained the skill of reading and critiquing research papers</li>
+   <li>have gained the skill of performing basic research in a course project</li>
+   </ul>
+</li>
+<li>Late policy: work submitted past due date and time will receive zero credits. </li>
+<li> 
+All students are expected to conduct themselves above and beyond the standards set forth in the <a href="http://www.hawaii.edu/svpa/ep/e7/e7208.pdf">University of Hawaii Systemwide Student Conduct Code</a>.
+</li>
+<li>
+Any student who feels s/he may need an accommodation based on the impact of a
+disability is invited to contact the instructor privately. The instructor would
+be happy to work with you, and the KOKUA Program (Office for Students with
+Disabilities) to ensure reasonable accommodations in the course. KOKUA can be
+reached at (808) 956-7511 or (808) 956-7612 (voice/text) in room 013 of the
+Queen Lili'uokalani Center for Student Services.  </li>
+</ul>
+
+<h2>Topics</h2>
+
+<ul>
+         <li>Big Data and Map-reduce </li>
+         <li>Data warehousing and Parallel databases</li>
+         <li>Query optimization </li>
+         <li>IR and Web Search </li>
+         <li>Computer Games</li>
+         <li>Streaming systems</li> 
+         <li>XML Databases</li>
+         <li>Graph Data and ontologies</li>
+         <li>Data Integration</li>
+         <li>Data Mining</li>
+         <li>Energy Efficiency</li>
+</ul>
+
+<h2>Grading (Tentative)</h2>
+
+<ul>
+   <li>20 % Class Participation</li>
+   <li>20 % Homework (Reviews) </li>
+   <li>60 % <a href="project.html">Research Project</a> </li>
+</ul>
+
+<h2>Class Schedule (tentative)</h2>
+
+<p/>
+<!-- START TABLE-->
+
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+   <th width="3%">Week</th>
+   <th width="7%">Date</th>
+   <th width="15%">Topic</th>
+   <th width="30%">Readings</th>
+   <th width="10%">Remarks
+</th>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      1
+   </td>
+   <td>
+      Mon Jan 10
+   </td>
+   <td>
+   Course Organization and 
+   Overview of Database Technology
+   </td>
+   <td>
+Architecture of a Database System
+   </td>
+   <td>
+   LY
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      1
+   </td>
+   <td>
+      Wed Jan 12
+   </td>
+   <td>
+   Overview of IR technology
+   </td>
+   <td>
+   Intro to IR: Ch 1,2,4,6
+   </td>
+   <td>
+   LY
+   <a href="ics624-20110112-dbir.pdf">slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      2
+   </td>
+   <td>
+      Mon Jan 17
+   </td>
+   <td>
+   Holiday: MLK
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      2
+   </td>
+   <td>
+      Wed Jan 19
+   </td>
+   <td>
+   Database Query Optimization
+   </td>
+   <td>
+Access Path Selection in a Relational Database Management System
+   </td>
+   <td>
+   ZH
+   <a href="selinger_presentation.ppt">slides (ppt)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      3
+   </td>
+   <td>
+      Mon Jan 24
+   </td>
+   <td>
+   Data Warehousing
+   </td>
+   <td>
+1. An overview of data warehousing and OLAP technology
+<br/>
+2. Multi-dimensional clustering: a new data layout scheme in DB2
+   </td>
+   <td>
+   KY <a href="ics624-20110124-dw.ppt">slides (ppt)</a>
+   LY <a href="ics624-20110124-mdc.pdf">slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      3
+   </td>
+   <td>
+      Wed Jan 26
+   </td>
+   <td>
+   Parallel Databases
+   </td>
+   <td>
+Parallel database systems: the future of high performance database systems
+   </td>
+   <td>
+   JT
+   <a href="ics624-20110126-pardbms.pdf">slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      4
+   </td>
+   <td>
+      Mon Jan 31
+   </td>
+   <td>
+   Web Search
+   </td>
+   <td>
+   The anatomy of a large-scale hypertextual Web search engine
+   </td>
+   <td>
+   JG
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      4
+   </td>
+   <td>
+      Wed Feb 2
+   </td>
+   <td>
+   Big Data
+   </td>
+   <td>
+   MapReduce: simplified data processing on large clusters
+   </td>
+   <td>
+   GL
+   <a href="gelee-mapreduce.ppt">slides (ppt)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      5
+   </td>
+   <td>
+      Mon Feb 7
+   </td>
+   <td>
+   Big Data
+   </td>
+   <td>
+A comparison of approaches to large-scale data analysis
+   </td>
+   <td>
+JC 
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      5
+   </td>
+   <td>
+      Wed Feb 9
+   </td>
+   <td>
+New Hardware
+   </td>
+   <td>
+StableBuffer: optimizing write performance for DBMS applications on flash devices
+   </td>
+   <td>
+JW
+<a href="StableBuffer.pptx">slides (pptx)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      6
+   </td>
+   <td>
+      Mon Feb 14
+   </td>
+   <td>
+Streaming
+   </td>
+   <td>
+ NiagaraCQ: a scalable continuous query system for internet databases
+   </td>
+   <td>
+AC <a href="NiagaraCQ.ppt">slides (ppt)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      6
+   </td>
+   <td>
+      Wed Feb 16
+   </td>
+   <td>
+Streaming
+   </td>
+   <td>
+SPADE: the system s declarative stream processing engine
+   </td>
+   <td>
+ZL <a href="SPADE.pptx">slides (pptx)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      7
+   </td>
+   <td>
+      Mon Feb 21
+   </td>
+   <td>
+   Holiday: President's day
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      7
+   </td>
+   <td>
+      Wed Feb 23
+   </td>
+   <td>
+Games
+   </td>
+   <td>
+SPADE: the system s declarative stream processing engine
+<br/>
+An evaluation of checkpoint recovery for massively multiplayer online games
+   </td>
+   <td>
+EM <a href="db_games.pptx">slides (pptx)</a>
+& KT <a href="mmo-checkpoint.pdf">slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      8
+   </td>
+   <td>
+      Mon Feb 28
+   </td>
+   <td>
+Streaming
+   </td>
+   <td>
+Fault-tolerance in the Borealis distributed stream processing system
+   </td>
+   <td>
+BH <a href="borealis.pptx">slides (pptx)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      8
+   </td>
+   <td>
+      Wed Mar 2
+   </td>
+   <td>
+Big Data
+   </td>
+   <td>
+Bigtable: A Distributed Storage System for Structured Data
+   </td>
+   <td>
+GB 
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      9
+   </td>
+   <td>
+      Mon Mar 7
+   </td>
+   <td>
+Data Mining
+   </td>
+   <td>
+BIRCH: an efficient data clustering method for very large databases
+   </td>
+   <td>
+D <a href="DanielChang-birch.pptx">slides (pptx)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      9
+   </td>
+   <td>
+      Wed Mar 9
+   </td>
+   <td>
+Data Mining
+   </td>
+   <td>
+The wisdom of social multimedia: using flickr for prediction and forecast
+   </td>
+   <td>
+T <a href="Wisdom-of-Social-Multimedia.pdf">slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      10
+   </td>
+   <td>
+      Mon Mar 14
+   </td>
+   <td>
+Data Mining/Graph Data
+   </td>
+   <td>
+Towards the web of concepts: extracting concepts from large datasets
+   </td>
+   <td>
+LM 
+<a href="extracting-concepts-1.pdf">slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      10
+   </td>
+   <td>
+      Wed Mar 16
+   </td>
+   <td>
+Graph Data
+   </td>
+   <td>
+Pregel: a system for large-scale graph processing
+   </td>
+   <td>
+LY <a href="ics624-20110316-rdf.pdf">slides on RDF (pdf)</a>
+CM <a href="pregel.pptx">slides (pptx)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      11
+   </td>
+   <td>
+      Mon Mar 21
+   </td>
+   <td>
+Spring Break
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      11
+   </td>
+   <td>
+      Wed Mar 23
+   </td>
+   <td>
+Spring Break
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      12
+   </td>
+   <td>
+      Mon Mar 28
+   </td>
+   <td>
+Scientific Databases
+   </td>
+   <td>
+PanSTARRS PSPS
+   </td>
+   <td>
+JH <a href="ics624-panstarrs.ppt">slides (ppt)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      12
+   </td>
+   <td>
+      Wed Mar 30
+   </td>
+   <td>
+Data Integration
+   </td>
+   <td>
+Entity Resolution with Evolving Rules
+   </td>
+   <td>
+LY <a href="ics624-evolvingrules.pdf">slides (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      13
+   </td>
+   <td>
+      Mon Apr 4
+   </td>
+   <td>
+Big Data
+   </td>
+   <td>
+Megastore: Providing Scalable, Highly Available Storage for Interactive Services
+   </td>
+   <td>
+GL <a href="ics-624-megastore.pdf">slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      13
+   </td>
+   <td>
+      Wed Apr 6
+   </td>
+   <td>
+Energy
+   </td>
+   <td>
+Analyzing the energy efficiency of a database server
+   </td>
+   <td>
+RP <a href="Energy.pptx">slides (pptx)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      14
+   </td>
+   <td>
+      Mon Apr 11
+   </td>
+   <td>
+Multimedia
+   </td>
+   <td>
+Large-scale concept ontology for multimedia
+  <br/> 
+Design and evaluation of an effective and efficient video copy detection system
+   </td>
+   <td>
+M 
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      14
+   </td>
+   <td>
+      Wed Apr 13
+   </td>
+   <td>
+Graph Data
+   </td>
+   <td>
+On graph query optimization in large networks
+   </td>
+   <td>
+KY 
+ <a href="ics624-ongraphquery.ppt">slides (ppt)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      15
+   </td>
+   <td>
+      Mon Apr 18
+   </td>
+   <td>
+XML
+   </td>
+   <td>
+Cost-based optimization in DB2 XML
+   </td>
+   <td>
+JW <a href="db2xml.pptx">slides (pptx)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      15
+   </td>
+   <td>
+      Wed Apr 20
+   </td>
+   <td>
+IR in DB
+   </td>
+   <td>
+Toward scalable keyword search over relational data
+   </td>
+   <td>
+BH <a href="ics624-KeywordSearch-BaohuyUng.pptx">slides (pptx)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      16
+   </td>
+   <td>
+      Mon Apr 25
+   </td>
+   <td>
+   Project Presentations
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      16
+   </td>
+   <td>
+      Wed Apr 27
+   </td>
+   <td>
+   Project Presentations
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      17
+   </td>
+   <td>
+      Mon May 2
+   </td>
+   <td>
+   Project Presentations
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      17
+   </td>
+   <td>
+      Wed May 4
+   </td>
+   <td>
+   Project Presentations
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+</table>
+
+<h2>Readings and links</h2>
+<ul>
+<li>
+<a href="http://www.citeulike.org/group/14464">Reading List</a>
+</li>
+<li><a href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf">Architecture of a Database System</a> </li>
+<li><a href="http://nlp.stanford.edu/IR-book/">Introduction to Information Retrieval</a> </li>
+</ul>
+
+<h2>Useful Links</h2>
+<ul>
+<li>
+<a href="http://www.screencast-o-matic.com/">Screencast-o-matic</a> Free Screencast software for creating recorded presentations.
+</li>
+<li>
+<a href="http://manoa.hawaii.edu/records/calendar/spring_2011.html">UHM Spring 2011 Academic Calender</a>
+</li>
+</ul>
+
+
+</body>

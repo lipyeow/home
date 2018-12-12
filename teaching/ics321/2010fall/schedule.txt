@@ -1,0 +1,33 @@
+Week; Date; Topic; Readings; Remarks
+1;Mon Aug 23;Course Organization and Introduction;None;
+1;Wed Aug 25;The Worlds of Database Systems;Ch.1;
+2;Mon Aug 30;The Relational Model of Data;Ch.2;
+2;Wed Sep 1;The Relational Model of Data;Ch.2;
+3;Mon Sep 6;Labor Day Holiday;;
+3;Wed Sep 8;Design Theory for Relational Databases;Ch.3;
+4;Mon Sep 13;Design Theory for Relational Databases;Ch.3;
+4;Wed Sep 15;Design Theory for Relational Databases;Ch.3;
+5;Mon Sep 20;High-Level Database Models;Ch.4;
+5;Wed Sep 22;High-Level Database Models;Ch.4;
+6;Mon Sep 27;High-Level Database Models;Ch.4;
+6;Wed Sep 29;Algebraic and Logical Query Languages;Ch.5;
+7;Mon Oct 4;Algebraic and Logical Query Languages;Ch.5;
+7;Wed Oct 6;The Database Language SQL;Ch.6;
+8;Mon Oct 11; Mid-term Exam; ;
+8;Wed Oct 13;The Database Language SQL;Ch.6;
+9;Mon Oct 18;The Database Language SQL;Ch.6; 
+9;Wed Oct 20;Constraints and Triggers;Ch.7;
+10;Mon Oct 25;Views and Indexes;Ch.8; 
+10;Wed Oct 27;SQL in a Server Environment;Ch.9;
+11;Mon Nov 1;SQL in a Server Environment;Ch.9;
+11;Wed Nov 3;The Semi-structured Data Model;Ch.11;
+12;Mon Nov 8
+12;Wed Nov 10
+13;Mon Nov 15
+13;Wed Nov 17
+14;Mon Nov 22
+14;Wed Nov 24
+15;Mon Nov 29; Project Presentation;;
+15;Wed Dec 1; Project Presentation;;
+16;Mon Dec 6; Project Presentation;;
+16;Wed Dec 8; Final Exam Review;;

@@ -1,0 +1,8 @@
+Exercise 12
+
+1. Login to the db2inst1 account
+2. Download the sqc.zip file from the course website.
+3. unzip sqc.zip
+4. cd sqc
+5. modify myapp.sqc to work on a database and a table you have on your system
+6. follow the instructions in the readme to compile.

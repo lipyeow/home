@@ -1,0 +1,185 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 421 Programming Assignment</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 421 - Spring 2010 - Programming Assignment 1</h1>
+
+<hr/>
+
+<p>
+You may work in a team of two students, but each student needs to make a
+submission. You are encouraged to engage in general discussions with other
+teams regarding the assignment, but specific details of a solution, including
+the solution itself, must always be the team's own work. You may submit the same
+code as the rest of your team.
+
+<h2>Part 1: Distributed DDL Processor (60 pts)</h2>
+
+Write a program <tt>runDDL</tt> that executes a given DDL
+statement on a cluster of computers each running an instance
+of a DBMS. The input to <tt>runDDL</tt> consists of two filenames
+(stored in variables <tt>clustercfg</tt> and <tt>ddlfile</tt>) passed in
+as commandline arguments. The file <tt>clustercfg</tt> contains
+access information for each computer on the cluster.  The
+file <tt>ddlfile</tt> contains the DDL terminated by a semi-colon
+to be executed.  The <tt>runDDL</tt> program will execute the same
+DDL on the database instance of each of the computers on the
+cluster <i>concurrently</i> using threads. One thread should
+be spawned for each computer in the cluster.
+
+<p><tt>runDDL</tt> should report success or failure of executing the DDL for
+each node in the cluster to standard output.
+
+<p>
+You may test your program on a single computer by using
+different databases to simulate the multiple computers.
+
+<p>
+You may first write a non-threaded program that executes the
+DDL on each computer in the cluster in a for-loop and then
+convert the program to a multi-threaded version.
+
+<h2>Part 2: Catalog for Distributed Tables (40 pts)</h2>
+
+Modify your program from Part 1 so that it stores metadata
+about the DDL being executed in a catalog database. The
+access information of the catalog database will be provided
+in the <tt>clustercfg</tt> file as well. The metadata should
+be stored in a table 
+<p>
+<ul>
+<tt>dtables(tname char(32), 
+nodedriver char(64),
+nodeurl char(128), 
+nodeuser char(16),
+nodepasswd char(16),
+partmtd int, 
+<b>
+nodeid int,
+partcol char(32),
+</b>
+partparam1 char(32), partparam2
+char(32))</tt></ul> 
+<br/>
+where
+<ul>
+<li> <tt>tname</tt> is the table name involved in the DDL operation.
+</li>
+<li> <tt>nodeid</tt> is the node number associated with this node.
+</li>
+<li> <tt>nodedriver</tt> is the driver used to connect to
+the node in the cluster for this entry
+</li>
+<li> <tt>nodeurl</tt> is the JDBC URL of the node in the
+cluster for this entry
+</li>
+<li> <tt>nodeuser</tt> and <tt>nodepasswd</tt> are the userid
+and password of the DBMS instance at the node in the cluster
+for this entry
+</li>
+<li> <tt>partmtd</tt> is the partition method used to
+partition the data in the table
+</li>
+<li> <tt>partcol</tt> is the column(s) used by the partition method to
+partition the data in the table
+</li>
+<li> <tt>partparam1</tt> and <tt>partparam2</tt> are
+parameters associated with the particular partition method
+</li>
+</ul>
+<p>
+If this table does not exist in the catalog
+database, your program will create the table. 
+The field <tt>tname</tt> should be obtained using a simple
+parsing of the DDL for the keyword TABLE that precedes the
+table name (we will switch to a more sophisticated SQL
+parser later).
+The fields <tt>partmtd, partcol, partparam1, partparam2</tt> should
+be left as null for this assignment.  This table should only
+be updated
+on successful execution of the DDLs. For create table DDL,
+this table should be populated and for drop table DDLs, the
+relevant entries in this table should be deleted. This
+operation need not be multi-threaded.
+
+<h2>General Requirements</h2>
+
+<ul>
+<li>You may program in any of the following languages: Java, C/C++, PHP, Python, Perl.</li> 
+<li>You may use any third party libraries, but you need to provide them, so that your program is executable on the submission machine.</li> 
+<li>Your code should minimally support the drop table and create table DDLs.</li>
+<li>Your code should minimally work with DB2 Express C DBMS instances.</li> 
+<li>You should ensure that your code is well commented and readable.</li>
+<li>You should develop the code on your own computer. In order for you to
+receive credit for the assignment, your code must to be compilable and
+executable on a linux machine. (A linux box will be provided for you to test
+your code for compliance.) 
+</li>
+<li>You must provide two shell scripts <tt>compile.sh</tt> and <tt>run.sh</tt>
+to compile and run your code respectively. The script <tt>run.sh</tt> should
+take <tt>clustercfg</tt> and <tt>ddlfile</tt> as its 1st and 2nd commandline
+arguments</li>
+
+</ul>
+
+<h2>Submission Procedure</h2>
+
+<p>
+Since Part 1 and Part 2 are cumulative, you should submit only one program, i.e., the final code for Part 2.
+
+<p>
+See <a href=programsub.html>Submission Instructions</a>
+
+
+<hr/>
+<h3>Sample contents of a <tt>clustercfg</tt> file</h3>
+<ul>
+<pre>
+catalog.driver=com.ibm.db2.jcc.DB2Driver
+catalog.hostname=jdbc:db2://10.0.0.3:50001/mycatdb
+catalog.username=db2inst1
+catalog.passwd=mypasswd
+
+numnodes=2
+
+node1.driver=com.ibm.db2.jcc.DB2Driver
+node1.hostname=jdbc:db2://10.0.0.3:50001/mydb1
+node1.username=db2inst1
+node1.passwd=mypasswd
+
+node2.driver=com.ibm.db2.jcc.DB2Driver
+node2.hostname=jdbc:db2://10.0.0.3:50001/mydb2
+node2.username=db2inst1
+node2.passwd=mypasswd
+</pre>
+</ul>
+<hr/>
+
+<h3>Sample contents of a <tt>ddlfile</tt> file</h3>
+<ul>
+<pre>
+CREATE TABLE BOOKS(isbn char(14), title char(80), price decimal);
+</pre>
+</ul>
+<hr/>
+
+<h3>Sample Output of <tt>`./run.sh ./cluster.cfg ./books.sql`</tt></h3>
+<ul>
+<pre>
+[jdbc:db2://10.0.0.3:50001/mydb2]: ./books.sql success.
+[jdbc:db2://10.0.0.3:50001/mydb1]: ./books.sql failed.
+[jdbc:db2://10.0.0.3:50001/mycatdb]: catalog updated.
+</pre>
+</ul>
+<hr/>
+
+
+
+</body>

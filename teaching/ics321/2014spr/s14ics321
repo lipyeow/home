@@ -1,0 +1,34 @@
+1;Mon Jan 13;Course Organization;;;slides:ics321-01-org.
+1;Wed Jan 15;intro;;vid:youtu.be/Es4t7sPgvYU:; slides:ics321-02-intro. ex:1-intro.
+2;Mon Jan 20; MLK Holiday;;;
+2;Wed Jan 22;relmodel;;vid:youtu.be/H-y8yeNcAaY:; slides:ics321-03-relmodel1. ex:2-ra.
+3;Mon Jan 27;fdnf;;vid:youtu.be/xIiFJwXf1lw:;slides:ics321-05-fd. ex:4-fd.
+3;Wed Jan 29;fdnf;;vid:youtu.be/1O0qjjNQLE4:;slides:ics321-06-nf1.  ex:5-nf1.
+4;Mon Feb 3;relmodel;;vid:youtu.be/NqPKewb1_P0:;slides:ics321-04-relmodel2.  ex:3-ddl. link:../2010fall/ex3.html:(html).
+4;Wed Feb 5;er;;vid:youtu.be/ycQJVmxOme4: vid:youtu.be/ejB78q9sBUY:;slides:ics321-08-er.  ex:7-er.
+5;Mon Feb 10;fdnf;; vid:youtu.be/XVx54P80RfE: ;slides:ics321-07-nf2. ex:6-nf2.
+5;Wed Feb 12;ra;;vid:youtu.be/4d4ScUDVpFY:;slides:ics321-09-bagra.  ex:8-ra.
+6;Mon Feb 17; President's Day Holiday;;
+6;Wed Feb 19;ra;;vid:youtu.be/lqDuDKLKMHY:;slides:ics321-10-datalog.  ex:9-datalog.
+7;Mon Feb 24;Pre-Midterm Review;;; link:./mock-midterm.pdf:mock-mideterm (pdf).
+7;Wed Feb 26;Midterm Exam;;;
+8;Mon Mar 3;sql;;vid:youtu.be/Vt_2VCWwASg:;slides:ics321-11-sql1. ex:10-sql.
+8;Wed Mar 5;sql;;vid:youtu.be/iVz5BjA6zbM:;slides:ics321-12-sql2. ex:11-sql. Project Proposals due Fri Mar 7.
+9;Mon Mar 10;sql;;vid:youtu.be/4vgc1jiWp5A:;slides:ics321-13-sql3. ex:12-sqlagg.
+9;Wed Mar 12;api;;Networking Primer vid:youtu.be/8cIc65BKYXc: vid:youtu.be/b2Ied5pE9pE:; Bring your laptops. slides:ics321-14-sqlapp1. link:./sqc.zip:sqc (zip).
+10;Mon Mar 17;api;;vid:youtu.be/FWV2dG02YHE:;Bring your laptops. slides:ics321-15-sqlapp2. ex:13-sqlapi. link:./odbc.zip:odbc (zip). link:./jdbc.zip:jdbc (zip).
+10;Wed Mar 19;ctvi;;vid:youtu.be/6ZfFYHHwiZM:;slides:ics321-16-ctvi. ex:14-idxsel.
+11;Mon Mar 24; Spring Recess;;;
+11;Wed Mar 26; Spring Recess;;;
+12;Mon Mar 31;txn;;vid:youtu.be/NcwRurRueYA: vid:youtu.be/zYzqKHhxDBM:;slides:ics321-17-txn1. ex:15-txn.
+12;Wed Apr 2;txn;;vid:youtu.be/2RxXrMtj2bs: vid:youtu.be/AKJ9BMWIPiY:;slides:ics321-18-txn2. ex:16-txn.
+13;Mon Apr 7;stridx;;vid:youtu.be/2oHMR10X-64:;slides:ics321-19-storage1. ex:17-disk.
+13;Wed Apr 9;stridx;;vid:youtu.be/p_8e0MvzxSs:;slides:ics321-20-storage2. ex:18-stgidx.
+14;Mon Apr 14;qp;;vid:youtu.be/5C0Zmh-Bp40:;slides:ics321-21-queryproc. ex:19-qopt.
+14;Wed Apr 16;Guest Lecture;;;
+15;Mon Apr 21;qp;;vid:youtu.be/bvBRiSdkSRM:;ex:20-qcost.
+15;Wed Apr 23;xml;;vid:youtu.be/3NxpiuBzAWM:;slides:ics321-22-xml.
+16;Mon Apr 28;Special Topics;;;
+16;Wed Apr 30;Project Presentations;;;
+17;Mon May 5; Project Presentations;;;
+17;Wed May 7; Project Presentations & Final Exam Review;;;link:./mock-final.pdf:mock final (pdf).

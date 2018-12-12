@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1038.32">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px Verdana; color: #333233}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Verdana; color: #333233; min-height: 15.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Verdana; color: #333233}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Verdana; color: #333233}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Verdana; color: #000000}
+    span.s1 {text-decoration: underline}
+    span.s2 {color: #7cdb66}
+    span.s3 {color: #69aaf9}
+    span.s4 {color: #333233}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><b>Install DB2 Express-C on Ubuntu running on VirtualBox</b></p>
+<p class="p2"><br></p>
+<p class="p3"><b>Part I. Get Ubuntu running on your VirtualBox</b></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p4"><span class="s1"><b>To get VirtualBox running on your OS:<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p4"><span class="s2"><b>--&gt;</b></span> Go to (<a href="http://www.virtualbox.org/wiki/Downloads">http://www.virtualbox.org/wiki/Downloads</a>) <span class="s3"><b>&gt;</b></span> Select the version for your OS <span class="s3"><b>&gt;</b></span> Save the .dmg (img1)<span class="Apple-converted-space"> </span></p>
+<p class="p4"><span class="s2"><b>--&gt;</b></span> Double-click <b>VirtualBox.mpkg</b> and it will install itself in your Application folder (img2)</p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p4"><span class="s1"><b>To load Ubuntu on VirtualBox:</b></span></p>
+<p class="p4">1. Download Ubuntu ISO-image (<a href="http://www.ubuntu.com/desktop/get-ubuntu/download">http://www.ubuntu.com/desktop/get-ubuntu/download</a>) (img3)</p>
+<p class="p4">2. Create new Virtual Machine</p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="s2"><b>--&gt; </b></span>Launch VirtualBox <span class="s3"><b>&gt;</b></span> Click <b>New </b>to create new Virtual Machine (img4) <span class="s3"><b>&gt;</b></span> For each panels, select the followings:<span class="Apple-converted-space"> </span></p>
+<p class="p4"><span class="Apple-tab-span">	</span> <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3"><b>&gt; </b></span><span class="s1">VM Name and OS Type</span> (img5)</p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Operating System <span class="Apple-tab-span">	</span><b>Linux</b><span class="Apple-converted-space"> </span></p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Version <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>Ubuntu</b></p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3"><b>&gt; </b></span><span class="s1">Memory</span> (img6)<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>1 GB</b></p>
+<p class="p4"><b><span class="Apple-tab-span">	</span></b><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3"><b>&gt; </b></span><span class="s1">Virtual Hard Disk</span> (img7)<span class="Apple-tab-span">	</span><b>Boot Hard Disk,</b><span class="Apple-converted-space"> </span></p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>Create new hard disk</b></p>
+<p class="p4"><b><span class="Apple-tab-span">	</span></b> <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3"><b>&gt; </b></span><span class="s1">Hard Disk Storage Type</span><span class="Apple-tab-span">	</span><b>Dynamically expanding storage</b></p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3"><b>&gt; </b></span><span class="s1">Size</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>8 GB</b><span class="Apple-converted-space"> </span></p>
+<p class="p4">3. Load Ubuntu Linux VM (img8)</p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="s2"><b>--&gt; </b></span>Double-click Ubuntu Linux VM <span class="s3"><b>&gt;</b></span> When wizard prompts for installation, Select <b>CD/DVD-ROM </b>and <b>Image file</b> under <span class="s1">Storage</span> <span class="s3"><b>&gt;</b></span> Indicate <b>path to the ISO-image</b> you downloaded</p>
+<p class="p4">4. Install Ubuntu<span class="Apple-converted-space"> <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span></p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="s3"><b>&gt; </b></span>Select Language and Select "Install Ubuntu" (img9) <span class="s3"><b>&gt;</b></span> Configure TimeZone <span class="s3"><b>&gt;</b></span> Configure Keyboard Layout (img10) <span class="s3"><b>&gt;</b></span> Partition (img11) <span class="s3"><b>&gt;</b></span> Enter name, username, password (img12) <span class="s3"><b>&gt;</b></span> Click <b>Install</b> <span class="s3"><b>&gt;</b></span> Restart<span class="Apple-converted-space"> </span></p>
+<p class="p4">5. Unmount .ISO (so it won't boot from the CD everytime)</p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="s2"><b>--&gt;</b></span> VirtualBox VM <span class="s3"><b>&gt;</b></span> Devices <span class="s3"><b>&gt;</b></span> CD/DVD Devices <span class="s3"><b>&gt;</b></span> <b>Unmount CD/DVD Devices</b> <span class="s2"><b>--&gt;</b></span> if success, you will see your username at right-hand corner in the ubuntu window (img13)</p>
+<p class="p4">6. Update Ubuntu<span class="Apple-converted-space"> </span></p>
+<p class="p4"><span class="Apple-tab-span">	</span><span class="s2"><b>--&gt; </b></span>Ubuntu <span class="s3"><b>&gt;</b></span> System <span class="s3"><b>&gt;</b></span> Administration <span class="s3"><b>&gt; </b></span><b>Update Manager </b>(img14) &gt; Install Updates (img15)</p>
+<p class="p2"><br></p>
+<p class="p3"><b>Part II. Get DB2 Express-C running on Ubuntu</b></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p4"><span class="s1"><b>To get DB2 Express-C:</b></span></p>
+<p class="p4"><span class="s1">From your original OS</span></p>
+<p class="p4"><span class="s2"><b>--&gt;</b></span> VirtualBox VM <span class="s3"><b>&gt;</b></span> Devices <span class="s3"><b>&gt;</b></span> <b>Install Guest Additions</b> (You should see VirtualBoxAddtion.iso is checked under CD/DVD Devices) <span class="s3"><b>&gt;</b></span> Places <span class="s3"><b>&gt;</b></span> VirtualBoxAdditions <span class="s3"><b>&gt;</b></span> <b>Open Autorun Prompt</b></p>
+<p class="p4"><span class="s2"><b>--&gt;</b></span> VirtualBox VM <span class="s3"><b>&gt;</b></span> Devices <span class="s3"><b>&gt;</b></span> Shared Folders <span class="s3"><b>&gt;</b></span> Add Folder Icon <span class="s3"><b>&gt;</b></span> Folder Path <span class="s3"><b>&gt;</b></span> Other <span class="s3"><b>&gt;</b></span> Folder Name: NativeDownloads</p>
+<p class="p4"><span class="s2"><b>--&gt;</b></span> Ubuntu <span class="s3"><b>&gt;</b></span> Terminal <span class="s3"><b>&gt;</b></span> type:</p>
+<p class="p4"><span class="Apple-tab-span">	</span>mk dir tmpsf</p>
+<p class="p4"><span class="Apple-tab-span">	</span>sudo mount -t vboxsf -o fmode=0644 dmode=0755 NativeDownloads tmpsf</p>
+<p class="p4"><span class="Apple-tab-span">	</span>cd tmpsf</p>
+<p class="p4"><span class="Apple-tab-span">	</span>cp <i>DB2install_filename directory_db2_is_downloaded</i></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1">From Ubuntu</span></p>
+<p class="p4"><span class="s2"><b>--&gt;</b></span> Ubuntu <span class="s3"><b>&gt;</b></span> Firefox <span class="s3"><b>&gt;</b></span> <a href="http://www-01.ibm.com/software/data/db2/express/download.html?S_TACT=imdb2luw&amp;S_CMP=ibm_im">http://www-01.ibm.com/software/data/db2/express/download.html?S_TACT=imdb2luw&amp;S_CMP=ibm_im</a> <span class="s3"><b>&gt;</b></span> Download <b>DB2 Express-C 9.7.2 for Linux</b> (img16) <span class="s3"><b>&gt;</b></span> Proceed without an IBM ID <span class="s3"><b>&gt;</b></span> DB2 Express-C free database server (img7) <span class="s3"><b>&gt;</b></span> Download via <b>html</b><span class="Apple-converted-space"> </span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p4"><span class="s1"><b>To install DB2 Express-C:</b></span></p>
+<p class="p4"><span class="s2"><b>--&gt;</b></span> Ubuntu <span class="s3"><b>&gt;</b></span> Application <span class="s3"><b>&gt;</b></span> Accessories <span class="s3"><b>&gt;</b></span> Terminal <span class="s3"><b>&gt;</b></span> type:</p>
+<p class="p5"><span class="s4"><span class="Apple-tab-span">	</span></span>cd <i>directory_db2_is_downloaded</i></p>
+<p class="p5"><span class="Apple-tab-span">	</span>tar xzfv db2exc_972_LNX_x86.tar.gz<span class="Apple-converted-space"> </span></p>
+<p class="p5"><span class="Apple-tab-span">	</span>cd <i>directory_db2_is_expanded_to</i> <span class="Apple-converted-space"> </span></p>
+<p class="p5"><span class="Apple-tab-span">	</span>sudo apt-get install libstdc++5</p>
+<p class="p5"><span class="Apple-tab-span">	</span>sudo apt-get install libaio-dev<span class="Apple-converted-space"> </span></p>
+<p class="p5"><span class="Apple-tab-span">	</span>sudo ./db2setup<span class="Apple-converted-space"> </span></p>
+<p class="p4"><span class="Apple-converted-space">      </span><span class="s3"><b>&gt;</b></span> GUI pops out and follow along to install DB2 (img18)</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p2"><br></p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+</body>
+</html>

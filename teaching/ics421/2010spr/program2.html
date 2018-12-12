@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 421 Programming Assignment</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 421 - Spring 2010 - Programming Assignment 2</h1>
+
+<hr/>
+<p>Updated Sat Feb 27. "nopartition" changed to "notpartition"
+<hr/>
+
+<p>
+You may work in a team of two students, but each student needs to make a
+submission. You are encouraged to engage in general discussions with other
+teams regarding the assignment, but specific details of a solution, including
+the solution itself, must always be the team's own work. You may submit the same
+code as the rest of your team.
+
+<h2>Part 3: Naive Distributed SQL Processor (40 pts)</h2>
+
+Using your code from Part 1 as a template, write a program
+<tt>runSQL</tt> that executes a given SQL statement on a
+cluster of computers each running an instance
+of a DBMS. The input to <tt>runSQL</tt> consists of two filenames
+(stored in variables <tt>clustercfg</tt> and <tt>sqlfile</tt>) passed in
+as commandline arguments. The file <tt>clustercfg</tt> contains
+access information for the catalog DB.  The
+file <tt>sqlfile</tt> contains the SQL terminated by a semi-colon
+to be executed.  The <tt>runSQL</tt> program will execute the same
+SQL on the database instance of each of the computers on the
+cluster (that holds data fragments for the table)
+<i>concurrently</i> using threads. One thread should be
+spawned for each computer in the cluster.
+
+<p><tt>runSQL</tt> should output the rows retrieved to the
+standard output on success or report failure.
+
+<p>You may assumed that the SQL queries only operate on
+single tables and do not contain any nested subqueries.
+
+<p>You should consider using the ANTLR compiler compiler to generate a SQL parser that you can use to extract the table name.
+
+<p>
+You may test your program on a single computer by using
+different databases to simulate the multiple computers.
+
+<hr/>
+<h3>Sample contents of a <tt>clustercfg</tt> file</h3>
+<ul>
+<pre>
+catalog.driver=com.ibm.db2.jcc.DB2Driver
+catalog.hostname=jdbc:db2://10.0.0.3:50001/mycatdb
+catalog.username=db2inst1
+catalog.passwd=mypasswd
+</pre>
+</ul>
+<hr/>
+
+<h3>Sample contents of a <tt>sqlfile</tt> file</h3>
+<ul>
+<pre>
+select * from books
+;
+</pre>
+</ul>
+<hr/>
+
+<h3>Sample Output of <tt>`./run3.sh ./cluster.cfg ./books.sql`</tt></h3>
+<ul>
+<pre>
+123323232 Database Systems       Ramakrishnan
+234323423 Operating Systems      Silberstein
+[jdbc:db2://10.0.0.3:50001/mydb2]: ./books.sql success.
+[jdbc:db2://10.0.0.3:50001/mydb1]: ./books.sql failed.
+</pre>
+</ul>
+
+<hr/>
+
+
+<h2>Part 4: Distributed Loader (60 pts)</h2>
+
+Write a program <tt>loadCSV</tt> that loads
+data from a comma-separated (CSV) file into a distributed
+table on the cluster. The program takes two commandline
+arguments <tt>clustercfg</tt> and <tt>csvfile</tt>. The
+<tt>clustercfg</tt> file contains access information for the
+catalog DB, the name of the table to be loaded, and the
+partitioning information. The <tt>csvfile</tt> contains the
+data to be loaded. The catalog should be consulted for
+access information for the nodes in the cluster. 
+Your program should also update the catalog with the
+partitioning information. <b>The loader does NOT need to 
+be multi-threaded.</b>
+
+<p>
+<tt>dtables(tname char(32), 
+nodedriver char(64),
+nodeurl char(128), 
+nodeuser char(16),
+nodepasswd char(16),
+partmtd int, 
+<b>
+nodeid int,
+partcol char(32),
+</b> 
+partparam1 char(32), 
+partparam2 char(32))</tt></ul> 
+where
+<ul>
+<li> <tt>tname</tt> is the table name involved in the DDL operation.
+</li>
+<li> <tt>nodeid</tt> is the node number of the node in the cluster.
+</li>
+<li> <tt>nodedriver</tt> is the driver used to connect to
+the node in the cluster for this entry
+</li>
+<li> <tt>nodeurl</tt> is the JDBC URL of the node in the
+cluster for this entry
+</li>
+<li> <tt>nodeuser</tt> and <tt>nodepasswd</tt> are the userid
+and password of the DBMS instance at the node in the cluster
+for this entry
+</li>
+<li> <tt>partmtd</tt> is the partition method used to
+partition the data in the table
+  <ul>
+  <li>0: not partitioned at all </li>
+  <li>1: range partition: param1 and param2 will correspond to the min and max of the range </li>
+  <li>2: hash partition using mod for numeric types</li>
+  </ul>
+Note that you will need to convert the partition method specified as a string
+in the config file to the integer partition method stored in dtables. The
+values in the config file corresponding partmtd 0, 1, and 2 are <i>notpartition,
+range,</i> and <i>hash</i> respectively.
+
+</li>
+<li> <tt>partcol</tt> is the name of the column used for partitioning </li>
+<li> <tt>partparam1</tt> and <tt>partparam2</tt> are
+parameters associated with the particular partition method
+</li>
+</ul>
+
+<p>If the partition method is zero, ie, not partition, then the entire CSV file is inserted into the table at every node.
+</p>
+
+<p>For range partitioning the rows that should be inserted into partitionX
+should have a value in the <tt>partcol</tt> between the minimum and maximum of
+the range for X: 
+<ul>
+<tt> partparam1 &lt; partcol &lt;= partparam2.</tt>
+</ul>
+At the boundary ranges, partparam{1,2} may take the special values : -inf,
++inf.
+
+<p>For hash partitioning the rows that should be inserted into partitionX if 
+<ul>
+<tt>X = ( partcol mod partparam1 ) + 1.</tt> 
+</ul>
+The plus one is to handle the fact that our partition/node numbers start from 1 instead of 0. You may assume that only numeric columns will be partitioned for this assignment.
+
+<p>
+The number of nodes in the dtables relation and the number of partitions in the
+config file should match. If not the program should return an error message and exit. You may assume the CSV file is error free (ie every row has the same number of columns of the right type).
+
+<hr/>
+<h3>Sample contents of a <tt>clustercfg</tt> file</h3>
+<ul>
+<pre>
+catalog.driver=com.ibm.db2.jcc.DB2Driver
+catalog.hostname=jdbc:db2://10.0.0.3:50001/mycatdb
+catalog.username=db2inst1
+catalog.passwd=mypasswd
+
+tablename=books
+partition.method=range
+partition.column=age
+
+numnodes=2
+partition.node1.param1=1
+partition.node1.param2=10
+
+partition.node2.param1=10
+partition.node2.param2=20
+</pre>
+</ul>
+
+<hr/>
+<h3>Another sample of a <tt>clustercfg</tt> file</h3>
+<ul>
+<pre>
+catalog.driver=com.ibm.db2.jcc.DB2Driver
+catalog.hostname=jdbc:db2://10.0.0.3:50001/mycatdb
+catalog.username=db2inst1
+catalog.passwd=mypasswd
+
+tablename=books
+
+partition.method=hash
+partition.column=age
+partition.param1=2
+
+</pre>
+</ul>
+<hr/>
+
+<h3>Sample csv file for books.csv</h3>
+<ul>
+<pre>
+123323232,"Database Systems","Ramakrishnan,Raghu"
+234323423,"Operating Systems","Silberstein, Adam"
+</pre>
+</ul>
+<hr/>
+
+<h3>Sample Output of <tt>`./run4.sh ./cluster.cfg ./books.csv`</tt></h3>
+<ul>
+<pre>
+[jdbc:db2://10.0.0.3:50001/mydb2]: 10 rows inserted.
+[jdbc:db2://10.0.0.3:50001/mydb1]: 0 rows inserted.
+[jdbc:db2://10.0.0.3:50001/mycatdb]: catalog updated.
+</pre>
+</ul>
+<hr/>
+
+<h2>Part 4X: Multi-threaded Distributed Loader (20 extra pts)</h2>
+
+<p>
+Convert your sequential Distributed Loader into a multi-threaded one. Note that
+you will need to use synchronization or locking mechanisms (see <a
+href="http://java.sun.com/docs/books/tutorial/essential/concurrency/syncmeth.html">java
+synchronization</a>). The following is a suggested design: 
+<ul>
+  <li>A shared buffer/queue of a fixed configurable size will be allocated for
+each node/thread.</li>
+  <li>The main thread will iterate through the CSV file and partition each row.</li>
+  <li>The main thread will copy a row to the corresponding buffer associated with the partition</li>
+  <li>Each thread will constantly check its shared queue. If it is not empty, pop off one row and insert it into the associated database table.</li> 
+  <li>A special row or signal can be used to signal to the thread to finish.
+  <li>Note that the main thread could update each shared
+queue, and each thread will continuously read from the
+queue, so synchronization is needed to ensure concurrency.
+  <li>Note also that if all the buffers/queues are full, the
+main thread may need to pause for a while</li>
+</li>
+</ul>
+
+<h2>General Requirements</h2>
+
+<ul>
+<li>You may program in any of the following languages: Java, C/C++, PHP, Python, Perl.</li> 
+<li>You are encouraged to use ANTLR to generate the code to parse SQL statements as well as to parse the CSV file. It will save you a lot of time.</li> 
+<li>You may use any third party libraries, but you need to provide them, so that your program is executable on the submission machine.</li> 
+<li>Your code should minimally support select-from-where statements</li>
+<li>Your code should minimally work with DB2 Express C DBMS instances.</li> 
+<li>You should ensure that your code is well commented and readable.</li>
+<li>You should develop the code on your own computer. In order for you to
+receive credit for the assignment, your code must to be compilable and
+executable on a linux machine. (A linux box will be provided for you to test
+your code for compliance.) 
+</li>
+<li>You must provide two shell scripts <tt>compile.sh</tt> and <tt>run.sh</tt>
+to compile and run your code respectively. The script <tt>run.sh</tt> should
+take <tt>clustercfg</tt> and <tt>sqlfile</tt> as its 1st and 2nd commandline
+arguments</li>
+
+</ul>
+
+<h2>Submission Procedure</h2>
+
+<p>Submit:
+<ul>
+<li>One set of source files for Part 3</li>
+<li>compile3.sh and run3.sh for Part 3</li>
+<li>One set of source files for Part 4</li>
+<li>compile4.sh and run4.sh for Part 4</li> 
+<li>submission of grammar file is optional, you may just submit the generated files</li>
+<li>[OPTIONAL] If you are submitting Part 4x as well, you will need
+compile4x.sh and run4x.sh as well.</li>
+</ul>
+
+<p>antlrworks.jar is installed in /home/db2inst1/lib/antlrworks.jar  on the submission machine</p>
+
+<p>Follow the <a href="programsub.html">Submission Procedure</a>
+
+
+</body>

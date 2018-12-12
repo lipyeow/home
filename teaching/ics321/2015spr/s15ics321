@@ -1,0 +1,34 @@
+1;Mon Jan 12;Course Organization;;;slides:ics321-01-org.
+1;Wed Jan 14;intro;;vid:youtu.be/Es4t7sPgvYU:;slides:ics321-02-intro. ex:1-intro.
+2;Mon Jan 19; Martin Luther King Holiday;;;
+2;Wed Jan 21;relmodel;;;slides:ics321-03-relmodel1. ex:2-ra.
+3;Mon Jan 26;relmodel;;;slides:ics321-04-relmodel2. ex:3-ddl.
+3;Wed Jan 28;ra;;;slides:ics321-05-bagra. ex:4-bagra.
+4;Mon Feb 2;ra;;;slides:ics321-06-datalog. ex:5-datalog.
+4;Wed Feb 4;sql;;;slides:ics321-07-sql1. ex:6-sql.
+5;Mon Feb 9;sql;;;slides:ics321-08-sql2. ex:7-sql.
+5;Wed Feb 11;sql;;;slides:ics321-09-sql3. ex:8-sqlagg.
+6;Mon Feb 16;Presidents' Day Holiday;;;
+6;Wed Feb 18;api;;;slides:ics321-10-sqlapp.
+7;Mon Feb 23;api;;;
+7;Wed Feb 25;Pre-midterm Review;;;link:mock-midterm.pdf:mock-midterm.
+8;Mon Mar 2;Midterm Exam;;;
+8;Wed Mar 4;api;;;slides:ics321-11-sqlapp. ex:9-sqlapi. link:../core/oracle-jdbc.zip:jdbc example.
+9;Mon Mar 9;er;;;slides:ics321-12-er. ex:10-er.
+9;Wed Mar 11;fdnf;;;slides:ics321-13-fd.
+10;Mon Mar 16;fdnf;;; ex:11-fd.
+10;Wed Mar 18;Review;;;
+11;Mon Mar 23; Spring Break
+11;Wed Mar 25; Spring Break
+12;Mon Mar 30;fdnf;;;slides:ics321-14-nf1. ex:12-nf1.
+12;Wed Apr 1;fdnf;;;slides:ics321-15-nf2. ex:13-nf2.
+13;Mon Apr 6;ctvi;;;slides:ics321-16-ctvi. ex:14-idxsel.
+13;Wed Apr 8;txn;;;slides:ics321-17-txn1. ex:15-txn.
+14;Mon Apr 13;txn;;;slides:ics321-18-txn2.
+14;Wed Apr 15;txn;;;ex:16-txn.
+15;Mon Apr 20;stridx;;;slides:ics321-19-storage1. ex:17-disk.
+15;Wed Apr 22;stridx;;;slides:ics321-20-storage2. ex:18-stgidx.
+16;Mon Apr 27;qp;;;slides:ics321-21-queryproc. ex:19-qopt.
+16;Wed Apr 29;xml;;vid:youtu.be/3NxpiuBzAWM:;slides:ics321-22-xml.link:mock-final.pdf:mock-final.
+17;Mon May 4;Project;;;
+17;Wed May 6;Project;;; 

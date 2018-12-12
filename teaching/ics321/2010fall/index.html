@@ -1,0 +1,926 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Welcome to the ICS 321 Course Webpage!</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 321 Data Storage and Retrieval (Fall 2010)</h1>
+
+<h2>General Information</h2>
+<ul>
+<li>Class Meets: Mon and Wed 12pm - 1:15 pm POST 127 Aug 23-Dec 18 2009
+</li>
+<li>Final Exam : Dec 13 2010 12pm - 2pm (No make up exam)
+</li>
+<li>Instructor : <a href="http://www2.hawaii.edu/~lipyeow">Lipyeow Lim</a>
+</li>
+<li>Office Hours : Wed 2pm - 4pm POST 303 E or by appointment 808-956-3495
+</li>
+<li>
+Undergraduate TA/Grader: Vivian Cheng
+</li>
+<li>
+Textbooks: 
+<ul>
+<li>
+(Required)
+<b>Database Systems: The Complete Book (2nd Edition)</b>.
+Hector Garcia-Molina, Jeff Ullman, and Jennifer Widom. 
+ISBN-13: 978-0-13-187325-4.
+<a href="http://infolab.stanford.edu/~ullman/dscb.html">Book Website</a>
+</li>
+<li>
+(Alternate) You may also use A First Course in Database Systems (3nd Edition). 
+Jeff Ullman, and Jennifer Widom.  
+</li>
+<li>
+(Previous)  
+Database Management Systems, Third Edition. 
+Raghu Ramakrishnan and Johannes Gehrke.
+ISBN: 0-07-246563-8. <a href="http://pages.cs.wisc.edu/~dbbook/">Book Website</a>.
+</li>
+
+</ul>
+</li>
+<li>Objective: At the end of this class, the successful student should have a broad understanding of database software including database internals and be able to use database software for storing, updating, and querying data in data-intensive applications. </li>
+<li>Late policy: work submitted past due date and time will receive zero credits. </li>
+<li> 
+All students are expected to conduct themselves above and beyond the standards set forth in the <a href="http://www.hawaii.edu/svpa/ep/e7/e7208.pdf">University of Hawaii Systemwide Student Conduct Code</a>.
+</li>
+<li>
+Any student who feels s/he may need an accommodation based on the impact of a
+disability is invited to contact the instructor privately. The instructor would
+be happy to work with you, and the KOKUA Program (Office for Students with
+Disabilities) to ensure reasonable accommodations in the course. KOKUA can be
+reached at (808) 956-7511 or (808) 956-7612 (voice/text) in room 013 of the
+Queen Lili'uokalani Center for Student Services.  </li>
+<li>Pre-requisites: ICS 211 Intro to CS II or consent. </li>
+
+
+</ul>
+
+<h2>Topics</h2>
+
+<ul>
+   <li>Ch 1. The Worlds of Database Systems ~10p</li>
+   <li>Ch 2. The Relational Model of Data ~50p </li>
+   <li>Ch 3. Design Theory for Relational Databases ~60p</li>
+   <li>Ch 4. High-Level Database Models ~70p</li>
+   <li>Ch 5. Algebraic and Logical Query Languages ~40p</li>
+   <li>Ch 6. The Database Language SQL ~60p</li>
+   <li>Ch 7. Constraints and Triggers ~20p</li>
+   <li>Ch 8. Views and Indexes ~20p </li>
+   <li>Ch 9. SQL in a Server Environment ~50p </li>
+   <li>Ch 11. The Semi-structured Data Model ~20p </li>
+   <li>Ch 12. Programming Languages for XML ~30p </li>
+   <li>Ch 13.{0-2,3.{1-2}}, Ch 14.{0-3}. Overview of Storage and Indexing </li>
+   <li>Ch 16.1, Ch 15.{0-3}. Overview of Query Processing</li>
+   <li>Ch 18.{0-2}, Ch 17.1. Overview of Transaction Processing</li>
+</ul>
+
+
+<h2>Grading (Tentative)</h2>
+
+<ul>
+   <li>20 % Quizzes</li>
+   <li>20 % Homework (administered via Laulima)</li>
+   <li>30 % 
+<a href="project.html">Course Project</a>
+
+</li>
+   <li>15 % Mid-term exam</li>
+   <li>15 % Final Exam</li>
+</ul>
+
+<h2>Class Schedule (tentative)</h2>
+
+<ul>
+<li>Screencasts of each class will be available under the Resources section in laulima for a limited time. </li>
+<li>The weekly quizzes will be administered as timed quizzes using the Test and Quizzes section of Laulima. Each quiz will consists of 10 multiple choice questions to be answered in 15 minutes. You may take each quiz only once anytime within the window between Sunday 11 AM to Monday 11:30 AM.</li>
+
+</ul>
+
+<!-- START TABLE-->
+
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+   <th width="5%">Week</th>
+   <th width="10%"> Date</th>
+   <th width="30%"> Topic</th>
+   <th width="10%"> Readings</th>
+   <th width="40%"> Remarks
+</th>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      1
+   </td>
+   <td>
+      Mon Aug 23
+   </td>
+   <td>
+      Course Organization and Introduction
+   </td>
+   <td>
+      None
+   </td>
+   <td>
+   <a href="ics321-20100823-org.pdf">Slides (pdf)</a>
+   |
+   <a href="ics321-20100823-ex1.pdf">Exercise 1 (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      1
+   </td>
+   <td>
+      Wed Aug 25
+   </td>
+   <td>
+      The Worlds of Database Systems
+   </td>
+   <td>
+      Ch.1
+   </td>
+   <td>
+   <li>Bring your laptops.</li>
+   <li>Before coming to class, 
+   (1) install <a href="http://www.virtualbox.org/">VirtualBox</a>, (2)
+   download 
+   <a href="http://www.ubuntu.com/desktop/get-ubuntu/download">Ubuntu Desktop Edition</a> (10.04 32 bit version),
+   and 
+   (3) download <a href="http://www-01.ibm.com/software/data/db2/express/download.html?S_TACT=imdb2luw&S_CMP=ibm_im">the free IBM DB2 Express-C 9.7</a>. 
+   </li>
+   <li>
+   <a href="ics321-20100825-intro.pdf">Slides (pdf)</a> | 
+   <a href="vbox-ubuntu-db2.html">Install Instructions</a> (from Vivian) <br/>
+   </li>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      2
+   </td>
+   <td>
+      Mon Aug 30
+   </td>
+   <td>
+      The Relational Model of Data
+   </td>
+   <td>
+      Ch.2
+   </td>
+   <td>
+   Quiz 1 is due before class at 11AM<br/>
+   <a href="http://www.youtube.com/watch?v=UBLX2bkmCek">Screencast Tutorial</a>  on Installing Ubuntu in a VirtualBox VM.<br/>
+   <a href="http://www.youtube.com/watch?v=a_RcLPM8g7E">Screencast Tutorial</a>  on Installing DB2 in Ubuntu.
+   <br/>
+   <a href="ics321-20100830-relmodel1.pdf">Slides (pdf)</a>
+   |
+   <a href="ics321-20100830-ex2-ra.pdf">Exercise 2 (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      2
+   </td>
+   <td>
+      Wed Sep 1
+   </td>
+   <td>
+      The Relational Model of Data
+   </td>
+   <td>
+      Ch.2
+   </td>
+   <td>
+   Bring your laptops.
+   <br/>
+   <a href="ics321-20100901-relmodel2.pdf">Slides (pdf)</a>
+   |
+   <a href="ics321-20100901-ex3.html">Exercise 3 (html)</a>
+   <br/>
+   <a href="db2commands.txt">db2 commands (txt)</a>
+   <br/>
+   <a href="http://www.math.utah.edu/lab/unix/unix-commands.html">Unix Command Summary</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      3
+   </td>
+   <td>
+      Mon Sep 6
+   </td>
+   <td>
+   &nbsp
+   &nbsp
+      <i>Labor Day Holiday<i>
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   Quiz 2's window is pushed back to Tuesday. 
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      3
+   </td>
+   <td>
+      Wed Sep 8
+   </td>
+   <td>
+      Design Theory for Relational Databases
+   </td>
+   <td>
+      Ch.3
+   </td>
+   <td>
+   Quiz 2 opens on Tue 11AM and is due on Wed at 11AM.
+   <br/>
+   <a href="ics321-20100908-fd.pdf">Slides (pdf)</a>
+   |
+   <a href="ics321-20100908-ex4.pdf">Exercise 4 (pdf)</a>
+   <br/>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      4
+   </td>
+   <td>
+      Mon Sep 13
+   </td>
+   <td>
+      Design Theory for Relational Databases
+   </td>
+   <td>
+      Ch.3
+   </td>
+   <td>
+   Quiz 3 is due at 11AM.
+   <br/>
+   <a href="ics321-20100913-nf1.pdf">Slides (pdf)</a> (updated)
+   |
+   <a href="ics321-20100913-ex5-nf1.pdf">Exercise 5 (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      4
+   </td>
+   <td>
+      Wed Sep 15
+   </td>
+   <td>
+      Design Theory for Relational Databases
+   </td>
+   <td>
+      Ch.3 3.{6-} not in syllabus.
+   </td>
+   <td>
+   Bring Exercise 5 back to class.
+   <br/>
+   <a href="ics321-20100915-nf2.pdf">Slides (pdf)</a>
+   <br/>
+   <a href="soln-ex5.txt">Solution to Exercise 5 (txt)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      5
+   </td>
+   <td>
+      Mon Sep 20
+   </td>
+   <td>
+      High-Level Database Models
+   </td>
+   <td>
+      Ch.4
+   </td>
+   <td>
+   Quiz 4 is due at 11AM.
+   <br/>
+   Bring Exercise 5 back to class.
+   <br/>
+   <a href="decomp-bcnf.png">BCNF decomp algo (png)</a>
+   |
+   <a href="decomp-3nf.png">3NF decomp algo (png)</a>
+   <br/>
+   <a href="ics321-20100920-er1.pdf">Slides (pdf)</a>
+|
+   <a href="ics321-20100920-ex6-er.pdf">Exercise 6 (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      5
+   </td>
+   <td>
+      Wed Sep 22
+   </td>
+   <td>
+      High-Level Database Models
+   </td>
+   <td>
+      Ch.4
+      ODL is not in syllabus.
+   </td>
+   <td>
+   Bring Exercise 6 back to class. Laptops would help, but not critical.
+   <br/>
+   <a href="ics321-20100922-er2.pdf">Slides (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      6
+   </td>
+   <td>
+      Mon Sep 27
+   </td>
+   <td>
+      Algebraic and Logical Query Languages
+   </td>
+   <td>
+      Ch.5
+   </td>
+   <td>
+   Quiz 5 is due at 11:30AM. (Extended till 23:59 hour)<br/>
+   <a href="ics321-20100927-bagra.pdf">Slides (pdf)</a>
+   | <a href="ics321-20100927-ex7-ra.pdf">Exercise 7 (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      6
+   </td>
+   <td>
+      Wed Sep 29
+   </td>
+   <td>
+      Algebraic and Logical Query Languages
+   </td>
+   <td>
+      Ch.5
+   </td>
+   <td>
+   Assignment 1 due.
+   <br/>
+   <a href="ics321-20100929-datalog.pdf">Slides (pdf)</a>
+   | <a href="ics321-20100929-ex8-datalog.pdf">Exercise 8 (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      7
+   </td>
+   <td>
+      Mon Oct 4
+   </td>
+   <td>
+      The Database Language SQL
+   </td>
+   <td>
+      Ch.6
+   </td>
+   <td>
+   Quiz 6 is due at 11:30AM.<br/>
+   <a href="ics321-20101004-sql1a.pdf">Slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      7
+   </td>
+   <td>
+      Wed Oct 6
+   </td>
+   <td>
+      Mid-term Review
+   </td>
+   <td>
+      Ch.6
+   </td>
+   <td>
+   Ex 3.2.10, 3.3.1, 3.5.1
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      8
+   </td>
+   <td>
+      Mon Oct 11
+   </td>
+   <td>
+       <b>Mid-term Exam</b>
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      8
+   </td>
+   <td>
+      Wed Oct 13
+   </td>
+   <td>
+      Post Mid-term Exam Review
+   </td>
+   <td>
+      Ch.6
+   </td>
+   <td>
+   Project Proposal Due on Friday Oct 15 23:59 hours.
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      9
+   </td>
+   <td>
+      Mon Oct 18
+   </td>
+   <td>
+      The Database Language SQL
+   </td>
+   <td>
+      Ch.6
+   </td>
+   <td>
+   Quiz 7 is due at 11:30AM.<br/>
+   <a href="ics321-20101018-sql2.pdf">Slides (pdf)</a>
+   |
+   <a href="ics321-20101018-ex9-sql.pdf">Exercise (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      9
+   </td>
+   <td>
+      Wed Oct 20
+   </td>
+   <td>
+      The Database Language SQL
+   </td>
+   <td>
+      Ch.6
+   </td>
+   <td>
+   <a href="ics321-20101020-sql3.pdf">Slides (pdf)</a>
+   |
+   <a href="ics321-20101020-ex10-sql.pdf">Exercise (pdf)</a>
+   <br/>
+   Pics of sample data can be found in 
+   <a href="ics321-20100901-ex3.html">Exercise 3 (html)</a>
+   <br/>
+   <a href="http://www.youtube.com/watch?v=LwhkvldombM">Screencast Tutorial</a>  on using DB2 in Ubuntu.
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      10
+   </td>
+   <td>
+      Mon Oct 25
+   </td>
+   <td>
+      The Database Language SQL <br/>
+      Overview of Transactions
+   </td>
+   <td>
+      Ch.6 18.1
+   </td>
+   <td>
+   Quiz 8 is due at 11:30AM.<br/>
+   <a href="ex10.zip">Sample scripts for Ex 10 (zip)</a>
+   <a href="ics321-20101025-sql4.pdf">Slides (pdf)</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      10
+   </td>
+   <td>
+      Wed Oct 27
+   </td>
+   <td>
+      Overview of Transactions
+   </td>
+   <td>
+      Ch.6 & 18.1
+   </td>
+   <td>
+      Assignment 2 due on Sunday Oct 31 at 23:55 hours. 
+      <a href="http://www.youtube.com/watch?v=D7cqRXyJD0U">Screencast</a> showing how to use ssh and scp to submit assignment.
+   <br/>
+   <a href="ics321-20101027-transactions.pdf">Slides (pdf)</a>
+   |
+   <a href="ics321-20101027-ex11-txn.pdf">Exercise (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      11
+   </td>
+   <td>
+      Mon Nov 1
+   </td>
+   <td>
+      SQL in a Server Environment
+   </td>
+   <td>
+      Ch.9
+   </td>
+   <td>
+   Quiz 9 is due at 11:30AM.<br/>
+   <a href="ics321-20101101-sqlapp1.pdf">Slides (pdf)</a>
+   |
+   <a href="ex12.txt">Exercise 12 (txt)</a>
+   |
+   <a href="sqc.zip">sqc.zip (zip)</a>
+   <br/>
+   <a href="http://www.youtube.com/watch?v=gUndy-oQazA">SQC Screencast</a> 
+   for compiling and running the sqc sample program.
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      11
+   </td>
+   <td>
+      Wed Nov 3
+   </td>
+   <td>
+      SQL in a Server Environment
+   </td>
+   <td>
+      Ch.9
+   </td>
+   <td>
+   <a href="ics321-20101103-sqlapp2.pdf">Slides (pdf)</a>
+|
+   <a href="../2009fall/odbc.zip">odbc.zip (zip)</a>
+|
+   <a href="../2009fall/jdbc.zip">jdbc.zip (zip)</a>
+   <br/>
+   <a href="http://www.youtube.com/watch?v=5wM7EemcpEQ">JDK Screencast</a> 
+      for installing jdk in ubuntu.
+   <br/>
+   <a href="http://www.youtube.com/watch?v=IDhj-cseDkc">ODBC Screencast</a>
+      for compiling and running the sample ODBC program.
+   <br/>
+   <a href="http://www.youtube.com/watch?v=eYv93EzeSeY">JDBC Screencast</a> 
+      for compiling and running the sample JDBC program.
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      12
+   </td>
+   <td>
+      Mon Nov 8
+   </td>
+   <td>
+      Constraints, Triggers, Views, Indexes
+   </td>
+   <td>
+Ch.7,8
+   </td>
+   <td>
+   Quiz 10 is due at 11:30AM.<br/>
+   <a href="ics321-20101108-ctvi.pdf">Slides (pdf)</a>
+<br/>
+
+   <a href="../2009fall/ics321-20090929-project.pdf">Project Info (pdf)</a>
+|
+   <a href="../2009fall/ics321-20091119-proj.pdf">Project Presentation Template(pdf)</a>
+|
+   <a href="../2009fall/ics321-20091119-proj.pptx">(pptx)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      12
+   </td>
+   <td>
+      Wed Nov 10
+   </td>
+   <td>
+     Overview of Storage and Indexing 
+   </td>
+   <td>
+      Ch 13.{0-2,3.{1-2}}, Ch 14.{0-3}
+   </td>
+   <td>
+   Project Progress Report due at 23:59 hours.<br/>
+   <a href="ics321-20101110-storage1.pdf">Slides (pdf)</a>
+   | <a href="ics321-20101110-ex13-disk.pdf">Exercise (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      13
+   </td>
+   <td>
+      Mon Nov 15
+   </td>
+   <td>
+      Overview of Storage and Indexing
+   </td>
+   <td>
+      Ch 13.{0-2,3.{1-2}}, Ch 14.{0-3}
+   </td>
+   <td>
+   Quiz 11 is due at 11:30AM.<br/>
+   <a href="ics321-20101115-storage2.pdf">Slides (pdf)</a>
+   | <a href="ics321-20101115-ex14-idx.pdf">Exercise (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      13
+   </td>
+   <td>
+      Wed Nov 17
+   </td>
+   <td>
+Overview of Query Processing
+   </td>
+   <td>
+Ch 16.1, Ch 15.{0-3}
+   </td>
+   <td>
+   <a href="ics321-20101117-queryproc.pdf">Slides (pdf)</a>
+   | <a href="ics321-20101117-ex15-opt.pdf">Exercise (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      14
+   </td>
+   <td>
+      Mon Nov 22
+   </td>
+   <td>
+      The Semi-structured Data Model
+   </td>
+   <td>
+Ch. 11+12
+   </td>
+   <td>
+   Quiz 12 is due on Wed Nov 24 6:00AM.<br/>
+   <a href="ics321-20101122-xml.pdf">Slides (pdf)</a>
+   | <a href="ics321-20101122-ex16-xml.pdf">Exercise (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      14
+   </td>
+   <td>
+      Wed Nov 24
+   </td>
+   <td>
+      Other Data Models: Unstructured, Graph, Key-Value Pairs
+   </td>
+   <td>
+   </td>
+   <td>
+   <a href="ics321-20101124-other.pdf">Slides (pdf)</a>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      15
+   </td>
+   <td>
+      Mon Nov 29
+   </td>
+   <td>
+       Project Presentation
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   Quiz 13 due at 11:30 AM.
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      15
+   </td>
+   <td>
+      Wed Dec 1
+   </td>
+   <td>
+       Project Presentation
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      16
+   </td>
+   <td>
+      Mon Dec 6
+   </td>
+   <td>
+       Project Presentation
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      16
+   </td>
+   <td>
+      Wed Dec 8
+   </td>
+   <td>
+       Final Exam Review
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+</table>
+<!-- END TABLE-->
+
+
+<h2>Other Readings</h2>
+<ul>
+<li>
+Alternate perspective:
+<a href="http://cacm.acm.org/blogs/blog-cacm/32212-the-end-of-a-dbms-era-might-be-upon-us/fulltext">
+Michael Stonebraker's latest article on the doom of DBMS
+</a>. 
+</li>
+<li>
+<a href="https://www6.software.ibm.com/dw/education/dm/db2cert7033/db2_cert7033-pdf.pdf">Tutorial (pdf)</a> on Embedding SQL in C programs for DB2.
+</li>
+<li> 
+The original paper describing query optimization in System R.
+<a href="http://www.cs.berkeley.edu/~brewer/cs262/3-selinger79.pdf">Access Path Selection in a Relational Database Management System</a> Selinger, P. G., Astrahan, M. M., Chamberlin, D. D., Lorie, R. A., and Price, T. G. SIGMOD 1979.
+</li>
+<li>
+<a href="http://www.alphaworks.ibm.com/tech/purexml">XML industry bundles for DB2</a>
+</li>
+<li>
+<a href="http://www.ibm.com/developerworks/data/library/techarticle/dm-0708nicola/">Using XMLTable</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=Rn5rVGGfzy0">Greenplum video on Data Explosion</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=zlm495J2HvQ">Asterdata video: Myspace </a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=OcCTJsx3AxI">EMC+SQL Server Video on Data Warehousing</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=koa0p0sH3sc">IBM DB2 video on Convergence CT</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=v1p-rOt70aI">SAS & Netezza video</a>
+</li>
+<li>
+<a href="http://www.mysqlperformanceblog.com/2009/09/29/quick-comparison-of-myisam-infobright-and-monetdb/">Comparison of myisam, infobright and monetdb</a>
+</li>
+<li>
+<a href="http://linkeddata.org/">Linked Open Data</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=3YcZ3Zqk0a8">Tim Berners-Lee: The year open data went worldwide </a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=OM6XIICm_qo">Tim Berners-Lee: The next Web of open, linked data</a>
+</li>
+</ul>
+
+<h2>Useful Links</h2>
+<ul>
+<li>
+   <a href="http://www.simplyhired.com/a/salary/search/q-Database">Database Job Salaries</a> <a href="http://www.payscale.com/af/calc.aspx?af=2385&src=SH1&job=Database&city=&state=">DBA Job Salaries</a>
+</li>
+
+<li>
+<a href="http://www.ubuntu.com/desktop/get-ubuntu/download">Ubuntu Desktop Edition</a> (10.04 32 bit version) 
+</li>
+<li>
+<a href="http://www.virtualbox.org/">VirtualBox</a>
+</li>
+<li>
+<a href="http://navet.ics.hawaii.edu/~casanova/courses/ics412_fall09/Virtualbox.html">Installing Ubuntu with VirtualBox</a>
+</li>
+<li>
+<a href="http://www-01.ibm.com/software/data/db2/express/download.html?S_TACT=imdb2luw&S_CMP=ibm_im">Download the free IBM DB2 Express-C</a>. 
+   <ul>
+   <li>
+   <a href="http://techsatwork.com/blog/?p=234">Installing DB2 on Ubuntu</a>
+   </li>
+   <li>In general, you
+should make use of the install documentation (eg. the free <a
+href="http://www.ibm.com/developerworks/wikis/display/DB2/FREE+Book-+Getting+Started+with+DB2+Express-C">Getting
+Started with DB2 Express-C</a> book) and the DB2 forums. There is also
+comprehensive documentation on the DB2 commands etc at the <a
+href="http://publib.boulder.ibm.com/infocenter/db2luw/v9/index.jsp">DB2
+Information Center</a>. Part of learning how to use a DBMS software is navigating the documentation that comes with the software.
+   </li>
+   <li>Mac OS: Note that if you're installing the beta for Mac OS, you should
+check the forum for configuration instructions if the install has
+problems. XCode is required (thanks to Kevin Leong). </li>
+   </ul>
+</li>
+<li>
+<a href="http://www.screencast-o-matic.com/">Screencast-o-matic</a> Free Screencast software for creating recorded presentations.
+</li>
+<li>
+<a href="http://manoa.hawaii.edu/records/calendar/fall_2010.html">UHM Fall 2010 Academic Calender</a>
+</li>
+<li>
+<a href="http://manoa.hawaii.edu/records/final_exam/fall_2010.html">UHM Fall 2010 Final Examination Schedule</a>
+</li>
+</ul>
+
+
+</body>

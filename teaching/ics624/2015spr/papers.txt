@@ -1,0 +1,47 @@
+Ceren Budak, Theodore Georgiou, Divyakant Agrawal, Amr El Abbadi:
+GeoScope: Online Detection of Geo-Correlated Information Trends in Social Networks. 229 - 240.
+
+Explore-by-example: An automatic query steering framework for interactive data exploration
+http://people.cs.umass.edu/~yanlei/publications/sigmod2014-explore.pdf
+
+Metro Maps of Science
+http://www.cs.cmu.edu/~dshahaf/kdd2012-shahaf-guestrin-horvitz.pdf
+
+Entity Resolution
+-----
+Yueh-Hsuan Chiang, AnHai Doan, Jeffrey F. Naughton:
+Tracking Entities in the Dynamic World: A Fast Algorithm for Matching Temporal Records. 469 - 480.\\
+Yueh-Hsuan Chiang, AnHai Doan, and Jeffrey F. Naughton. 2014. Tracking entities in the dynamic world: a fast algorithm for matching temporal records. Proc. VLDB Endow. 7, 6 (February 2014), 469-480.
+
+
+Anja Gruenheid, Xin Luna Dong, Divesh Srivastava:
+Incremental Record Linkage. 697 - 708.
+
+Yasser Altowim, Dmitri V. Kalashnikov, Sharad Mehrotra:
+Progressive Approach to Relational Entity Resolution. 999 - 1010.
+------
+
+Renchu Song, Weiwei Sun, Baihua Zheng, Yu Zheng:
+PRESS: A Novel Framework of Trajectory Compression in Road Networks. 661 - 672.
+
+Aditya Parameswaran, Stephen Boyd, Hector Garcia-Molina, Ashish Gupta, Neoklis Polyzotis, Jennifer Widom:
+Optimal Crowd-Powered Rating and Filtering Algorithms. 685 - 696.
+
+Craig Chasseur, Jignesh M. Patel:
+Design and Evaluation of Storage Organizations for Read-Optimized Main Memory Databases. 1474-1485
+
+
+Inferring Gas Consumption and Pollution Emissions of
+Vehicles throughout a City 
+
+up next: retrieval methods for large scale related video suggestion
+
+Predicting student risks through longitudinal analysis
+
+
+RDF Analytics: Lenses over Semantic Graphs - HAL-Rennes 
+http://wwwconference.org/proceedings/www2014/proceedings/p467.pdf
+
+A Hierarchical Dirichlet Model for Taxonomy Expansion for
+Search Engines
+http://web.engr.illinois.edu/~hanj/pdf/www14_jwang.pdf

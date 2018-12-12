@@ -1,0 +1,52 @@
+Part 5 
+fetch all columns no additional filtering
+add projection pushdown
+add filtering pushdown
+
+
+equijoin table A and B 
+
+A = A1 U A2 U ... U An
+B = B1 U B2 U ... U Am
+
+k=0
+foreach fragment Ai of A
+   foreach fragment Bj of B
+      joinList[k] = Ai join Bj
+      sameNode[k] = false
+      local[k] = false 
+      if ( node(Ai) == node(Bj) )
+         sameNode[k] = true
+      if ( node(Ai) == local )
+         local[k] = true;
+      elsif ( node(Bi) == local )
+         joinList[k] = Bj join Ai
+         local[k] = true;
+
+// there are now only 4 types of fragment joins to handle
+// 1) sameNode == false and local == false
+//          : both operands of join are remote and on different DB
+// 2) sameNode == false and local == true 
+//          : first operand of join is local and second is remote
+// 3) sameNode == true and local == false 
+//          : both operands are remote and on the same DB
+// 4) sameNode == true and local == true 
+//          : both operands are on the same local DB
+
+foreach join operation join(i,j) of joinList
+   if type 1 then
+      create a temporary table for fragment i
+      fetch entire fragment i into a temporary table
+      follow the steps for type 2.
+
+   elsif type 2 then
+      fetch remote fragment j
+      foreach row fetched from j
+         query local fragment i to construct join 
+         output join results
+
+   elsif type 3 or type 4 then
+      construct SQL query for join(i,j)
+      send SQL query to remote/local db for processing
+      output the results
+   else error

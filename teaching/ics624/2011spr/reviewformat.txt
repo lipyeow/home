@@ -1,0 +1,9 @@
+Comment on the originality, novelty, technical depth, quality of analysis, presentation and ease of understanding of the paper using the following format.
+
+1. Summarize the key contributions of the paper.
+
+2. List 3 strong points of the paper, i.e., three things you like about the paper. Label them S1, S2, S3.
+
+3. List 3 weak points of the paper, i.e., 3 things that you do not like about the paper. Label them W1, W2, W3.
+
+4. Give detailed comments on the strengths and weaknesses listed in the previous questions. Also give any other comments, questions or suggestions.

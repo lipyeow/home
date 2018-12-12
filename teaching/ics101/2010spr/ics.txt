@@ -1,0 +1,44 @@
+ICS 101 Tools for the Information Age 
+ICS 110 Introduction to Programming Through 3D Animations 
+ICS 111 Introduction to Computer Science I 
+ICS 141 Discrete Mathematics for Computer Science I 
+ICS 210 Information Systems in Society 
+ICS 211 Introduction to Computer Science II 
+ICS 212 Program Structure 
+ICS 215 Introduction to Scripting 
+ICS 241 Discrete Mathematics for Computer Science II 
+ICS 290 Computer Science Careers: An Exploration of the Specialties of Computer Science 
+ICS 311 Algorithms 
+ICS 312 Machine-Level and Systems Programming 
+ICS 313 Programming Language Theory 
+ICS 315 Web Design and Management 
+ICS 321 Data Storage and Retrieval 
+ICS 331 Logic Design and Microprocessors 
+ICS 351 Network Design and Management 
+ICS 390 Computing Ethics for Lab Assistants 
+ICS 412 Operating Systems 
+ICS 413 Software Engineering I 
+ICS 414 Software Engineering II 
+ICS 415 Introduction to Programming for the Web 
+ICS 419 The Science, Psychology and Philosophy of Systems Design 
+ICS 421 Database Systems 
+ICS 422 Data Processing 
+ICS 423 Computer Security 
+ICS 424 Application Frameworks 
+ICS 425 Computer Security and Ethics 
+ICS 426 Computer System Security 
+ICS 431 Computer Architecture 
+ICS 432 Concurrent and High-Performance Programming 
+ICS 441 Theory of Computation 
+ICS 442 Analytical Models and Methods 
+ICS 451 Data Networks 
+ICS 452 Software Design for Robotics 
+ICS 461 Artificial Intelligence 
+ICS 464 Human Computer Interaction I 
+ICS 465 Introduction to Hypermedia 
+ICS 466 Design for Mobile Devices 
+ICS 469 Cognitive Science 
+ICS 471 Probability, Statistics, and Queuing 
+ICS 475 Introduction to Bioinformatics Sequences and Genomes Analysis 
+ICS 481 Introduction to Computer Graphics 
+ICS 483 Computer Vision 

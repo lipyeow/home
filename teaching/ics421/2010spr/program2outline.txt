@@ -1,0 +1,96 @@
+Outline of One Possible Solution to Programming Assignment 2.
+=============================================================
+Note that other designs are possible, the critical thing is
+to understand the tradeoffs. This outline only lists the
+high level steps, it does not structure the code nicely into
+objects/subroutines etc.
+=============================================================
+
+connlist : array of connections
+rclist   : array of return codes
+tlist    : array of threads
+
+Read config file and sql file
+
+---------------------------------------
+Part 3: Naive Distributed SQL Processor
+---------------------------------------
+
+parse SQL
+
+if SQL is create table statement 
+then 
+   createTable(cfgfile, sql, connlist, rclist, tlist) from assignment 1
+elsif SQL is drop table statement
+then
+   dropTable(cfgfile, sql, connlist, rclist, tlist) from assignment 1
+elsif SQL is select-from-where statement
+then 
+   processQuery(cfgfile, sql, connlist, rclist, tlist) 
+endif
+
+PROCEDURE processQuery(cfgfile, sql, connlist, rclist, tlist) 
+-------------------------------------------------------------
+
+query catalog db for node & connection info for given table name
+
+foreach node n, connlist[n] = open connection.
+
+foreach node n, tlist[n] = runThread (sql, rclist, n)
+runThread:
+   run SQL query
+   while(resultset not empty)
+      fetch results
+      foreach column
+         print results
+
+Wait for each thread to finish
+
+foreach node n check rclist[n] and output success or failure
+
+close all node and catalog connections
+
+perform other clean up
+
+---------------------------------------
+Part 4: Naive Distributed SQL Processor
+---------------------------------------
+
+Read config file 
+
+query catalog db for node & connection info for given table name
+
+update catalog db with partition information
+
+connlist = open connections such that nodeid is the index into the array
+
+if partmtd=notpartition
+
+   foreach line in csv file
+      foreach nodeid  associated with the table
+         insert(connlist[nodeid], line, rclist[i]) 
+
+elsif partmtd=hash
+
+   foreach line in csv file
+      partcolval = get partitioning column(s)
+      nodeid = hashfunction(partcolval, partparam1)
+      insert(connlist[nodeid], line, rclist[nodeid]) 
+
+elsif partmtd=range
+   partition ranges should be read into an in-memory data structure.   
+   foreach line in csv file
+      partcolval = get partitioning column(s)
+      nodeid = findrange(partcolval, ranges2nodeid)
+      insert(connlist[nodeid], line, rclist[nodeid]) 
+else
+   error
+
+foreach node n check rclist[n] and output success or failure, number of rows inserted, number of rows rejected etc. 
+
+close all node and catalog connections
+
+perform other clean up
+
+
+

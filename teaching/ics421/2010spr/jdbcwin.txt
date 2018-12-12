@@ -1,0 +1,42 @@
+Instructions for Setting up JDK and JDBC on Windows Platform
+=============================================================
+
+1. If you do not have JDK installed, please download JDK from 
+
+http://java.sun.com/javase/downloads/widget/jdk6.jsp
+
+and install it. Note the installation path for the jdk. On my Vista box it
+installed into "C:\Program Files (x86)\Java\jdk1.6.0_18"
+
+2. Add the path to javac to your PATH environment variable. You can edit your
+environment variable by StartMenu->Control Panel->Classic
+View->System->Advanced
+
+On my Vista box the path is "C:\Program Files (x86)\Java\jdk1.6.0_18\bin"
+
+3. Open a command window. Goto the directory where the JDBC sample code is.
+
+4. Compile the code by typing:
+
+javac *.java
+
+5. Edit the properties file per instruction in Task description and run the
+program using:
+
+java -cp path/to/db2jcc.jar;. runquery -q q1.clp
+
+the db2jcc file is usually located in program files\ibm\db2\sqllib\java
+directory
+
+you shouldn't get any class not found errors.
+
+Make sure that your db2 instance is started up.
+
+Eclipse IDE
+------------
+
+if you are using the eclipse IDE, you can add the db2jcc.jar
+by clicking on the project. Right click to bring up menu.
+Click on properties. In the properties dialog box, hit the
+libraries tab, and add external library button.
+

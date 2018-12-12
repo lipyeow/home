@@ -1,0 +1,37 @@
+Exercise 2.3.1: In this exercise we introduce one
+of our running examples of a relational database schema.
+The database schema consists of four relations, whose
+schemas are: 
+
+Product ( maker, model, type ) 
+PC ( model, speed, ram, hd, price ) 
+Laptop ( model, speed, ram, hd, screen, price ) 
+Printer ( model, color, type, price )
+
+The Product relation gives the manufacturer, model number
+and type ( PC, laptop, or printer ) of various products.
+We assume for convenience that model numbers are unique over
+all manufacturers and product types ; that assumption is not
+realistic, and a real database would include a code for the
+manufacturer as part of the model number. The PC relation
+gives for each model number that is a PC the speed ( of the
+processor, in gigahertz ), the amount of RAM ( in
+megabytes ), the size of the hard disk ( in gigabytes ),
+and the price. The Laptop relation is similar, except that
+the screen size ( in inches ) is also included. The Printer
+relation records for each printer model whether the printer
+produces color output ( true, if so ), the process type (
+laser or ink - jet, typically ), and the price. 
+
+Write the following declarations : 
+
+a ) A suitable schema for relation Product.  
+b ) A suitable schema for relation PC. 
+c ) A suitable schema for relation Laptop. 
+d ) A suitable schema for relation Printer. 
+e ) An alteration to your Printer schema from ( d ) to
+delete the attribute color. 
+f ) An alteration to your Laptop schema from ( c ) to add
+the attribute od ( optical - disk type, e. g., cd or dvd
+).  Let the default value for this attribute be ' none ' if
+the laptop does not have an optical disk.

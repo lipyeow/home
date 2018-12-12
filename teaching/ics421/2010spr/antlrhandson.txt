@@ -1,0 +1,26 @@
+Tasks
+========
+
+1. Download and install ANTLRWorks.
+
+2. Update your classpath to include the path to the antlrworks jar file
+
+3. Download the antlr.zip sample code. Unzip it.
+
+4. Look at compile.sh for the commands to antlr on the sqltest.g grammar and
+compile the testSQL.java program with the generated lexer and parser. You
+should also read testSQL.java to understand what it does.
+
+5. Run TestSQL. Enter "create table mytabname (id int)" + Ctrl-C.
+
+6. Run Antlrworks. Open sqltest.g. Add rules to parse a "drop table" statement.
+Test your grammar using the interpreter or debugger.
+
+7. Generate the lexer and parser code again. Modify TestSQL.java. Compile and
+test that you can extract the table name from a drop table statement.
+
+8. [Homework] Repeat the same steps to enable parsing of simple
+Select-From-where statements.
+
+
+

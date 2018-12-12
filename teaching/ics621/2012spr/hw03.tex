@@ -1,0 +1,79 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\setlength{\textwidth}{6.5in}     
+\setlength{\oddsidemargin}{0in}  
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{8.5in} 
+\setlength{\topmargin}{0in}   
+\setlength{\headheight}{14pt} 
+\setlength{\headsep}{10pt}   
+%\setlength{\footskip}{0in}
+
+%------------------------------------------------
+\newcommand{\homework}[2]{
+\setcounter{section}{#1}
+\section*{ICS621 Homework {\thesection}: {#2} }
+{\markboth{#2}{#2}}
+}
+%------------------------------------------------
+
+
+ \addtolength{\parskip}{\baselineskip}
+\begin{document}
+
+% Enter the Homework number and title as arguments to
+% homework
+\homework{3}{Bucket Sort on a Circle or Water Jugs}
+
+\noindent Choose one of the following.
+
+\noindent
+\textbf{Problem 8.4-4 from CLRS.} 
+We are given $n$ points in the unit circle, $p_i=(x_i,
+y_i)$, such that $0< x_i^2+y_i^2 \leq 1$ for
+$i=1,2,\ldots,n$. Suppose that the points are uniformly
+distributed; that is, the probability of finding a point in
+any region of the circle is proportional to the area of that
+region. Design an algorithm with an average-case running
+time of $\Theta(n)$ to sort the $n$ points by their distance
+$d_i=\sqrt{x_i^2+y_i^2}$ from the origin. (\textit{Hint:}
+Design the bucket sizes in Bucket-Sort to reflect the
+uniform distribution of the points in the unit circle.)
+
+\noindent
+\textbf{Problem 8-4 from CLRS.} 
+Suppose that you are given $n$ red and $n$ blue water jugs,
+all of different shapes and sizes. All red jugs hold
+different amounts of water, as do the blue ones. Moreover,
+for every red jug, there is a blue jug that holds the same
+amount of water, and vice versa. Your task is to find a
+grouping of the jugs into pairs of red and blue jugs that
+hold the same amount of water. To do so, you may perform the
+following operation: pick a pair of jugs in which one is
+red and one is blue, fill the red jug with water, and then
+pour the warer into the blue jug. This operation will tell
+you whether the red or the blue jug can hold more water, or
+they have the same volume. Assume that such a comparison
+takes one time unit. Your goal is to find an algorithm that
+makes a minimum number of comparisons to determine the
+grouping. Remember that you may not directly compare two red
+jugs or two blue jugs.
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+\item Describe a deterministic algorithm that uses
+$\Theta(n^2)$ comparisons to group the jugs into pairs.
+\item Prove a lower bound of $\Omega(n \lg n)$ for the
+number of comparisons that an algorithm solving this problem
+must make.
+\item Give a randomized algorithm whose expected number of
+comparisons is $O(n \lg n)$, and prove that this bound is
+correct. What is the worst-case number of comparisons for
+your algorithm?
+\end{enumerate}
+
+\end{document}

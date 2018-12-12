@@ -1,0 +1,29 @@
+dbintro|Architecture of a Database System <a href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf">(pdf)</a>| Database Systems
+onesize|One Size Fits All: An Idea Whose Time has Come and Gone <a href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=381220060E514F309517AAA27E740B52?doi=10.1.1.68.9136&rep=rep1&type=pdf">(pdf)</a>, <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&sqi=2&ved=0CDYQFjAB&url=http%3A%2F%2Fwww.world-exchanges.org%2Ffiles%2Ffile%2FMichael%2520Stonebraker%2520MIT%2520Session.ppt&ei=lsntUPvxI-fJigK1-IGgDw&usg=AFQjCNFe848ojVneAMpbW7nKkuOiLuJooQ">(ppt)</a>| Database Systems
+parproc|Parallel Database Systems: The Future of High Performance Database Systems <a href="http://www.cc.gatech.edu/computing/Database/readinggroup/articles/p85-dewitt.pdf">(pdf)</a>,<br/> MapReduce: Simplified Data Processing on Large Clusters<a href="http://static.usenix.org/event/osdi04/tech/full_papers/dean/dean.pdf">(pdf)</a>| Big Data
+parapp|Analyzing Massive Astrophysical Datasets: Can. Pig/Hadoop or a Relational DBMS Help? <a href="http://nuage.cs.washington.edu/pubs/iasds09.pdf">(pdf)</a>| Big Data
+google|The anatomy of a large-scale hypertextual Web search engine <a href="http://zoo.cs.yale.edu/classes/cs426/2012/bib/brin98theanatomy.pdf">(pdf)</a>|Web Search
+facet|Facet discovery for structured web search: a query-log mining approach <a href="https://cs.uwaterloo.ca/~jpound/pubs/pound-sigmod2011.pdf">(pdf)</a>|Web Search
+lars|LARS: A Location-Aware Recommender System <a href="http://www-users.cs.umn.edu/~mokbel/papers/icde12a.pdf">(pdf)</a>|Location-awareness
+placerank|Hyper-local, directions-based ranking of places <a href="http://www.vldb.org/pvldb/vol4/p290-venetis.pdf">(pdf)</a>|Location-awareness
+mobilesensing|A survey of mobile phone sensing <a href="http://nslab.kaist.ac.kr/courses/2011/cs710/paperlist/1-1.pdf">(pdf)</a>| Mobile Data Mgmt
+trajtrack|Energy-efficient trajectory tracking for mobile devices <a href="mobisys11-trajtrack.pdf">(pdf)</a>| Mobile Data Mgmt
+contnn|Continuous nearest neighbor search <a href="http://www.vldb.org/conf/2002/S09P02.pdf">(pdf)</a> | Mobile Data Mgmt
+qualityflaws| Predicting quality flaws in user-generated content: the case of wikipedia <a href="http://www.uni-weimar.de/medien/webis/publications/papers/stein_2012i.pdf">(pdf)</a> <a href="http://www.cs.waikato.ac.nz/~eibe/pubs/hfw08-oneclassclassification.pdf">background (pdf)</a>| IR
+ace| ACE: exploiting correlation for energy-efficient and continuous context sensing <a href="http://research.microsoft.com/pubs/160599/main.pdf">(pdf)</a>| Mobile Data Mgmt
+taxonomy| Automatic Taxonomy Construction from Keywords <a href="http://research.microsoft.com/pubs/166228/BRT_KeywordTaxonomy_new.pdf">(pdf)</a> | Semantics
+timeseries| Finding semantics in time series <a href="http://research.microsoft.com/pubs/144983/mod480-wang.pdf">(pdf)</a> | Datamining
+travelcompanions| On Discovery of Traveling Companions from Streaming Trajectories <a href="http://web.engr.illinois.edu/~tang18/Publications/2012_ICDE_Companion.pdf">(pdf)</a> | Data Mining
+swordfight| SwordFight: enabling a new class of phone-to-phone action games on commodity phones <a href="http://research.microsoft.com/en-us/um/people/moscitho/Publications/MobiSys_2012.pdf">(pdf)</a> | Mobile
+redshift|Mapping Large Scale Structure in the Universe - An Ongoing Case Study in Data Mining | Datamining
+energybrowse| Who killed my battery?: analyzing mobile browser energy consumption <a href="http://www2012.wwwconference.org/proceedings/proceedings/p41.pdf">(pdf)</a> | Mobile Data Mgmt
+autoparallel| Auto-parallelizing stateful distributed streaming applications <a href="http://www.scott-a-s.com/files/pact2012.pdf">(pdf)</a> | Streaming
+wringtable|How to wring a table dry: entropy compression of relations and querying of compressed relations <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CC8QFjAA&url=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fdownload%3Fdoi%3D10.1.1.103.817%26rep%3Drep1%26type%3Dpdf&ei=DpY2Ub6SLov7qAHai4Fg&usg=AFQjCNGBlawGYZhgHac3qtcC_ZMTNktPcw&bvm=bv.43287494,d.aWM">(pdf)</a> | Compression
+probase|Probase: a probabilistic taxonomy for text understanding <a href="http://research.microsoft.com/pubs/158737/paper.pdf">(pdf)</a> | Semantics
+lempelziv|Relative Lempel-Ziv factorization for efficient storage and retrieval of web collections <a href="http://vldb.org/pvldb/vol5/p265_christopherhoobin_vldb2012.pdf">(pdf)</a> | Compression 
+findexpert|Choosing the right crowd: expert finding in social networks <a href="http://www.edbt.org/Proceedings/2013-Genova/papers/edbt/a57-bozzon.pdf">(pdf)</a> | Social Networks
+wavelet|Performance analysis of image compression using wavelets <a href="http://www.vcl.fer.hr/papers_pdf/performance%20analysis%20of%20image%20compression%20using%20wavelets.pdf">(pdf)</a> | Compression
+streamdbms|Enhanced Stream Processing in a DBMS Kernel <a href="http://www.edbt.org/Proceedings/2013-Genova/papers/edbt/a45-liarou.pdf">(pdf)</a>|Streaming
+nestedsets|Efficient processing of containment queries on nested sets <a href="http://www.edbt.org/Proceedings/2013-Genova/papers/edbt/a22-ibrahim.pdf">(pdf)</a>| Hierarchical Data
+joincomp|Query-aware compression of join results <a href="http://www.edbt.org/Proceedings/2013-Genova/papers/edbt/a4-mullins.pdf">(pdf)</a> | Compression
+sqbe|Semantic queries by example <a href="http://www.edbt.org/Proceedings/2013-Genova/papers/edbt/a32-lim.pdf">(pdf)</a> | Semantics 

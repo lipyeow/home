@@ -1,0 +1,79 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\setlength{\textwidth}{6.5in}     
+\setlength{\oddsidemargin}{0in}  
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{8.5in} 
+\setlength{\topmargin}{0in}   
+\setlength{\headheight}{14pt} 
+\setlength{\headsep}{10pt}   
+%\setlength{\footskip}{0in}
+
+%------------------------------------------------
+\newcommand{\homework}[2]{
+\setcounter{section}{#1}
+\section*{ICS621 Homework {\thesection}: {#2} }
+{\markboth{#2}{#2}}
+}
+%------------------------------------------------
+
+
+\begin{document}
+
+% Enter the Homework number and title as arguments to
+% homework
+\homework{1}{Merge sort \& Inversions}
+
+\textbf{Problem 2-1 from CLRS.} Although merge sort runs in
+$\Theta(n \log n)$ worst-case time and insertion sort runs
+in $\Theta(n^2)$ worst-case time, the constant factors in
+insertion sort can make it faster in practice for small
+problem sizes on many machines. Thus, it makes sense to
+coarsen the leaves of the recursion by using insertion sort
+within merge sort when subproblems become sufficiently
+small. Consider a modification to merge sort in which $n/k$
+sublists of length $k$ are sorted using insertion sort and
+then merged using the standard merging mechanism, where $k$
+is a value to be determined.
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+\item Show that insertion sort can sort the $n/k$ sublists,
+each of length $k$, in $\Theta(nk)$ worst-case time.
+\item Show how to merge the sublists in $\Theta(n
+\log(n/k))$ worst-case time.
+\item Given that the modified algorithm runs in
+$\Theta(nk+n\log(n/k))$ worst-case time, what is the largest
+value of $k$ as a function of $n$ for which the modified
+algorithm has the same running time as standard merge sort,
+in terms of $\Theta$-notation?
+\item How should we choose $k$ in practice?
+\end{enumerate}
+
+\noindent
+\textbf{Problem 2-4 from CLRS: Inversions.}
+Let $A[1\ldots n]$ be an array of $n$ distinct numbers. If
+$i < j$ and $A[i]> A[j]$, then the pair $(i,j)$  is called
+an inversion of $A$.
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+\item List the five inversions of the array $\langle 2, 3,
+        8, 6, 1\rangle$.
+\item What array with elements from the set $\{1,2, \ldots
+        n\}$ has the most inversions?  How many does it
+        have?
+\item What is the relationship between the running time of
+insertion sort and the number of inversions in the input
+array? Justify your answer.
+\item Give an algorithm that determines the number of
+inversions in any permutation
+on $n$ elements in $O(n lg n)$ worst-case time. (Hint: Modify
+merge sort.)
+\end{enumerate}
+You only need to write the answer for part (d). Remember you
+need to prove both correctness and efficiency.
+
+\end{document}

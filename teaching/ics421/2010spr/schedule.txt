@@ -1,0 +1,35 @@
+Week; Date; Topic; Readings; Remarks
+1;Tue Jan 12;Course Organization and Introduction;None;
+1;Thu Jan 14;Database Design, Relational Model, Normal Forms;Ch 2;
+2;Tue Jan 19;Database Design, Relational Model, Normal Forms;Ch 3;Quiz 1
+2;Thu Jan 21;Database Design, Relational Model, Normal Forms;Ch 19;
+3;Tue Jan 26;Relational Algebra & SQL;;Quiz 2
+3;Thu Jan 28;Relational Algebra & SQL;;
+4;Tue Feb 2;Parallel & Distributed DBs;;Quiz 3
+4;Thu Feb 4;Parallel & Distributed DBs;;
+5;Tue Feb 9;Query Evaluation;;Quiz 4 
+5;Thu Feb 11;Query Evaluation;;
+6;Tue Feb 16;Transaction Management;;Quiz 5
+6;Thu Feb 18;Transaction Management;;
+7;Tue Feb 23;Storage & Indexing;;Quiz 6
+7;Thu Feb 25;Storage & Indexing;;
+8;Tue Mar 2;Data Warehousing;;Quiz 7
+8;Thu Mar 4;Data Warehousing;;
+9;Tue Mar 9;Mid-term Exam;;Mid-term Exam
+9;Thu Mar 11;;;
+10;Tue Mar 16;;;Quiz 8
+10;Thu Mar 18;;;
+11;Tue Mar 23; Spring Recess - no class;;
+11;Thu Mar 25; Spring Recess - no class;;
+12;Tue Mar 30;;;Quiz 9
+12;Thu Apr 1;;;
+13;Tue Apr 6;;;Quiz 10
+13;Thu Apr 8;;;
+14;Tue Apr 13;;;Quiz 11
+14;Thu Apr 15;;;
+15;Tue Apr 20;;;Quiz 12
+15;Thu Apr 22;;;
+16;Tue Apr 27;Project Presentation;;
+16;Thu Apr 29;Project Presentation;;
+17;Tue May 4; Review;;
+18;Tue May 11; Final Examination;;

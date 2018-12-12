@@ -1,0 +1,31 @@
+onesize|One Size Fits All: An Idea Whose Time has Come and Gone <a href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=381220060E514F309517AAA27E740B52?doi=10.1.1.68.9136&rep=rep1&type=pdf">(pdf)</a>, <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&sqi=2&ved=0CDYQFjAB&url=http%3A%2F%2Fwww.world-exchanges.org%2Ffiles%2Ffile%2FMichael%2520Stonebraker%2520MIT%2520Session.ppt&ei=lsntUPvxI-fJigK1-IGgDw&usg=AFQjCNFe848ojVneAMpbW7nKkuOiLuJooQ">(ppt)</a>| Database Systems
+pardbmrns| Can the Elephants Handle the NoSQL Onslaught? <a href="http://vldb.org/pvldb/vol5/p1712_avriliafloratou_vldb2012.pdf">(pdf)</a> | Big Data
+streamqp| High Performance Stream Query Processing With Correlation-Aware Partitioning. <a href="http://www.vldb.org/pvldb/vol7/p265-cao.pdf">(pdf) | Big Data
+systemml| Hybrid Parallelization Strategies for Large-Scale Machine Learning in SystemML. <a href="http://www.vldb.org/pvldb/vol7/p553-boehm.pdf">(pdf) | Big Data
+bbqking| Who is the Barbecue King of Texas?: A Geo-spatial Approach to Finding Local Experts on Twitter <a href="http://faculty.cse.tamu.edu/caverlee/pubs/cheng_sigir14.pdf">(pdf)</a> | IR 
+crowdscreen| CrowdScreen: Algorithms for Filtering Data with Humans <a href="http://ilpubs.stanford.edu:8090/1011/1/single-filter.pdf">(pdf)</a> | Crowdsourcing
+dictprune| Principled Dictionary Pruning for Low-Memory Corpus Compression <a href="http://nbjl.nankai.edu.cn/Lab_Papers/2014/SIGIR14-tong-lab.pdf">(pdf)</a>|Compression
+bundlerec|  Bundle recommendation in ecommerce.<a href="https://laulima.hawaii.edu/access/content/group/MAN.89405.201530/Readings/p657-zhu.pdf">(pdf)</a> | IR
+partialbitvec| Skewed Partial Bitvectors for List Intersection <a href="https://laulima.hawaii.edu/access/content/group/MAN.89405.201530/Readings/p263-kane.pdf">(pdf)</a>| IR 
+trackingentities|Tracking Entities in the Dynamic World ... <a href="http://pages.cs.wisc.edu/~anhai/papers/vldb14-scaling-temporal-matching.pdf">(pdf)</a> | Entity Resolution
+graphquery|Schemaless and Structureless Graph Querying <a href="http://www.vldb.org/pvldb/vol7/p565-yang.pdf">(pdf)</a>|Graph Data
+mooc|Engaging with Massive Online Courses <a href="http://www.cs.cornell.edu/home/kleinber/www14-courses.pdf">(pdf)</a>| Data Analytics
+malware|The Company You Keep: Mobile Malware Infection Rates and Inexpensive Risk Indicators <a href="http://arxiv.org/pdf/1312.3245.pdf">(pdf)</a> | Data Analytics
+upnext| Up Next: Retrieval Methods for Large Scale Related Video Suggestion <a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/42623.pdf">(pdf)</a>|Multimedia IR
+explore| Explore-By-Example: An Automatic Query Steering Framework for Interactive Data Exploration <a href="http://people.cs.umass.edu/~yanlei/publications/sigmod2014-explore.pdf">(pdf)</a>| Big Data
+datamining| Intro to Data Mining | Big Data
+datainteg| Intro to Data Analytics and Data Integration <a href="http://homepages.inf.ed.ac.uk/libkin/teach/dataintegr15/intro.pdf">(pdf)</a> <a href="http://homepages.inf.ed.ac.uk/libkin/teach/dataintegr15/relbasics.pdf">Basics (pdf)</a> | Data Integration
+tpcdi|TPC-DI: the first industry benchmark for data integration <a href="http://www.vldb.org/pvldb/vol7/p1367-poess.pdf">(pdf)</a> | Data Integration
+metromaps| Metro Maps of Science <a href="http://i.stanford.edu/~dshahaf/kdd2012-shahaf-guestrin-horvitz.pdf">(pdf)</a> | Big Data
+contnn|Continuous nearest neighbor search <a href="http://www.vldb.org/conf/2002/S09P02.pdf">(pdf)</a> | Mobile Data Mgmt
+travelcompanions| On Discovery of Traveling Companions from Streaming Trajectories <a href="http://web.engr.illinois.edu/~tang18/Publications/2012_ICDE_Companion.pdf">(pdf)</a> | Data Mining
+autoparallel| Auto-parallelizing stateful distributed streaming applications <a href="http://www.scott-a-s.com/files/pact2012.pdf">(pdf)</a> | Streaming
+wringtable|How to wring a table dry: entropy compression of relations and querying of compressed relations <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CC8QFjAA&url=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fdownload%3Fdoi%3D10.1.1.103.817%26rep%3Drep1%26type%3Dpdf&ei=DpY2Ub6SLov7qAHai4Fg&usg=AFQjCNGBlawGYZhgHac3qtcC_ZMTNktPcw&bvm=bv.43287494,d.aWM">(pdf)</a> | Compression
+lempelziv|Relative Lempel-Ziv factorization for efficient storage and retrieval of web collections <a href="http://vldb.org/pvldb/vol5/p265_christopherhoobin_vldb2012.pdf">(pdf)</a> | Compression 
+streamdbms|Enhanced Stream Processing in a DBMS Kernel <a href="http://www.edbt.org/Proceedings/2013-Genova/papers/edbt/a45-liarou.pdf">(pdf)</a>|Streaming
+dm1| Exploring Data <a href="http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap3_data_exploration.pdf">(pdf)</a>. Classification: Decision Trees <a href="http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap4_basic_classification.pdf">(pdf)</a> | Data Mining 
+dm2| Classification: Decision Boundaries, Overfitting, MDL, Metrics <a href="http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap4_basic_classification.pdf">(pdf)</a> | Data Mining 
+dm3| Classification:Rules, kNN, LR, AR, Cubist. <a href="http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap5_alternative_classification.pdf">(pdf)</a>| Data Mining 
+dm4| Classification: NBC, ANN, SVM, Ensemble <a href="http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap5_alternative_classification.pdf">(pdf)</a>| Data Mining 
+dm5| Association Analysis <a href="http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap6_basic_association_analysis.pdf">(pdf)</a>|Data Mining
+dm6| Cluster Analysis <a href="http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap8_basic_cluster_analysis.pdf">(pdf)</a>|Data Mining

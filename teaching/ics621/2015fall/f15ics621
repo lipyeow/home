@@ -1,0 +1,32 @@
+1;Tue Aug 25;Course Organization;Ch 1.;vid:asymp. ; link:Problem-2-3.png:Problem 2-3.
+1;Thu Aug 27;Sorting;Ch 2-4;vid:selsort. vid:inssort. vid:mergesort. vid:recurrences.; link:Problem-2-2.png:Problem 2-2. link:Problem-2-4.png:Problem 2-4. link:hw01.pdf:hw01 (pdf). link:hw01.tex:(tex).
+2;Tue Sep 1; No class;;;
+2;Thu Sep 3; No class;;;
+3;Tue Sep 8; Sorting; Ch 6;vid:heaps. vid:heapsort.; link:Problem-6-3.png:Problem 6-3.
+3;Thu Sep 10; Sorting; Ch 7;vid:qsort. vid:qsort-worst. vid:qsort-avg.; link:Problem-7-5.png:Problems 7-5. link:Problem-7-6.png:Problem 7-6.
+4;Tue Sep 15; Sorting; Ch 8;vid:lowerbounds. vid:csort. vid:rsort. vid:bsort.; link:Problem-8-3.png:Problem 8-3.
+4;Thu Sep 17;Order Statistics & Binary Search Trees; Ch 9,12;vid:order1. vid:order2. vid:order3. vid:bst. ; link:Problem-9-1.png:Problem 9-1. link:Problem-12-3.png:Problem 12-3. link:hw02.pdf:hw02 (pdf). link:hw02.tex:(tex).
+5;Tue Sep 22;Red-black Trees & Interval Trees; Ch 13,14;vid:rbt. vid:orderrbt. vid:intt.; link:Problem-14-2.png:Problem 14-2.
+5;Thu Sep 24; Amortized Analysis; Ch 17;vid:ama1. vid:ama2. vid:ama3. vid:ama4. vid:ama5.; link:Problem-17-1.png:Problem 17-1. 
+6;Tue Sep 29; Amortized Analysis; Ch 17;;link:Problem-17-2.png:Problem 17-2.
+6;Thu Oct 1; Binomial Heaps; Ch 19 in 2nd ed <a href="https://mitpress.mit.edu/sites/default/files/Chapter%2019.pdf">(pdf)</a>;vid:bin1. vid:bin2. vid:bin3.;link:binomialheaps.pdf:Notes (pdf). <br/> link:Problem-2e-19-1.png:Problem (2e) 19-1.
+7;Tue Oct 6;Fibonacci Heaps; Ch 19;vid:fib1.vid:fib2.vid:fib3.vid:fib4.vid:fib5.;Problem 19-1.
+7;Thu Oct 8;Fibonacci Heaps; Ch 19;;Problem 19-3.
+8;Tue Oct 13;B Trees, B+ Trees, Parallel Disk Model; Ch 18, Vitter's <a href="http://www.ittc.ku.edu/~jsv/Papers/Vit.IO_book.pdf">IO Book (pdf)</a> Ch. 1,2.;;External Sorting
+8;Thu Oct 15;Midterm Exam;;; 
+9;Tue Oct 20;Post Midterm Debrief;;;Project Proposals due!
+9;Thu Oct 22;Dynamic Programming;Ch 15;vid:dp1. vid:dp2. vid:dp3.;Problem 15-2
+10;Tue Oct 27;Proposal Presentation;;;
+10;Thu Oct 29;Greedy Algorithms;Ch 16;vid:greedy1. vid:greedy2. vid:greedy3.;Problem 16-1. link:hw03.pdf:hw03 (pdf).link:hw03.tex:(tex).
+11;Tue Nov 3;Hashing;Ch 11;vid:h1.vid:h2.vid:h3.vid:h4.vid:h5.;Problem 11-1.
+11;Thu Nov 5;Graph Algo:BFS,DFS,SCC,MST;Ch 22-23;vid:g1.vid:g2.vid:g3. vid:g4.;Problem 22-2.
+12;Tue Nov 10;Graph Algo:SSSP,APSP;Ch 24-25;vid:g5.vid:g6.vid:g7.vid:g8.vid:g9.;Problem 22-2.
+12;Thu Nov 12;NP-Completeness;Ch 34;vid:npc1.vid:npc2.vid:npc3.vid:npc4.vid:npc5.;
+13;Tue Nov 17;NP-Completeness;Ch 34;vid:npc6.vid:npc7.vid:npc8.;Cook's Theorem.
+13;Thu Nov 19;NP-Completeness;Ch 34;vid:npc9.vid:npc10.vid:npc11.;
+14;Tue Nov 24;NP-Completeness;Ch 34;;Problem 34-2.
+14;Thu Nov 26; Thanksgiving Holiday
+15;Tue Dec 1;Guest Lecture by Nodari
+15;Thu Dec 3;Approximation Algo;Ch 35;vid:approx1.vid:approx2.;Problem 35-1
+16;Tue Dec 8;Project Presentations;;;
+16;Thu Dec 10;Project Presentations;;;

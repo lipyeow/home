@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 421 Programming Assignment</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 421 - Spring 2010 - Project</h1>
+
+<hr/>
+<p>Updated Apr 15 posted queries
+<hr/>
+
+<p>
+You may work in a team of three-four students. You are encouraged to engage in
+general discussions with other teams regarding the project, but specific
+details of a solution, including the solution itself, must always be the team's
+own work. 
+
+<h2>Course Project (100 pts)</h2>
+
+The goal of the project is to compare two distributed database system on a
+given benchmark data set and queries. At least one of the distributed database
+system needs to be the one that you implemented as part of the programming
+assignments. Here are the tasks that you will need to do. How you distribute
+the work among your team members is up to you!
+
+<ul>
+<li>
+For the distributed database system you developed:
+   <ul>
+   <li>Modify your program so that the benchmark data can be loaded and the queries can run.
+   </li>
+   <li>Upload, install, and configure the you distributed database program on
+the Amazon nodes (provided).
+   </li>
+   <li>Load up the provided benchmark data. This may include tweaking the DDLs etc.
+   </li>
+   <li>Write any additional scripts to run and time queries etc. This may include tweaking the syntax of the queries.
+   </li>
+   <li>Run the queries from benchmark on different number of nodes, partitioning method etc. 
+   </li>
+   <li>Analyze and graph the results (using a spreadsheet for example).
+   </li>
+   <li>Iterate to optimize and tune your code if necessary.
+   </li>
+   </ul>
+</li>
+<li>
+For the distributed DBMS system you will be testing against:
+   <ul>
+   <li>Read up on the distributed DBMS software that you will be using.
+   </li>
+   <li>Download, install, and configure the distributed DBMS software on the Amazon nodes (provided).
+   </li>
+   <li>Load up the provided benchmark data. This may include tweaking the DDLs etc.
+   </li>
+   <li>Write any additional scripts to run and time queries etc. This may include tweaking the syntax of the queries.
+   </li>
+   <li>Run the queries from benchmark on different number of nodes, partitioning method etc. 
+   </li>
+   <li>Analyze and graph the results (using a spreadsheet for example).
+   </li>
+   <li>Iterate to tune the system if necessary.
+   </li>
+   </ul>
+</li>
+<li>
+Compare the results. Iterate if necessary.
+</li>
+</ul>
+
+<h2>Distributed DBMS Software For Comparison</h2>
+
+<ul>
+<li>Your distributed database program with DB2 as its underlying DBMS</li>
+<li>Your distributed database program with
+<a href="http://db.apache.org/derby/">Apache Derby</a>
+ as its underlying DBMS</li>
+<li>Your distributed database program with
+<a href="http://monetdb.cwi.nl/">MonetDB</a> as its underlying DBMS</li>
+<li>Your distributed database program with 
+<a href="http://www.mysql.com/">MySQL</a>
+ as its underlying DBMS</li>
+<li>Your distributed database program with 
+<a href="http://www.infobright.org">Infobright</a>
+as its underlying DBMS</li>
+<li>
+<a href="http://www.alphaworks.ibm.com/tech/gaiandb">GaianDB</a>
+</li>
+<li>
+<a href="http://www.mysql.com/products/database/cluster/">MySQL Cluster</a>
+</li>
+<li>
+<a href="http://db.cs.yale.edu/hadoopdb/hadoopdb.html">HadoopDB</a>
+</li>
+
+<li>
+<a href="http://hadoop.apache.org/hive/">Hive</a>
+</li>
+</ul>
+
+<h2>Datelines</h2>
+
+<ul>
+<li>Thursday Mar 18: Form your groups and pick a name. Post in wiki in
+Laulima</li> 
+<li>Tuesday Mar 30: Pick the two database systems to be compared.
+Post in wiki in Laulima</li>
+<li>Tuesday Apr 27: Oral presentation</li>
+<li>Thursday Apr 29: Oral presentation</li>
+<li>Thursday Apr 29: All deliverables due</li>
+</ul>
+
+
+<h2>Deliverables</h2>
+
+<ul>
+<li>Code that you develop and documentation on how to run the code</li>
+<li>Oral presentation</li>
+<li>Powerpoint or PDF file of the presentation</li>
+</ul>
+
+<h2>Submission Procedure</h2>
+
+<p>Submit:
+<ul>
+<li>Copy all files to /home/db2inst1/ics421/project/<teamname></li>
+<li>TBA</li>
+<li>TBA</li>
+</ul>
+
+<p>antlrworks.jar is installed in /home/db2inst1/lib/antlrworks.jar  on the submission machine</p>
+
+<h2>Pan-STARRS1 Benchmark</h2>
+
+<h3>Brief Description:</h3>
+<p>
+The project will use a benchmark based on the <a
+href="http://pan-starrs.ifa.hawaii.edu/public/">Pan-STARRS</a> project.  In
+brief, the Pan-STARRS project scans the sky for astronomical objects that might
+pose a threat to Earth. Each scan of the sky produces detections of
+astronomical objects at different positions. By "stacking up" different scans
+of the same position/region of the sky, moving objects may be detected. 
+
+<h3>Data</h3>
+<p>
+The benchmark consists of the following tables
+with associated cardinalities:
+<pre>
+    41983848 rows in Object
+  1014349449 rows in Detection
+   209919240 rows in StackDetection
+    83646580 rows in StackApFlx
+    83646580 rows in StackModelFit
+    3458632  rows in Photoz
+        2903 rows in FrameMeta
+           5 rows in Filter
+           2 rows in PhotozRecipe
+</pre>
+Loaded into an SQLite database this produces a file of 164,978,269,184 bytes (before indexing on objectID).
+The DB2 DDL file for all the tables can be found in
+<a href="crtables.sql">crtables.sql</a>.
+<a href="crtables.db2">crtables.db2 (optimized for DB2)</a>.
+
+<p>The data resides on ec2-67-202-8-208.compute-1.amazonaws.com in the /mnt/astronomy/ directory.
+Consult the wiki in laulima for more information.
+
+<p>
+Tne nneighbor (nearest neighbor) table hasn't been populated yet and is pending the actual neighbor determinations. If we limit the associations to the N nearest neighbors, this table will be N times larger than the number of objects. It could be smaller should we decide to limit it to N nearest neighbors within some fixed distance. 
+
+<p> Since the current query workload only queries the object and detection table, you only need to partition and load those two tables.
+
+<h3>Partitioning</h3>
+<p>
+We will partition the large tables on the objectID. The objectID is constructed
+from the position of the object in the sky (see image below).
+<br/>
+<img width="60%" src="http://www.ifa.hawaii.edu/~heasley/objid.jpg"/>
+<br/>
+<p>
+The current PS1 database has adopted an approach that slices the sky into zones
+in declination (our default zone height is 0.008333 deg). The sky is
+partitioned into 16 slices with the declination widths adjusted to give
+approximately the same number of sources in each slice. All the large tables
+(objects, detections, stackdetection, stackapflx, stackmodelfit, etc.) are
+partitioned in this way. The partition key is the objectID which is an attribute
+in each of these tables. This approach is used to keep sources that are close
+together on the sky close together on the computer disks.
+
+<p>
+The calculation of the objectID given a source's reference position (right
+ascension and declination in degrees) is shown in the reproduction below of one
+of our PowerPoint slides. Given the object's declination we compute the zone id
+(and fraction) the integer part of the zone id comprises the first 5 digits of
+the objectID. The next 9 digits of the objectID are computed by multiplying the
+right ascension by 1,000,000 and taking the integer part of the result. The
+final 4 digits of the objectID are taken from the fractional part of the full
+zone id.
+
+<p>
+Thus, the objid includes the zoneid as its most significant digits, the right
+ascension, and declination. Examination of the object id computed in this way
+for real sources shows that the least significant digit of the objid is
+essentially distributed randomly over the digits 0-9 and could be used as the
+basis for a random hashing of the sources.
+
+<p>
+If one wants to apply a form of spatial partitioning, a simple approach would
+be to partition on the zoneid. This attribute can be found either in the Object
+table or by simply taking the first 5 digits of the objid. 
+
+<p>
+The current data set has the following characteristics:
+<ul>
+<li> 44.297 &lt; object.ra &lt; 135.701 degrees </li>
+<li> -47.781 &lt; object.dec &lt; 47.799 degrees </li>
+<li> 10226 &lt; object.zoneid &lt; 11373 </li>
+</ul>
+For the purpose of this project, you may partition the data along
+<ul>
+<li> range partition on {object,detection}.objid using the zoneid part </li>
+<li> range partition on object.ra </li>
+<li> range partition on object.dec </li>
+<li> range partition on object.{ra,dec} </li>
+<li> hash partition on object.zoneid using most significant digits </li>
+<li> hash partition on object.zoneid using least significant digits </li>
+</ul>
+
+
+<hr/>
+
+<h3>Queries</h3>
+
+<p>
+<a href="query-20100415.sql">List of SQL queries</a>
+
+</body>

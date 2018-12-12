@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 421 Programming Assignments Documentation</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 421 - Spring 2010 - Programming Assignments Documentation</h1>
+
+<hr/>
+<p>Updated Mar 12
+<hr/>
+
+<h2>SQL Data Types Supported</h2>
+
+<ul>
+<li>SMALLINT</li>
+<li>INTEGER or INT</li>
+<li>BIGINT</li>
+<li>FLOAT(integer), REAL, DOUBLE, DOUBLE PRECISION, FLOAT </li>
+<li>DECIMAL(prec,scale) OR DEC(prec,scale) or DECIMAL or DEC, NUMERIC, NUM</li>
+<li>CHARACTER(integer) or CHAR(integer) or CHARACTER or CHAR</li>
+<li>VARCHAR(integer), or CHARACTER VARYING(integer), or CHAR VARYING(integer)</li>
+<li>DATE</li>
+<li>TIME</li>
+<li>TIMESTAMP</li>
+</ul>
+
+<h2>Fragment of SQL Supported</h2>
+
+<pre>
+SELECT projection-list
+FROM table-list
+WHERE condition-list
+</pre>
+
+<li><i>projection-list</i> can be *, a list of column-names, or list of column-names
+and column function calls. Column-names of which can be qualified with a table
+alias (aka range variable). Examples of column functions are aggregation functions:sum(amount) etc</li>
+<li><i>table-list</i> is a list of tables, optionally with aliases specified using "AS alias"</li>
+<li><i>condition-list</i> is a list of predicates of the form 
+   <ul>
+   <li>  <i>columnname operator constant</i></li>
+   <li>  <i>columnname operator function(constant)</i></li>
+   <li>  <i>columnname operator columnname</i></li>
+   </ul>
+columnnames may be qualified with table aliases
+</li>
+
+</body>

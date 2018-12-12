@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Welcome to the ICS 321 Course Webpage!</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../fallstyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 321 Data Storage and Retrieval (Fall 2009)</h1>
+
+<h2>General Information</h2>
+<ul>
+<li>Class Meets: Tues and Thurs 9am - 10:15 am POST 126 Aug 24-Dec 18 2009
+</li>
+<li>Final Exam : Dec 15 2009 9:45am - 11:45 am (No make up exam)
+</li>
+<li>Instructor : <a href="http://www2.hawaii.edu/~lipyeow">Lipyeow Lim</a>
+</li>
+<li>Office Hours : Tues 10:30am - 12pm POST 303 E or by appointment 808-956-3495
+</li>
+<li>Required Textbook : 
+Database Management Systems, Third Edition. 
+Raghu Ramakrishnan and Johannes Gehrke.
+ISBN: 0-07-246563-8. <a href="http://pages.cs.wisc.edu/~dbbook/">Book Website</a>.
+</li>
+<li>Objective: At the end of this class, the student should have a broad understanding of database software including database internals and be able to use database software for storing, updating, and querying data in data-intensive applications. </li>
+<li>Late policy: work submitted past due date and time will receive zero credits. </li>
+<li>Pre-requisites: ICS 111 & 141 or consent. </li>
+</ul>
+
+<h2>Topics</h2>
+
+<ul>
+   <li>Ch 1. Overview of Database Systems ~20p</li>
+   <li>Ch 2. Intro to Database Design ~20p</li>
+   <li>Ch 3. The Relational Model ~40p </li>
+   <li>Ch 4. Relational Algebra and Calculus ~20p</li>
+   <li>Ch 5. SQL: Queries, Constraints, Triggers ~40p</li>
+   <li>Ch 6. Database Application Development ~20p</li>
+   <li>Ch 8. Overview of Storage And Indexing ~20p</li>
+   <li>Ch 12. Overview of Query Evaluation ~20p </li>
+   <li>Ch 16. Overview of Transaction Management ~20p </li>
+   <li>Ch 19. Schema Refinement and Normal Forms ~40p </li>
+</ul>
+
+
+<h2>Grading</h2>
+
+<ul>
+   <li>20 % Quizzes</li>
+   <li>35 % Project</li>
+   <li>20 % Mid-term exam</li>
+   <li>25 % Final Exam</li>
+</ul>
+
+<h2>Class Schedule (tentative)</h2>
+
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr>
+<th width="5%" >Week</th>
+<th width="15%" >Date</th>
+<th width="45%">Topic</th>
+<th width="35%">Remarks</th>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>1</td>
+<td>Tues Aug 25</td>
+<td>Organizational Stuff</td>
+<td></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Aug 27</td>
+<td>A quick tour of data management issues</td>
+<td>Slides <a href="ics321-20090827-tour.pdf">pdf</a> & the DB2 scripts <a href="ics321-20090827-scripts.zip">zip</a></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>2</td>
+<td>Tues Sep  1</td>
+<td>Overview of Database Systems</td>
+<td>Read Ch 1. Slides <a href="ics321-20090901-intro.pdf">pdf</a></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Sep  3</td>
+<td>Introduction to Database Design</td>
+<td>Read Ch 2. Slides <a href="ics321-20090903-ER.pdf">pdf</a></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>3</td>
+<td>Tues Sep  8</td>
+<td>The Relational Model (i)</td>
+<td>Quiz #1. Read Ch. 3. Slides <a href="ics321-20090908-relational1.pdf">pdf</a> </td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Sep 10</td>
+<td>The Relational Model (ii)</td>
+<td>Read Ch. 3. Start reading Ch. 5. Info on projects.
+Slides <a href="ics321-20090910-relational2.pdf">pdf</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>4</td>
+<td>Tues Sep 15</td>
+<td>SQL: Queries, Constraints, Triggers (i)</td>
+<td>Quiz #2. Read Ch. 5. 
+Slides <a href="ics321-20090915-sql1.pdf">pdf</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Sep 17</td>
+<td>SQL: Queries, Constraints, Triggers (ii)</td>
+<td>Read Ch. 5.
+Slides <a href="ics321-20090917-sql2.pdf">pdf</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>5</td>
+<td>Tues Sep 22</td>
+<td>SQL: Queries, Constraints, Triggers (iii)</td>
+<td>Quiz #3. Read Ch. 5. </td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Sep 24</td>
+<td>SQL: Queries, Constraints, Triggers (iv)</td>
+<td>Read Ch. 5.
+Slides <a href="ics321-20090924-sql3.pdf">pdf</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>6</td>
+<td>Tues Sep 29</td>
+<td>SQL: Queries, Constraints, Triggers (v)</td>
+<td>Quiz #4. Start reading Ch. 4.
+<br>
+A Toy Project <a href="ics321-20090929-project.pdf">pdf</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Oct  1</td>
+<td>Relational Algebra</td>
+<td>Read Ch. 4.
+Quiz 4 answers <a href="ics321-20091001-quiz4.pdf">pdf</a>
+<br>
+Slides <a href="ics321-20091001-relalgebra.pdf">pdf</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>7</td>
+<td>Tues Oct  6</td>
+<td>Finish up on "Relational Calculus".<br> Start on Database Application Development</td>
+<td>Quiz #5. Read Ch.4+6.<br> 
+Project proposals due.<br>
+Slides for Rel Calc <a href="ics321-20091006-relcalc.pdf">pdf</a><br>
+Slides for DB App Dev <a href="ics321-20091006-dbapp.pdf">pdf</a><br>
+Sample SQC code <a href="sqc.zip">sqc.zip</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Oct  8</td>
+<td>Database Application Development (ii)</td>
+<td>Read Ch.6.
+<br>
+Slides for DB App Dev 2 <a href="ics321-20091008-dbapp2.pdf">pdf</a>
+<br>
+Sample ODBC code <a href="odbc.zip">odbc.zip</a>
+<br>
+Sample JDBC code <a href="jdbc.zip">jdbc.zip</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>8</td>
+<td>Tues Oct 13</td>
+<td>Mid-Term Exam</td>
+<td>
+<a href="midterm.gif">Grade Distribution</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Oct 15</td>
+<td>Review Mid-Term Exam</td>
+<td></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>9</td>
+<td>Tues Oct 20</td>
+<td>Overview of Storage and Indexing</td>
+<td>Quiz #6. Read Ch. 8.
+<br/>
+Slides <a href="ics321-20091020-storage.pdf">pdf</a>
+<br/>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Oct 22</td>
+<td>Overview of Storage and Indexing (ii)</td>
+<td>
+Slides <a href="ics321-20091022-storage2.pdf">pdf</a> (updated 10/22 11AM to fix delete analysis for heap+hash)
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>10</td>
+<td>Tues Oct 27</td>
+<td>Overview of Storage and Indexing (iii)</td>
+<td>Quiz #7. 
+Slides <a href="ics321-20091027-storage3.pdf">pdf</a> <br>
+Optional reading on <a href="sigmod03-mdc.pdf">multi-dimensional clustering</a>.
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Oct 29</td>
+<td>Overview of Query Evaluation</td>
+<td> Read Ch.12.<br>
+Slides <a href="ics321-20091029-queryeval.pdf">pdf</a> updated Nov 4 <br>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>11</td>
+<td>Tues Nov  3</td>
+<td>Overview of Query Evaluation (ii)</td>
+<td>Quiz #8.
+<br>
+Project progress checkpoint.</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Nov  5</td>
+<td>Overview of Transaction Management</td>
+<td> Read Ch.16.
+Slides <a href="ics321-20091105-transaction.pdf">pdf</a> <br>
+SQL <a href="ordering.sql">script</a> for simulating the clusteredness of indexes using sequence numbers (explanation of Quiz 8 Qn 3.)<br>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>12</td>
+<td>Tues Nov 10</td>
+<td>Overview of Transaction Management (ii)</td>
+<td>Quiz #9.
+Slides <a href="ics321-20091110-transaction2.pdf">pdf</a> <br>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Nov 12</td>
+<td>Schema Refrnement and Normal Forms</td>
+<td>Read Ch.19.
+Slides <a href="ics321-20091112-fdnf.pdf">pdf</a> <br>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>13</td>
+<td>Tues Nov 17</td>
+<td>Schema Refrnement and Normal Forms (ii)</td>
+<td>Quiz #10.
+Slides <a href="ics321-20091117-fdnf2.pdf">pdf</a> <br>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Nov 19</td>
+<td>Schema Refrnement and Normal Forms (iii)</td>
+<td>
+Slides <a href="ics321-20091119-fdnf3.pdf">pdf</a> <br>
+Project Presentation Template <a href="ics321-20091119-proj.pdf">pdf</a>
+,
+<a href="ics321-091119-proj.pptx">pptx</a>
+</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>14</td>
+<td>Tues Nov 24</td>
+<td>special topic: XML databases</td>
+<td>
+Read Ch 27.{6,7,8}
+Slides <a href="ics321-20091124-xml.pdf">pdf</a> <br>
+Scripts <a href="xml.zip">xml.zip</a> <br/>
+Optional Reading: 
+<a href="http://www.vldb2005.org/program/paper/thu/p1164-nicola.pdf">DB2 pureXML paper</a></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Nov 26</td>
+<td>Thanksgiving Holiday. No Class</td>
+<td></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>15</td>
+<td>Tues Dec  1</td>
+<td>Potpourri.</td>
+<td>Quiz #11.</td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Dec  3</td>
+<td>Project Demo & Presentations (8)</td>
+<td></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>16</td>
+<td>Tues Dec  8</td>
+<td>Project Demo & Presentations (7)</td>
+<td></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td>Thur Dec 10</td>
+<td>Review</td>
+<td></td>
+</tr>
+<!-- --------------------- -->
+<tr>
+<td rowspan=2>17</td>
+<td>Tues Dec 15 </td>
+<td>Final Examination</td>
+<td>
+Open Notes Policy: One sheet of letter size paper with either printed or handwritten notes on both sides will be allowed in the Final Exam.
+</td>
+</tr>
+<!-- --------------------- -->
+
+</table>
+
+
+<h2>Other Readings</h2>
+<ul>
+<li>
+Alternate perspective:
+<a href="http://cacm.acm.org/blogs/blog-cacm/32212-the-end-of-a-dbms-era-might-be-upon-us/fulltext">
+Michael Stonebraker's latest article on the doom of DBMS
+</a>. 
+</li>
+<li>
+<a href="https://www6.software.ibm.com/dw/education/dm/db2cert7033/db2_cert7033-pdf.pdf">Tutorial (pdf)</a> on Embedding SQL in C programs for DB2.
+</li>
+<li> 
+The original paper describing query optimization in System R.
+<a href="http://www.cs.berkeley.edu/~brewer/cs262/3-selinger79.pdf">Access Path Selection in a Relational Database Management System</a> Selinger, P. G., Astrahan, M. M., Chamberlin, D. D., Lorie, R. A., and Price, T. G. SIGMOD 1979.
+</li>
+<li>
+<a href="http://www.alphaworks.ibm.com/tech/purexml">XML industry bundles for DB2</a>
+</li>
+<li>
+<a href="http://www.ibm.com/developerworks/data/library/techarticle/dm-0708nicola/">Using XMLTable</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=Rn5rVGGfzy0">Greenplum video on Data Explosion</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=zlm495J2HvQ">Asterdata video: Myspace </a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=OcCTJsx3AxI">EMC+SQL Server Video on Data Warehousing</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=koa0p0sH3sc">IBM DB2 video on Convergence CT</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=v1p-rOt70aI">SAS & Netezza video</a>
+</li>
+<li>
+<a href="http://www.mysqlperformanceblog.com/2009/09/29/quick-comparison-of-myisam-infobright-and-monetdb/">Comparison of myisam, infobright and monetdb</a>
+</li>
+</ul>
+
+<h2>Useful Links</h2>
+<ul>
+<li>
+<a href="http://www-01.ibm.com/software/data/db2/express/download.html?S_TACT=imdb2luw&S_CMP=ibm_im">Download the free IBM DB2 Express-C</a>. 
+   <ul>
+   <li>In general, you
+should make use of the install documentation (eg. the free <a
+href="http://www.ibm.com/developerworks/wikis/display/DB2/FREE+Book-+Getting+Started+with+DB2+Express-C">Getting
+Started with DB2 Express-C</a> book) and the DB2 forums. There is also
+comprehensive documentation on the DB2 commands etc at the <a
+href="http://publib.boulder.ibm.com/infocenter/db2luw/v9/index.jsp">DB2
+Information Center</a>. Part of learning how to use a DBMS software is navigating the documentation that comes with the software.
+ </li>
+   <li>Mac OS: Note that if you're installing the beta for Mac OS, you should
+check the forum for configuration instructions if the install has
+problems. XCode is required (thanks to Kevin Leong). </li>
+   </ul>
+</li>
+<li>
+<a href="http://manoa.hawaii.edu/records/calendar/fall_2009.html">UHM Fall 2009 Academic Calender</a>
+</li>
+<li>
+<a href="http://www.hawaii.edu/myuh/manoa/fall2009/course_listings/final_exam.html">UHM Fall 2009 Final Examination Schedule</a>
+</li>
+</ul>
+
+
+</body>

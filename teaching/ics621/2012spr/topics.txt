@@ -1,0 +1,52 @@
+Analysis Techniques
+* Asymptotics
+* Best, Average/Probabilistic, Worst case 
+* Solving Recurrences
+* Amortized analysis
+
+Sorting Algorithms
+*  Insertion
+*  Quicksort:
+*  Bubble 
+*  Merge Sort
+*  Sorting lower bounds
+*  Counting,Bucket,Radix
+*  Order Statistics - median of medians
+
+Search
+* Binary Search Trees
+* Red Black Trees
+* Interval trees & tree augmentation
+  B+ tree
+* Binomial Heaps
+* Fibonacci Heaps
+  Hashing 
+  Van Emde Boas Trees
+
+Design Paradigms
+* Exhaustive Search / Brute Force
+* Divide and Conquer
+  Dynamic Programming
+  Greedy 
+  Approximation
+  Branch and Bound
+  Transform
+
+Graph Algorithms
+
+Numerical Algorithms
+
+Compression algorithms
+
+IO Model & IO Efficient Algorithms
+
+Cache Oblivious/Conscious Algorithms
+
+Parallel & Multithreaded Algorithms
+
+Streaming Algorithms
+   Reservior Sampling
+   Approximate Counting & top K
+   Min Hash
+
+NP-Completeness

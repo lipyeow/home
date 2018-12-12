@@ -1,0 +1,80 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\setlength{\textwidth}{6.5in}     
+\setlength{\oddsidemargin}{0in}  
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{8.5in} 
+\setlength{\topmargin}{0in}   
+\setlength{\headheight}{14pt} 
+\setlength{\headsep}{10pt}   
+%\setlength{\footskip}{0in}
+
+%------------------------------------------------
+\newcommand{\homework}[2]{
+\setcounter{section}{#1}
+\section*{ICS621 Homework {\thesection}: {#2} }
+{\markboth{#2}{#2}}
+}
+%------------------------------------------------
+
+
+\begin{document}
+
+% Enter the Homework number and title as arguments to
+% homework
+\homework{1}{Merge sort \& $d$-ary Heaps}
+
+\textbf{Problem 2-1 from CLRS.} Although merge sort runs in
+$\Theta(n \log n)$ worst-case time and insertion sort runs
+in $\Theta(n^2)$ worst-case time, the constant factors in
+insertion sort can make it faster in practice for small
+problem sizes on many machines. Thus, it makes sense to
+coarsen the leaves of the recursion by using insertion sort
+within merge sort when subproblems become sufficiently
+small. Consider a modification to merge sort in which $n/k$
+sublists of length $k$ are sorted using insertion sort and
+then merged using the standard merging mechanism, where $k$
+is a value to be determined.
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+\item Show that insertion sort can sort the $n/k$ sublists,
+each of length $k$, in $\Theta(nk)$ worst-case time.
+\item Show how to merge the sublists in $\Theta(n
+\log(n/k))$ worst-case time.
+\item Given that the modified algorithm runs in
+$\Theta(nk+n\log(n/k))$ worst-case time, what is the largest
+value of $k$ as a function of $n$ for which the modified
+algorithm has the same running time as standard merge sort,
+in terms of $\Theta$-notation?
+\item How should we choose $k$ in practice?
+\end{enumerate}
+
+\noindent
+\textbf{Problem 6-2 from CLRS: Analysis of d-ary heaps.}  
+A \textbf{d-ary heap} is like a binary heap, but (with one
+possible exception) non-leaf nodes have $d$ children instead
+of 2 children.
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+\item How would you represent a $d$-ary heap in an array?
+\item What is the height of a $d$-ary heap of $n$ elements
+in terms of $n$ and $d$ ?
+\item Give an efficient implementation of
+\textsc{Extract-Max} in a $d$-ary max-heap. Analyze its
+running time in terms of $d$ and $n$.
+\item Give an efficient implementation of \textsc{Insert} in
+a $d$-ary max-heap. Analyze its running time in terms of $d$
+and $n$.
+\item Give an efficient implementation of
+\textsc{Increase-Key($A,i,k$)}, which flags and error if
+$k<A[i]$, but otherwise sets $A[i]=k$ and then updates the
+$d$-ary max-heap structure appropriately. Analyze its
+running time in terms of $d$ and $n$.
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,74 @@
+approx2|approx-algo-randomized-max-3sat/20119629/|Approx Algo 3SAT
+approx1|approx-algo-vertex-cover/20119531/|Approx Algo VC
+npc11|npc-3sat-to-vertex-cover-proof/19893862/| 3SAT to VC Proof
+npc10|npc-3sat-to-vertex-cover/19893379/|3SAT to VC
+npc9|npc-sat-to-3sat-proof/19885132/|SAT to 3SAT proof
+npc8|npc-sat-to-3sat/19830423/|SAT to 3SAT
+npc7|npc-non-deterministic-turing-machines/19676881/|NTM
+npc6|npc-deterministic-turing-machines/19676007/|DTM
+npc5|npc-the-class-npc/19395320/|NPC
+npc4|npc-the-class-np/19395214/|NP
+npc3|npc-problems-as-languages/19395097/|Languages
+npc2|npc-encoding-problems/19394318/|Encoding
+npc1|npc-abstract-decision-problems/19394122/|Decision Problems
+flow4|max-flow-maximum-matching/18988016/|Matching
+flow3|max-flow-ford-fulkerson-edmonds-karp-algos/18915240/|Ford Fulkerson Edmonds Karp
+flow2|max-flow-augmenting-paths/18846909/|Augmenting Paths
+flow1|max-flow-problem-defn/18845810/|Max Flow Problem
+g9|apsp-2-floyd-warshall-johnson-s-algo/18688902/|Floyd Warshall Johnson
+g8|apsp-1-dp/18688442/|All Pairs Shortest Path
+g7|sssp-3-diff-constraints/18341976/|Constraints
+g6|sssp-2-dijkstra-s/18341935/|Dijkstra
+g5|sssp-1-bellman-ford/18341845/|Bellman Ford
+g4|graphs-4-mst/18337915/|MST
+g3|graphs-3-strongly-connected-components/18331958/|SCC
+g2|graphs-2-dfs-topological-sort/18197054/|DFS
+g1|graphs-1-data-structures-bfs/18195036/|BFS
+h8|hashing-8-perfect-hashing/17992499/|Hashing 8
+h7|hashing-7-matrix-method-for-constructing-universal/17991878/|Hashing 7
+h6|hashing-6-universal-hashing/17991437/|Hashing 6
+h5|hashing-5-analysis-of-open-addressing-2/17954158/|Hashing 5
+h4|hashing-4-analysis-of-open-addressing-1/17953850/|Hashing 4
+h3|hashing-3-open-addressing/17865476/|Hashing 3
+h2|hashing-2-chaining/17725001/|Hashing 2
+h1|hashing-1-the-dictionary-problem/17711452/|Hashing 1
+greedy3|greedy-algorithms-3-knapsack/17627512/|Greedy Algo 3
+greedy2|greedy-algorithms-2-greedy-choice/17581402/|Greedy Algo 2
+greedy1|greedy-algorithms-1-scheduling-activities/17581180/|Greedy Algo 1
+dp3|dynamic-programming-3-matrix-chain/17542608/|Dynamic Programming 3
+dp2|dynamic-programming-2-sssp-with-dp/17542060/|Dynamic Programming 2
+dp1|dynamic-programming-1-sssp/17530251/|Dynamic Programming 1
+fib5|fibonacci-heaps-5-max-degree/17267413/|Fibonacci Heaps 5
+fib4|fibonacci-heaps-4-decreasekey/17266613/|Fibonacci Heaps 4
+fib3|fibonacci-heaps-3-analysis-of-extractmin/17264468/|Fibonacci Heaps 3
+fib2|fibonacci-heaps-2-extractmin/17263853/|Fibonacci Heaps 2
+fib1|fibonacci-heaps-1/17262960/|Fibonacci Heaps 1
+bin3|binomial-heaps-3/16314782/|Binomial Heaps 3
+bin2|binomial-heaps-2/16314170/|Binomial Heaps 2
+bin1|binomial-heaps-1/16313802/|Binomial Heaps 1
+ama5|amortized-analysis-5-dynamic-tables/16183819/|Amortized A. - Dyn. Tables 
+ama4|amortized-analysis-4-potential-mtd/16183641/|Amortized A. - Pot. Mtd
+ama3|amortized-analysis-3-accounting-mtd/16183560/|Amortized A. - Acc. Mtd
+ama2|amortized-analysis-2-aggregate-mtd-on-binary-count/16183486/|Amortized A. - Binary Cnt. Eg.
+ama1|amortized-analysis-1-aggregate-mtd/16183374/|Amortized A. - Agg. Mtd
+intt|interval-trees/16180742/|Interval Trees
+orderrbt|order-statistic-rbt/16180432/| Order Statistics Red Black Trees
+rbt|red-black-trees/16179926/|Red Black Trees
+bst|binary-search-trees/16179323/|Binary Search Trees
+order3|order-stats-3-median-of-medians-quicksort/16178986/|Order Stats 3 Quicksort
+order2|order-stats-2-partition-using-median-or-medians/16178767/|Order Stats 2 Median of Medians
+order1|order-stats-1-min-max/16178100/|Order Stats 1 Min Max
+bsort|sorting-4d-bucket-sort/16171913/|Bucket Sort
+rsort|sorting-4c-radix-sort/16169336/|Radix Sort
+csort|sorting-4b-counting-sort/16168016/|Counting Sort
+lowerbounds|sorting-4a-lower-bounds/16000876/|Lower Bounds
+qsort-avg|sorting-3c-avg-case-analysis-of-quicksort/15949926/|Average Case Analysis
+qsort-worst|sorting-3b-worst-case-quicksort/15949110/|Worst Case Analysis
+qsort|sorting-3a-quicksort/15948737/|Quicksort
+heapsort|sorting-2b-heapsort/15947257/|Heapsort
+heaps|sorting-2a-heaps/15903326/|Heaps
+recurrences|sorting-1-solving-recurrence-relations/15719500/|Reccurences
+mergesort|sorting-1-merge-sort/15718843/|MergeSort
+inssort|sorting-1-insertion-sort/15715269/|InsertionSort
+selsort|sorting-1-selection-sort/15614189/|SelectionSort
+asymp|sorting-1a-asymptotics/15613629/|Asymptotics

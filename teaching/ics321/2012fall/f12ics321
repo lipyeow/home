@@ -1,0 +1,32 @@
+1;Mon Aug 20;Course Organization;;slides:ics321-01-org
+1;Wed Aug 22;intro;;slides:ics321-02-intro. ex1-intro.
+2;Mon Aug 27;relmodel;;Quiz 1 due. slides:ics321-03-relmodel1. ex2-ra.
+2;Wed Aug 29;relmodel;;slides:ics321-04-relmodel2. ex3-ddl. link:../2010fall/ex3.html:(html).
+3;Mon Sep 3;Labor Day Holiday;;Quiz 2 due on Tue 11:30am
+3;Wed Sep 5;fdnf;;slides:ics321-05-fd. ex4-fd.
+4;Mon Sep 10;fdnf;;slides:ics321-06-nf1. ex5-nf1. link:../2010fall/soln-ex5.txt:Soln(txt). Quiz 3 due.
+4;Wed Sep 12;fdnf;;slides:ics321-07-nf2. ex6-nf2. 
+5;Mon Sep 17;er;;Assignment 1 due at 5PM. slides:ics321-08-er. ex7-er. Quiz 4 due.
+5;Wed Sep 19;ra;;slides:ics321-09-bagra. ex8-ra.
+6;Mon Sep 24;ra;;slides:ics321-10-datalog. ex9-datalog. Quiz 5 due.
+6;Wed Sep 26;sql;;slides:ics321-11-sql1. ex10-sql1. Assignment 2 due 2200.
+7;Mon Oct 1;Pre-Midterm Review;; Quiz 6 due. link:mock-midterm.pdf:mock-midterm(pdf).
+7;Wed Oct 3;Midterm Exam;;
+8;Mon Oct 8;Post-Midterm Review;; Quiz 7 due.
+8;Wed Oct 10;sql;;slides:ics321-12-sql2. ex11-sql2. Project Proposals due 2355.
+9;Mon Oct 15;sql;;slides:ics321-13-sql3. ex12-sqlagg. link:data.zip:data(zip). Quiz 8 due.
+9;Wed Oct 17;api;;slides:ics321-14-sqlapp1. link:../../ics101/2012fall/ics101-20120904-networking.pdf:Networking Intro(pdf). link:../2011spr/sqc.zip:sqc (zip).
+10;Mon Oct 22;api;;slides:ics321-15-sqlapp2. ex13-sqlapi. link:../2011spr/odbc.zip:odbc (zip). link:../2011spr/jdbc.zip:jdbc (zip). Quiz 9 due.
+10;Wed Oct 24;ctvi;;slides:ics321-16-ctvi. ex14-idxsel.
+11;Mon Oct 29;txn;;slides:ics321-17-txn1. ex15-txn. Quiz 10 due. http://www.youtube.com/watch?v=AKJ9BMWIPiY http://www.youtube.com/watch?v=2RxXrMtj2bs
+11;Wed Oct 31;txn;;slides:ics321-18-txn2. ex16-txn. http://www.youtube.com/watch?v=zYzqKHhxDBM http://www.youtube.com/watch?v=NcwRurRueYA
+12;Mon Nov 5;stridx;;slides:ics321-19-storage1. ex17-disk. Quiz 11 due.
+12;Wed Nov 7;stridx;; Project Progress Report due. slides:ics321-20-storage2. ex18-idx. 
+13;Mon Nov 12;Veteran's Day Holiday;;
+13;Wed Nov 14;qp;;slides:ics321-21-queryproc. ex19-qopt.
+14;Mon Nov 19;qp;;ex20-qcost.
+14;Wed Nov 21;xml;;slides:ics321-22-xml. ex21-xml.
+15;Mon Nov 26;Special Topics;;ics321-23-other.
+15;Wed Nov 28;Project Presentation;;
+16;Mon Dec 3;Project Presentation;;
+16;Wed Dec 5;Final Exam Review;;link:mock-final.pdf:mock-final(pdf).

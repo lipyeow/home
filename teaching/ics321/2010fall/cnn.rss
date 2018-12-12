@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://rss.cnn.com/~d/styles/itemcontent.css"?>
+<rss xmlns:media="http://search.yahoo.com/mrss/"
+xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0"
+version="2.0">
+  <channel>
+    <title>CNN.com</title>
+    <link>http://www.cnn.com/?eref=rss_topstories</link>
+    <description>CNN.com delivers up-to-the-minute news and
+    information on the latest top stories, weather, entertainment,
+    politics and more.</description>
+    <language>en-us</language>
+    <copyright>&#169; 2010 Cable News Network LP, LLLP.</copyright>
+    <pubDate>Mon, 22 Nov 2010 15:32:48 EST</pubDate>
+    <ttl>5</ttl>
+    <image>
+      <title>CNN.com</title>
+      <link>http://www.cnn.com/?eref=rss_topstories</link>
+      <url>
+      http://i2.cdn.turner.com/cnn/.element/img/1.0/logo/cnn.logo.rss.gif</url>
+      <width>144</width>
+      <height>33</height>
+      <description>CNN.com delivers up-to-the-minute news and
+      information on the latest top stories, weather,
+      entertainment, politics and more.</description>
+    </image>
+    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom"
+    rel="self" type="application/rss+xml"
+    href="http://rss.cnn.com/rss/cnn_topstories" />
+    <feedburner:info uri="rss/cnn_topstories" />
+    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom"
+    rel="hub" href="http://pubsubhubbub.appspot.com/" />
+    <thespringbox:skin xmlns:thespringbox="http://www.thespringbox.com/dtds/thespringbox-1.0.dtd">
+    http://rss.cnn.com/rss/cnn_topstories?format=skin</thespringbox:skin>
+    <item>
+      <title>Guilty verdict in Chandra Levy murder</title>
+      <guid isPermaLink="false">
+      http://www.cnn.com/2010/CRIME/11/22/dc.chandra.levy.trial/index.html?eref=rss_topstories</guid>
+      <link>
+      http://rss.cnn.com/~r/rss/cnn_topstories/~3/cBTFtBEP_gM/index.html</link>
+      <description>Jurors today convicted Ingmar Guandique of
+      first-degree murder in the 2001 death of D.C. intern Chandra
+      Levy. Guandique faces a sentence of life without
+      parole.</description>
+      <pubDate>Mon, 22 Nov 2010 14:16:09 EST</pubDate>
+      <feedburner:origLink>
+      http://www.cnn.com/2010/CRIME/11/22/dc.chandra.levy.trial/index.html?eref=rss_topstories</feedburner:origLink>
+    </item>
+    <item>
+      <title>TSA pat-down backlash grows</title>
+      <guid isPermaLink="false">
+      http://www.cnn.com/2010/TRAVEL/11/22/travel.tsa.pat.downs/index.html?eref=rss_topstories</guid>
+      <link>
+      http://rss.cnn.com/~r/rss/cnn_topstories/~3/4FC_-G7cgR8/index.html</link>
+      <description>The backlash against TSA pat-downs appears to be
+      growing as holiday travelers head to the airport and a video
+      of a shirtless boy getting a pat-down goes viral.</description>
+      <pubDate>Mon, 22 Nov 2010 14:58:02 EST</pubDate>
+      <feedburner:origLink>
+      http://www.cnn.com/2010/TRAVEL/11/22/travel.tsa.pat.downs/index.html?eref=rss_topstories</feedburner:origLink>
+    </item>
+  </channel>
+</rss>

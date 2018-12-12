@@ -1,0 +1,14 @@
+Goal: use Weka to learn a decision tree and visualize the tree.
+
+1. Install Weka
+2. Run Weka
+3. Click on "Explorer"
+4. Click on "Open File"
+5. Navigate to the data directory that came with Weka. 
+   On Windows, this is in the Weka install directory usually C:\Program Files (x86)\Weka
+   On Mac, it is in the dmg image
+6. Open the "Weather.arff" dataset. You should also examine the arff file using a text editor
+7. Click on the "Classify" tab.
+8. Click "Choose" and choose "Tree->J48"
+9. Click on "Start"
+10. In the lower left pane, right click on the run and select "Visualize Tree".

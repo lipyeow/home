@@ -1,0 +1,36 @@
+rtree
+http://www.citeulike.org/user/lipyeow/article/2844012
+volcano
+http://www.citeulike.org/user/lipyeow/article/1590366
+access
+http://www.citeulike.org/user/lipyeow/article/8447634
+OS
+http://www.citeulike.org/user/lipyeow/article/2811243
+dw
+http://www.citeulike.org/user/lipyeow/article/620833
+birch
+http://www.citeulike.org/user/lipyeow/article/8447722
+google
+http://www.citeulike.org/user/lipyeow/article/114
+niagaracq
+http://www.citeulike.org/user/lipyeow/article/1454819
+claremont
+http://www.citeulike.org/user/lipyeow/article/4010770
+eddies
+http://www.citeulike.org/user/lipyeow/article/4275626
+mapreduce
+http://www.citeulike.org/user/lipyeow/article/2212959
+energy
+http://www.citeulike.org/user/lipyeow/article/7529869
+hadoopdb
+http://www.citeulike.org/user/lipyeow/article/8285239
+cloudstorage
+http://www.citeulike.org/user/lipyeow/article/8447871
+entirty resolution
+http://www.citeulike.org/user/lipyeow/article/8447893
+concept mining
+http://www.citeulike.org/user/lipyeow/article/8447926
+cloud measurement
+http://www.citeulike.org/user/lipyeow/article/8447953
+keywordsearch
+http://www.citeulike.org/user/lipyeow/article/8448011

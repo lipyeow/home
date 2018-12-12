@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 321</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>Exercise 2.3.1 (Database Systems: The Complete Book)</h1>
+
+<p>
+In this exercise we introduce one
+of our running examples of a relational database schema.
+The database schema consists of four relations, whose
+schemas are: 
+<ul>
+<li> Product ( maker, model, type ) </li>
+<li> PC ( model, speed, ram, hd, price ) </li>
+<li> Laptop ( model, speed, ram, hd, screen, price ) </li>
+<li> Printer ( model, color, type, price )</li>
+</ul>
+
+<p>
+The Product relation gives the manufacturer, model number
+and type ( PC, laptop, or printer ) of various products.
+We assume for convenience that model numbers are unique over
+all manufacturers and product types ; that assumption is not
+realistic, and a real database would include a code for the
+manufacturer as part of the model number. The PC relation
+gives for each model number that is a PC the speed ( of the
+processor, in gigahertz ), the amount of RAM ( in
+megabytes ), the size of the hard disk ( in gigabytes ),
+and the price. The Laptop relation is similar, except that
+the screen size ( in inches ) is also included. The Printer
+relation records for each printer model whether the printer
+produces color output ( true, if so ), the process type (
+laser or ink - jet, typically ), and the price. 
+
+<h3>Task 1</h3>
+<p>
+Write the following declarations : 
+<ul>
+<li>a ) A suitable schema for relation Product.  </li>
+<li>b ) A suitable schema for relation PC. </li>
+<li>c ) A suitable schema for relation Laptop. </li>
+<li>d ) A suitable schema for relation Printer. </li>
+<li>e ) An alteration to your Printer schema from ( d ) to
+delete the attribute color. </li>
+<li>f ) An alteration to your Laptop schema from ( c ) to add
+the attribute od ( optical - disk type, e. g., cd or dvd
+).  Let the default value for this attribute be ' none ' if
+the laptop does not have an optical disk. </li>
+</ul>
+
+<h3>Task 2</h3>
+<p>
+<ul>
+<li>a) Create a database in DB2 ( CREATE DB <i>dbname</i> )</li>
+<li>b) Create tables in your database by inputing your SQL declarations into
+DB2</li>
+<li>c) Insert several tuples into the tables you have created</li>
+<li>d) Check your work by issuing a simple SQL query</li>
+</ul>
+
+<h3>Sample Data </h3>
+
+<p>
+Product
+<br/>
+<img src="figproduct.png"/>
+
+<p>
+PC
+<br/>
+<img src="figpc.png"/>
+
+<p>
+Laptop
+<br/>
+<img src="figlaptop.png"/>
+
+<p>
+Printer
+<br/>
+<img src="figprinter.png"/>
+
+</body>

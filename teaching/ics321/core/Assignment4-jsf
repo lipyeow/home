@@ -1,0 +1,20 @@
+
+Task A (20 pts)
+
+Follow the tutorial at to create a JSF 2.x web application that generates a random integer and asks the user to guess the number. When the user enters his guess, the web application responds with whether the guess is correct or not. 
+
+https://netbeans.org/kb/docs/web/jsf20-intro.html
+
+Task B (80 pts)
+
+You are going to modify the application in Task A to store all attempts at the number guessing game into a database table. The web application will display the most recent 20 guesses from the content of the database table in the index.xhtml page. Whenever the user enters a guess for the number, the application should insert the timestamp and the number into the database table. You should use the JSF datatable widget to display the most recent 20 guesses.
+
+The following tutorial show how to use JDBC to connect your web application to the DBMS.
+
+http://www.mkyong.com/jsf2/jsf-2-0-jdbc-integration-example/
+
+In this assignment you will be connecting to your oracle database and not the MySQL database in the above tutorial. The following sample JDBC code shows how you can connect to an oracle database:
+
+http://www2.hawaii.edu/~lipyeow/ics321/core/oracle-jdbc.zip
+
+You should create a table named "Attempts" in the database that stores a timestamp, the user guess, and the correct number.

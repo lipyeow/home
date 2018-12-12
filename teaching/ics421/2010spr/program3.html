@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 421 Programming Assignment</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 421 - Spring 2010 - Programming Assignment 3</h1>
+
+<hr/>
+<p>Updated Mar 22 to fix localnode.driver.
+<p>Updated Mar 12 to include policy on grammar sharing.
+<p>Updated Mar 12 to include temporary table information.
+<hr/>
+
+<p>
+You may work in a team of two students, but each student needs to make a
+submission. You are encouraged to engage in general discussions with other
+teams regarding the assignment, but specific details of a solution, including
+the solution itself, must always be the team's own work. You may submit the same
+code as the rest of your team.
+
+<h2>Part 5: Distributed SQL Processor Supporting Joins (100 pts)</h2>
+
+Modify your code from Part 3 (<tt>runSQL</tt>) to support select-from-where
+queries involving joins between exactly two tables. The two tables to be joined
+may be distributed tables with fragments residing on multiple nodes.
+The input to <tt>runSQL</tt> consists of two filenames
+(stored in variables <tt>clustercfg</tt> and <tt>sqlfile</tt>) passed in
+as commandline arguments. The file <tt>clustercfg</tt> contains
+access information for the catalog DB. The file <tt>sqlfile</tt> contains the
+SQL terminated by a semi-colon to be executed.  
+The join query needs to be executed on multiple threads; However, you should
+develop the sequential non-multi-threaded version first. Guidance will be
+provided on how to convert the join QEP into a multi-threaded one.
+
+<p><tt>runSQL</tt> should output the rows retrieved to the
+standard output on success or report failure.
+
+<p>You may assumed that the SQL queries only operate on
+at most two tables and do not contain any nested subqueries.
+
+<p>You should consider using the ANTLR compiler compiler to generate a SQL
+parser that you can use to extract the table names and to detect the join
+conditions. Only equi-joins need to be supported.
+
+<p><b>Policy on grammar sharing</b>
+You may discuss, share, and/or develop the grammar with other groups.
+
+<p>
+You may test your program on a single computer by using
+different databases to simulate the multiple computers.
+
+<hr/>
+<h3>Sample contents of a <tt>clustercfg</tt> file</h3>
+<ul>
+<pre>
+catalog.driver=com.ibm.db2.jcc.DB2Driver
+catalog.hostname=jdbc:db2://10.0.0.3:50001/mycatdb
+catalog.username=db2inst1
+catalog.passwd=mypasswd
+
+localnode.driver=com.ibm.db2.jcc.DB2Driver
+localnode.hostname=jdbc:db2://10.0.0.3:50001/mydb1
+localnode.username=db2inst1
+localnode.passwd=mypasswd
+
+</pre>
+</ul>
+
+localnode identifies the node in the cluster that received the query and that
+will co-ordinate the execution of the query. 
+
+<hr/>
+
+<h3>Sample contents of a <tt>sqlfile</tt> file</h3>
+<ul>
+<pre>
+SELECT S.sname 
+FROM Sailors S, Reserves R
+WHERE S.sid=R.sid and R.day='2009-12-21'
+;
+</pre>
+</ul>
+<hr/>
+
+<h3>Sample Output of <tt>`./run3.sh ./cluster.cfg ./sailors.sql`</tt></h3>
+<ul>
+<pre>
+Ramakrishnan
+Silberstein
+[jdbc:db2://10.0.0.3:50001/mydb2]: ./sailors.sql success.
+[jdbc:db2://10.0.0.3:50001/mydb1]: ./sailors.sql failed.
+</pre>
+</ul>
+
+<p>It is recommended that you develop your program in the following steps
+<ul>
+<li>Focus on the distributed join algorithm first. Assume no multi-threading,
+no projection or additional selection operators in the QEP. </li>
+
+<li>Once the
+distributed join algorithm is implemented and tested, work on incorporating
+projection.</li> 
+
+<li>Next incorporate additional filtering predicates (ie selection operators) from the where-clause </li> 
+
+<li>Keep in mind to pushdown predicates/selections and projections as much as possible.</li> 
+
+<li>Convert the join operation to a multi-threaded version by assigning each join between two fragments to a thread.</li>
+
+</ul>
+
+<hr/>
+
+You may need to use temporary tables for your joins. On DB2 you will need to use the following statement: <a href="http://publib.boulder.ibm.com/infocenter/db2luw/v9/topic/com.ibm.db2.udb.admin.doc/doc/r0003272.htm?resultof=%22%63%72%65%61%74%65%22%20%22%63%72%65%61%74%22%20%22%74%65%6d%70%6f%72%61%72%79%22%20%22%74%65%6d%70%6f%72%61%72%69%22%20%22%74%61%62%6c%65%22%20%22%74%61%62%6c%22%20">DECLARE GLOBAL TEMPORARY TABLE</a>.
+
+<hr/>
+
+<h2>General Requirements</h2>
+
+<ul>
+<li>You may program in any of the following languages: Java, C/C++, PHP, Python, Perl.</li> 
+
+<li>You are encouraged to use ANTLR to generate the code to parse SQL statements as well as to parse the CSV file. It will save you a lot of time.</li> 
+
+<li>You may use any third party libraries, but you need to provide them, so that your program is executable on the submission machine.</li> 
+
+<li>Your code should minimally support select-from-where statements</li>
+
+<li>Your code should minimally work with DB2 Express C DBMS instances.</li> 
+
+<li>You should ensure that your code is well commented and readable.</li>
+
+<li>You should develop the code on your own computer. In order for you to
+receive credit for the assignment, your code must to be compilable and
+executable on a linux machine. (A linux box will be provided for you to test
+your code for compliance.) 
+</li>
+
+<li>You must provide two shell scripts <tt>compile.sh</tt> and <tt>run.sh</tt>
+to compile and run your code respectively. The script <tt>run.sh</tt> should
+take <tt>clustercfg</tt> and <tt>sqlfile</tt> as its 1st and 2nd commandline
+arguments</li>
+
+</ul>
+
+<h2>Submission Procedure</h2>
+
+<p>Submit:
+<ul>
+<li>One set of source files for Part 5</li>
+<li>compile5.sh and run5.sh for Part 5</li>
+<li>submission of grammar file is optional but recommended, you may just submit the generated files</li>
+</ul>
+
+<p>antlrworks.jar is installed in /home/db2inst1/lib/antlrworks.jar  on the submission machine</p>
+
+<p>Follow the <a href="programsub.html">Submission Procedure</a>
+
+</body>

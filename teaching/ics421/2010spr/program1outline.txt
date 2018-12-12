@@ -1,0 +1,51 @@
+Outline of One Possible Solution to Programming Assignment 1.
+=============================================================
+Note that other designs are possible, the critical thing is
+to understand the tradeoffs. This outline only lists the
+high level steps, it does not structure the code nicely into
+objects/subroutines etc.
+=============================================================
+
+connlist : array of connections
+rclist   : array of return codes
+tlist    : array of threads
+
+Read config file and ddl file
+
+Parse ddl to get ddltype and table name
+
+open connection to catalog db
+
+if ddltype == CREATE TABLE, then
+
+   foreach node n, connlist[n] = open connection using config file info.
+
+   foreach node n, tlist[n] = runThread (ddl, rclist, n)
+
+   Wait for each thread to finish
+
+   foreach node n 
+     
+      check rclist[n] and output success or failure
+
+      if success, update catalog db to insert entry for node n   
+
+else if ddltype == DROP TABLE, then
+
+   query catalog db for node & connection info for given table name
+
+   foreach node n, connlist[n] = open connection.
+
+   foreach node n, tlist[n] = runThread (ddl, rclist, n)
+
+   Wait for each thread to finish
+
+   foreach node n 
+     
+      check rclist[n] and output success or failure
+
+      if success, update catalog db to remove entry for given table name for node n.  
+
+close all node and catalog connections
+
+perform other clean up

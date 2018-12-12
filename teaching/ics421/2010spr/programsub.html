@@ -1,0 +1,77 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 421 Programming Assignment</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+<h1>Submission Procedure for Programming Assignments</h1>
+<ul>
+<li>SSH/Login to the submission machine:
+   <ul>
+      ec2-174-129-49-13.compute-1.amazonaws.com
+   </ul>
+Username and passwork has been sent out via a class email. 
+</li>
+<li>CD into the ics421 directory. </li>
+<li>Create a subdirectory for yourself using your UH email
+ID (without the at hawaii.edu).</li> 
+<li>CD into your directory.</li>
+<li>Create a subdirectory called <tt>programN</tt>, substitute N with the assignment number..
+If you are submitting the same code as your team member, you may create a symbolic link instead of a real subdirectory.
+</li>
+<li>Upload your code to that directory using a secure FTP client. For example
+if your email is blue at hawaii dot edu, and you are submitting code for
+Assignment 1, your code should be uploaded to
+   <ul>
+   <tt>~/ics421/blue/program1/</tt> directory.
+   </ul>
+</li>
+<li>Create a shell script compile.sh that would compile your
+code. A sample is given in the
+<tt>~/ics421/lipyeow/program1</tt> directory. You just need
+to change the paths and source file list.
+</li> 
+<li>Create a shell script run.sh that would execute your
+program. A sample is given in the
+<tt>~/ics421/lipyeow/program1</tt> directory. You just need
+to change the paths and source file list.
+</li> 
+<li>
+Create a text file <tt>team.txt</tt> that contains the UH
+email ID (without the at hawaii.edu) of the team members,
+one member per line. 
+</li>
+<li>
+Edit the text files in linux. If you download the compile.sh and run.sh to a windows machine and edit it and upload it, you introduce windows style line feeds which confuses the linux shell.
+</li>
+</li>
+Run the checksubmissionN (replace N with the assignment number) from your submission directory (/home/db2inst1/ics421/<userid>/programN/) to check your submission.
+<li>
+</ul>
+
+<h2>Unix Commands you might need</h2>
+
+<ul>
+<li> <tt>man [commandname]</tt>: show the manual page of a command.
+</li> 
+<li> <tt>cd</tt>: change directory.
+</li>
+<li> <tt>ls</tt>: list directory.
+</li>
+<li> <tt>cp</tt>: copy files from src to target path.
+</li>
+<li> <tt>rm</tt>: remove files.
+</li> 
+<li> <tt>jpico</tt>: a relatively easy to use editor.
+</li> 
+<li> <tt>chmod u+x [file]</tt>: add execution permission for user to file.
+</li> 
+</ul>
+
+
+
+</body>

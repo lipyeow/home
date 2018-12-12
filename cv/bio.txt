@@ -1,0 +1,11 @@
+Lipyeow Lim is an Associate Professor of Information & Computer Sciences at the
+University of Hawai`i at Manoa (UHM). He obtained his Ph.D. from Duke
+University, NC and was a Research Scientist at IBM Thomas J. Wason Research
+Center in Yorktown Heights, NY prior to joining the University of Hawai`i. 
+Dr. Lim's expertise lies in information management, database technology, big
+data analytics and data science. He currently works with his students on
+various research projects such as analyzing Hawaiian language documents,
+forecasting solar irradiance in renewable energy applications, and identifying
+plants from natural images. He also serves as an IT consultant for several
+World Bank projects in China, Vietnam, Mongolia, and Malaysia.
+

@@ -1,0 +1,138 @@
+/* Generic Selectors */
+
+body {
+	font-family: "Palatino Linotype", serif;
+	font-size: 18px;
+	color: #333333;
+   /*background: url("http://www2.hawaii.edu/~lipyeow/img/manoa_seal2.jpg") 50% 50% no-repeat;*/
+	background-color: #FFFFCC;
+	/*margin: 0 0 0	0; top right bottom left*/
+}
+
+p {
+	width: 95%;
+}
+
+ul {
+	list-style-type: disc;
+	line-height: 150%;
+}
+
+ol {
+	list-style-type: decimal;
+	line-height: 150%;
+}
+
+
+
+h1 {
+
+	font-family: "Palatino Linotype", serif;
+	font-size: 28px;
+	font-weight: bold;
+	color: #000000;
+}
+
+code {
+	color: #004f9f;
+} 
+
+h2 {
+	font-family: "Palatino Linotype", serif;
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+}
+
+th {
+	background-color: #D0D0B0;
+   text-align:left;
+}
+
+td {
+   vertical-align:top;
+}
+
+
+
+/*************************  ID's *************************/
+#banner {
+	position: absolute;
+
+	padding: 0 0 150px 150px; /*top right bottom left*/
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#navigation {
+	position: absolute;
+
+	width: 210px;
+	height:	600px;
+	margin-top: 0px;
+	border-right: 1px solid	#C6EC8C;
+	font-weight: normal;
+}
+
+#centerDoc {
+	position: relative;
+
+	padding: 0 0 0 200px; /*top right bottom left*/
+	margin-top: 50px;
+}
+
+.navtab {
+   color:black;
+   background:#8FFF3F;
+}
+
+.navbar {
+   color:black;
+   background:#006633;
+}
+
+
+
+/*************************  Pseudo classes *************************/
+a:link {
+	color: #006633;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a:visited {
+color: #009933;
+text-decoration: underline;
+font-weight: bold;
+}
+
+a:hover	{
+color:#003300;
+padding-bottom:	5px;
+font-weight: bold;
+text-decoration: underline;
+
+}
+a:active {
+color: rgb(255,	0, 102);
+font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

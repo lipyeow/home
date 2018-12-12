@@ -1,0 +1,10 @@
+
+75.101.231.95
+
+db2expln -d testdb -f $1 -o $1.expln -z ";" -g
+
+create index yridx on pcefunc(year);
+
+create index yridx on pcefunc(quarter);
+
+runstats on table pcefunc and indexes all

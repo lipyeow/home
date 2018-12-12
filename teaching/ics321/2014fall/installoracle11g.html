@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 321 Softare Installation Instructions</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>Instructions for Installing Oracle DBMS in Ubuntu VM </h1>
+
+<hr/>
+<p>
+These install instructions are adapted from
+<a href="http://meandmyubuntulinux.blogspot.com/2012/05/installing-oracle-11g-r2-express.html">Me and My Ubuntu</a> blog.
+
+<h2> 1. Download VirtualBox</h2> 
+
+<p>Download the VirtualBox application for your host machine type
+from <a href="https://www.virtualbox.org/wiki/Downloads"> the virtual box download site</a>.
+
+<h2>2. Install VirtualBox</h2>
+
+<p>Doubleclick on the downloaded installer and follow the instructions.
+
+<h2>3. Download Ubuntu </h2>
+
+<p>Download
+   <a href="http://www.ubuntu.com/desktop/get-ubuntu/download">Ubuntu Desktop Edition</a> (14.04 64 bit version).
+ Note the directory where you downloaded it.
+
+<h2>
+4. Start the VirtualBox application
+</h2>
+
+<h2>5. Create a virtual machine (VM) and install Ubuntu</h2> 
+
+<p>Make sure that you set the memory of the VM to be greater than 2GB and the storage of the VM to be at least 10GB. 
+
+See <a href="http://youtu.be/gcye1vtBZXk">screencast</a>
+
+<h2>6. Clone backups of your Ubuntu VM</h2>
+
+<p>See <a href="http://youtu.be/Qy1cdF2mtoU">screencast</a>
+
+<h2>7. Download Oracle Database Express Edition</h2>
+
+Download <a href="http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html">Oracle Database Express Edition 11g Release 2 for Linux x64</a>. 
+
+<p>See <a href="http://youtu.be/EXcFozssgUE">screencast</a>
+
+<h2>8. Follow pre-install instructions</h2>
+
+<p>See <a href="http://youtu.be/Qm8lLMP4Mjk">screencast</a>, but note that the screencast did not include the last step before REBOOT listed below. You should execute the commands in the last step.
+
+<ol>
+<!-- ------------------------------------------------ -->
+   <li>Unzip using the command:
+<pre><code>unzip oracle-xe-11.2.0-1.0.x86_64.rpm.zip </code></pre>
+   </li>
+<!-- ------------------------------------------------ -->
+
+   <li>Install required packages using the command:
+<pre><code>sudo apt-get install alien libaio1 unixodbc</code></pre>
+   </li>
+<!-- ------------------------------------------------ -->
+
+   <li>
+   Convert RPM package format to DEB package format (that is used by Ubuntu)  using the command:
+<pre><code>sudo alien --scripts -d oracle-xe-11.2.0-1.0.x86_64.rpm</code></pre>
+   </li>
+<!-- ------------------------------------------------ -->
+   <li>
+   Create the required <i>chkconfig</i> script using the command:: 
+<pre><code>sudo pico /sbin/chkconfig</code></pre>
+The pico text editor is started and the commands are shown at the bottom of the
+screen. Now copy and paste the following into the file and save:
+<pre><code>
+#!/bin/bash
+# Oracle 11gR2 XE installer chkconfig hack for Ubuntu
+file=/etc/init.d/oracle-xe
+if [[ ! `tail -n1 $file | grep INIT` ]]; then
+echo >> $file
+echo '### BEGIN INIT INFO' >> $file
+echo '# Provides: OracleXE' >> $file
+echo '# Required-Start: $remote_fs $syslog' >> $file
+echo '# Required-Stop: $remote_fs $syslog' >> $file
+echo '# Default-Start: 2 3 4 5' >> $file
+echo '# Default-Stop: 0 1 6' >> $file
+echo '# Short-Description: Oracle 11g Express Edition' >> $file
+echo '### END INIT INFO' >> $file
+fi
+update-rc.d oracle-xe defaults 80 01
+</code></pre>
+   </li>
+   <li>
+   Change the permission of the chkconfig file using the command:
+<pre><code>sudo chmod 755 /sbin/chkconfig  </code></pre>
+   </li>
+<!-- ------------------------------------------------ -->
+   <li>
+   Set kernel parameters. Oracle 11gR2 XE requires additional kernel parameters which you need to set using the command:
+<pre><code>sudo pico /etc/sysctl.d/60-oracle.conf</code></pre>
+   Copy the following into the file and save:
+<pre><code># Oracle 11g XE kernel parameters  
+fs.file-max=6815744  
+net.ipv4.ip_local_port_range=9000 65000  
+kernel.sem=250 32000 100 128 
+kernel.shmmax=536870912 
+</pre></code>
+Verify the change using the command:
+<pre><code>sudo cat /etc/sysctl.d/60-oracle.conf 
+</pre></code>
+You should see what you entered earlier.
+Now load the kernel parameters:
+<pre><code>sudo service procps start
+</pre></code>
+Verify the new parameters are loaded using:
+<pre><code>sudo sysctl -q fs.file-max
+</pre></code>
+You should see the file-max value that you entered earlier.
+   </li>
+<!-- ------------------------------------------------ -->
+  <li>
+Set up /dev/shm mount point for Oracle. Create the following file using the command:
+<pre><code>sudo pico /etc/rc2.d/S01shm_load
+</pre></code> 
+Copy the following into the file and save. 
+<pre><code>#!/bin/sh
+case "$1" in
+start) mkdir /var/lock/subsys 2>/dev/null
+       touch /var/lock/subsys/listener
+       rm /dev/shm 2>/dev/null
+       mkdir /dev/shm 2>/dev/null
+       mount -t tmpfs shmfs -o size=2048m /dev/shm ;;
+*) echo error
+   exit 1 ;;
+esac 
+</code></pre>
+Change the permissions of the file using the command:
+<pre><code>sudo chmod 755 /etc/rc2.d/S01shm_load
+</code></pre>
+   </li>
+<!-- ------------------------------------------------ -->
+   <li>[This step was not included in the screencast, but you should do it.]
+   Execute the following commands:
+<pre><code>sudo ln -s /usr/bin/awk /bin/awk 
+sudo mkdir /var/lock/subsys 
+sudo touch /var/lock/subsys/listener 
+</pre></code>
+   </li>
+<!-- ------------------------------------------------ -->
+   <li>
+REBOOT your Ubuntu VM.
+   </li>
+<!-- ------------------------------------------------ -->
+</ol>
+
+<h2>9. Install Oracle</h2>
+
+<p>See <a href="http://youtu.be/yqCncbEolY8">screencast</a> for a recording of the following steps.
+
+<ol>
+<!-- ------------------------------------------------ -->
+<li>
+Install the oracle DBMS using the command:
+<pre><code>sudo dpkg --install oracle-xe_11.2.0-2_amd64.deb
+</code></pre>
+</li>
+<!-- ------------------------------------------------ -->
+<li>
+Configure Oracle using the command:
+<pre><code>sudo /etc/init.d/oracle-xe configure 
+</code></pre>
+Enter the following information:
+<ul>
+<li>A valid HTTP port for the Oracle Application Express (the default is 8080)  
+</li>
+<li>
+A valid port for the Oracle database listener (the default is 1521) 
+</li>
+<li>
+A password for the SYS and SYSTEM administrative user accounts
+</li>
+<li>
+Confirm password for SYS and SYSTEM administrative user accounts
+</li>
+<li>
+Whether you want the database to start automatically when the computer starts (next reboot).
+</li>
+</ul>
+</li>
+<!-- ------------------------------------------------ -->
+<li>
+Setup environment variables by editting your .bashrc file:
+<pre><code>pico ~/.bashrc
+</code></pre>
+Add the following lines to the end of the file:
+<pre><code>export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
+export ORACLE_SID=XE
+export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
+export ORACLE_BASE=/u01/app/oracle
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
+export PATH=$ORACLE_HOME/bin:$PATH
+</code></pre>
+Load the changes by executing your profile:
+<pre><code>. ~/.profile
+</code></pre>
+</li>
+<!-- ------------------------------------------------ -->
+<li>
+Start the Oracle 11gR2 XE:
+<pre><code>sudo service oracle-xe start
+</code></pre>
+</li>
+<!-- ------------------------------------------------ -->
+<li>
+Add user YOURUSERNAME to group dba using the command
+<pre><code>sudo usermod -a -G dba YOURUSERNAME
+</code></pre>
+</li>
+<!-- ------------------------------------------------ -->
+</ol>
+
+<h2>10. Using the Oracle XE Command Shell</h2>
+
+<p>See <a href="http://youtu.be/GHdtxkQ9rg8">screencast</a> for a recording of the following steps.
+
+<ol>
+<!-- ------------------------------------------------ -->
+<li>Start the Oracle XE 11gR2 server using the command:
+<pre><code>sudo service oracle-xe start
+</code></pre>
+This step is most likely not necessary, but I am documenting the command here anyway.
+</li>
+<!-- ------------------------------------------------ -->
+<li>Start command line shell as the system admin using the command:
+<pre><code>sqlplus sys as sysdba
+</code></pre>
+Enter the password that you gave while configuring Oracle earlier.
+You will now be placed in a SQL environment that only understands SQL commands.
+</li>
+<!-- ------------------------------------------------ -->
+<li>Create a regular user account in Oracle using the SQL command:
+<pre><code>create user USERNAME identified by PASSWORD;
+</code></pre>Replace USERNAME and PASSWORD with the username and password of
+your choice. Please remember this username and password.
+If you had error executing the above with a message about resetlogs, then execute the following SQL command and try again:
+<pre><code>alter database open resetlogs
+</code></pre>
+</li>
+<!-- ------------------------------------------------ -->
+<li>Grant privileges to the user account using the SQL command:
+<pre><code>grant connect, resource to USERNAME;
+</code></pre>
+Replace USERNAME and PASSWORD with the username and password of your choice. Please remember this username and password.
+</li>
+<!-- ------------------------------------------------ -->
+<li>Exit the sys admin shell using the SQL command:
+<pre><code>exit;
+</code></pre>
+</li>
+<!-- ------------------------------------------------ -->
+<li>Start the commandline shell as a regular user using the command:
+<pre><code>sqlplus
+</code></pre>
+You will be prompted for a username and password. Once authenticated, you will be able to type in the standard SQL commands learned in class.
+</li>
+<!-- ------------------------------------------------ -->
+</ol>
+
+<h2>11. Clone your VM if everything was successful!</h2>
+
+</body>

@@ -1,0 +1,961 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Welcome to the ICS 421 Course Webpage!</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 421 Database Systems (Spring 2010)</h1>
+
+<h2>General Information</h2>
+<ul>
+<li>Class Meets: Tues and Thurs 10:30am - 11:45 am 
+</li>
+<li>Final Exam : Tues May 11 2009 9:45-11:45 am. No make up exams!
+</li>
+<li>Instructor : <a href="http://www2.hawaii.edu/~lipyeow">Lipyeow Lim</a>
+</li>
+<li>Office Hours : Tues 1-3 pm and by appointment (lipyeow at hawaii dot edu tel: 956-3495)
+</li>
+<li>Required Textbook : 
+   Database Management Systems, Third Edition. 
+   Raghu Ramakrishnan and Johannes Gehrke.
+   ISBN: 0-07-246563-8. 
+<a href="http://pages.cs.wisc.edu/~dbbook/">Book Website</a>.
+</li>
+<li>Other Reference Books:
+<ul>
+   <li>Principles of Distributed Database Systems (2nd Ed.). M. Tamer Ozsu and Patrick Valduriez. Prentice Hall. ISBN: 0-13-659707-6</li>
+   <li>Data Mining (2nd Ed.). Jiawei Han and Micheline Kamber. Morgan Kaufmann. ISBN: 1-55860-901-6 </li>
+</ul>
+</li>
+<li>Objective: 
+Students meeting the pre-requisites should already have a basic understanding of
+databases software and a working knowledge of using database technology for
+simple applications. At the end of this course the successfull student should
+  <ul>
+     <li> have gained a deeper understanding of database technologies
+         including more advanced topics such as performance tuning, data
+         warehousing, parallel and distributed databases. </li>
+     <li> be able to install and deploy DBMS software </li>
+     <li> be able to program using database APIs</li>
+  </ul> 
+</li>
+<li>Late policy: work submitted past due date and time will receive zero credits. </li>
+<li>Pre-requisites: ICS 321 ICS 311</li>
+<li>A (portable) computer is required for this course</li>
+</ul>
+
+<h2>Topics (Tentative)</h2>
+
+<ul>
+   <li>Ch 2,3,19. Database Design, The Relational Model, & Schema Refinement and Normal Forms 
+   </li>
+   <li>Ch 4,5,6. Relational Algebra and SQL</li>
+   <li>Ch 8,9,10,11. Storage And Indexing</li>
+   <li>Ch 12,13,14,15. Query Evaluation </li>
+   <li>Ch 16,17,18. Transaction Management </li>
+   <li>Ch 20. Performance Tuning</li>
+   <li>Ch 21. Security & Authorization</li>
+   <li>Ch 22. Parallel & distributed DBs</li>
+   <li>Ch 25. Data Warehousing</li>
+   <li>Ch 26. Data Mining</li>
+   <li>Ch 24. Deductive Databases</li>
+   <li>Ch 28. Spatial Databases</li>
+</ul>
+
+<h2>Grading (Tentative)</h2>
+
+<ul>
+   <li> 15% Quizzes</li>
+   <li> 40% Homework (Programming) Assignments </li>
+   <li> 20% Project</li>
+   <li> 15% Mid-term exam</li>
+   <li> 10% Final Exam</li>
+   <li>If you choose to take part in the <a href="http://dbweb.enst.fr/events/sigmod10contest/">SIGMOD 2010 Programming Contest</a>, 
+      the programming work done for the contest can be used to replace 
+      the Homework Assignments and Project requirements.</a>
+   </li>
+</ul>
+
+<h2>Assignments & Course Project</h2>
+
+<ul>
+<li>
+   <a href="program1.html">Programming Assignment 1</a> (10%)
+   <a href="program1outline.txt">Solution Outline (txt)</a> 
+</li>
+<li>
+   <a href="program2.html">Programming Assignment 2</a> (10%)
+   <a href="program2outline.txt">Solution Outline (txt)</a> 
+</li>
+<li>
+   <a href="program3.html">Programming Assignment 3</a> (15%)
+   <a href="program3outline.txt">Solution Outline (txt)</a> 
+</li>
+<li>
+   <a href="program4.html">Programming Assignment 4</a> (5%+extra credit)
+</li>
+<li><a href="programsub.html">Submission Procedure</a> for all the assignments except Assignment 4.
+<li>A few random slides on Unix/Linux commandline environment from Henri Casanova <a href="http://navet.ics.hawaii.edu/~casanova/courses/ics412_fall09/slides/ics412_linux.pdf">pdf</a>
+<li>
+   <a href="project.html">Course Project</a> 
+</li>
+</ul>
+
+<h2>Class Schedule (Tentative)</h2>
+
+<table border="1" cellspacing="0" cellpadding="2" width="100%">
+<tr width="100%">
+   <th width="5%">Week</th>
+   <th width="10%">Date</th>
+   <th width="25%"> Topic</th>
+   <th width="15%"> Readings</th>
+   <th > Remarks
+</th>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      1
+   </td>
+   <td>
+      Tue Jan 12
+   </td>
+   <td>
+      Course Organization and Introduction
+   </td>
+   <td>
+      None
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      1
+   </td>
+   <td>
+      Thu Jan 14
+   </td>
+   <td>
+      Database Design
+   </td>
+   <td>
+      Ch 2
+   </td>
+   <td>
+      Slides <a href="ics421-20100114-ER.pdf">pdf</a>.
+      Exercise <a href="ex-20100114-ER.pdf">pdf</a>.
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      2
+   </td>
+   <td>
+      Tue Jan 19
+   </td>
+   <td>
+      Relational Model, Normal Forms
+   </td>
+   <td>
+      Ch 3, 19
+   </td>
+   <td>
+      Slides <a href="ics421-20100119-relmodelnf.pdf">pdf</a>.
+      Quiz 1
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      2
+   </td>
+   <td>
+      Thu Jan 21
+   </td>
+   <td>
+      Relational Model, Normal Forms
+   </td>
+   <td>
+      Ch 19
+   </td>
+   <td>
+      Download and install DB2 Express C edition on your laptop. 
+      <br/>
+      Slides <a href="ics421-20100121-nf.pdf">pdf</a>.
+      DBMS Hands-on<a href="ics421-20100121-db2handson1.pdf">pdf</a>.
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      3
+   </td>
+   <td>
+      Tue Jan 26
+   </td>
+   <td>
+      Relational Algebra & SQL
+   </td>
+   <td>
+      Ch 4.{1-2}, Ch 5
+   </td>
+   <td>
+      Quiz 2. <br/>
+      Slides <a href="ics421-20100126-ra.pdf">pdf</a>.
+      Exercise <a href="ex-20100126-nf.pdf">pdf</a>. The solution is available from the website of the textbook. 
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      3
+   </td>
+   <td>
+      Thu Jan 28
+   </td>
+   <td>
+      SQL & Application Programming
+   </td>
+   <td>
+     Ch 5, Ch 6.
+   </td>
+
+   <td>
+   Slides <a href="ics421-20100128-sqlapp.pdf">pdf</a><br/>
+   DB2 Hands-on 2 Tasks <a href="db2handson2.txt">txt</a><br/>
+   Sample JDBC code <a href="../../ics321/2009fall/jdbc.zip">jdbc.zip</a> <br/>
+   Setting up Java/JDBC on Windows <a href="jdbcwin.txt">txt</a> <br/>
+   DB2 JDBC port config info <a href="db2portsetup.txt">txt</a><br/>
+   <a href="program1.html">Programming Assignment 1</a> 
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      4
+   </td>
+   <td>
+      Tue Feb 2
+   </td>
+   <td>
+      Parallel & Distributed DBs
+   </td>
+   <td>
+      Ch 22.{1-9}
+   </td>
+   <td>
+      Quiz 3<br/>
+      Slides <a href="ics421-20100202-pardb1.pdf">pdf</a><br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      4
+   </td>
+   <td>
+      Thu Feb 4
+   </td>
+   <td>
+      Parallel & Distributed DBs
+   </td>
+   <td>
+   Ch 22.{1-9}
+   Supplemental reading on parallel DBs <a href=dewittgray92.pdf>dewittgray92.pdf</a>
+   </td>
+   <td>
+   Slides <a href="ics421-20100204-pardb2.pdf">pdf</a><br/>
+   Sample Java Threads code <a href="javathreads.zip">javathreads.zip</a> <br/>
+   Sample ODBC code <a href="../../ics321/2009fall/odbc.zip">odbc.zip</a> <br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      5
+   </td>
+   <td>
+      Tue Feb 9
+   </td>
+   <td>
+      Query Evaluation (i)
+   </td>
+   <td>
+      Ch 12, 14, 22.10
+   </td>
+   <td>
+      Quiz 4<br/> 
+      Slides <a href="ics421-20100209-queryeval1.pdf">pdf</a>(updated Feb 12 2pm)<br/>
+      <a href="http://www.antlr.org/">ANTLR</a> sample code <a href="antlr.zip">antlr.zip</a>. Download the complete GUI <a href="http://www.antlr.org/works/index.html">ANTLRWorks</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      5
+   </td>
+   <td>
+      Thu Feb 11
+   </td>
+   <td>
+      Query Evaluation (ii)
+   </td>
+   <td>
+   Ch 13.{1-3}, 14
+   </td>
+   <td>
+   Slides <a href="ics421-20100211-queryeval2.pdf">pdf</a>(updated Feb 12 2pm)<br/>
+   Programming Assignment 1 Due at 23:59 hour (extended to Sun Feb 14 23:59 hour) <br/>
+   <a href="program2.html">Programming Assignment 2</a> <br/> 
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      6
+   </td>
+   <td>
+      Tue Feb 16
+   </td>
+   <td>
+      Storage 
+   </td>
+   <td>
+      Ch 8, 9.{1,3-7}
+   </td>
+   <td>
+      Quiz 5<br/>
+   Slides <a href="ics421-20100216-storage.pdf">pdf</a><br/>
+   Exercise <a href="ex-20100216-qep.pdf">pdf</a><br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      6
+   </td>
+   <td>
+      Thu Feb 18
+   </td>
+   <td>
+      Tree-based Indexes
+   </td>
+   <td>
+   Ch 10
+   </td>
+   <td>
+   Slides <a href="ics421-20100218-index1.pdf">pdf</a>
+   <a href="ics421-20100218-index1.pptx">pptx</a> <br/>
+   ANTLR handson <a href="antlrhandson.txt">txt</a>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      7
+   </td>
+   <td>
+      Tue Feb 23
+   </td>
+   <td>
+      Hash Indexes
+   </td>
+   <td>
+      Ch 11.
+   </td>
+   <td>
+      Quiz 6<br/>
+   Slides <a href="ics421-20100223-index2.pdf">pdf</a>
+   <a href="ics421-20100223-index2.pptx">pptx</a> (updated Feb 23 2:15pm) <br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      7
+   </td>
+   <td>
+      Thu Feb 25
+   </td>
+   <td>
+      Query Optimization
+   </td>
+   <td>
+      Ch 15.  
+   </td>
+   <td>
+   Slides <a href="ics421-20100225-queryopt.pdf">pdf</a>
+   <a href="ics421-20100225-queryopt.pptx">pptx</a><br/>
+   Programming Assignment 2 Due at 23:59 hour (extended to Sunday Feb 28 23:59 hour)<br/>
+   <a href="program3.html">Programming Assignment 3</a> 
+<br/>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      8
+   </td>
+   <td>
+      Tue Mar 2
+   </td>
+   <td>
+      Transaction Management 1
+   </td>
+   <td>
+      Ch 16, 17
+   </td>
+   <td>
+      Quiz 7 <br/>
+   Slides <a href="ics421-20100302-concurrency1.pdf">pdf</a>
+   <a href="ics421-20100302-concurrency1.pptx">pptx</a><br/>
+   Exercise <a href="ex-20100302-conflict.pdf">pdf</a><br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      8
+   </td>
+   <td>
+      Thu Mar 4
+   </td>
+   <td>
+      Transaction Management 2
+   </td>
+   <td>
+Ch 18
+   </td>
+   <td>
+   Slides <a href="ics421-20100304-recovery.pdf">pdf</a>
+   <a href="ics421-20100304-recovery.pptx">pptx</a><br/>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      9
+   </td>
+   <td>
+      Tue Mar 9
+   </td>
+   <td>
+      Mid-term Exam
+   </td>
+   <td>
+      &nbsp
+   </td>
+   <td>
+      Mid-term Exam. Exactly one letter-size sheet of notes (double-sided) is allowed.
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      9
+   </td>
+   <td>
+      Thu Mar 11
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   Midterm review
+   </td>
+   <td>
+   <a href="program4.html">Programming Assignment 4</a> 
+   <br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      10
+   </td>
+   <td>
+      Tue Mar 16
+   </td>
+   <td>
+      Distributed Transactions.
+   </td>
+   <td>
+      Ch 22.{12-14}.
+   </td>
+   <td>
+      Quiz 8<br/>
+   Slides <a href="ics421-20100316-distributedtransactions.pdf">pdf</a>
+   <a href="ics421-20100316-distributedtransactions.pptx">pptx</a><br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      10
+   </td>
+   <td>
+      Thu Mar 18
+   </td>
+   <td>
+      Data Warehousing 1
+   &nbsp
+   </td>
+   <td>
+      Ch 25.
+   &nbsp
+   </td>
+   <td>
+   Slides <a href="ics421-20100318-dw1.pdf">pdf</a>
+   <a href="ics421-20100318-dw1.pptx">pptx</a><br/>
+   Post Group Name and Members in Wiki in Laulima<br/>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      11
+   </td>
+   <td>
+      Tue Mar 23
+   </td>
+   <td>
+       Spring Recess - no class
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      11
+   </td>
+   <td>
+      Thu Mar 25
+   </td>
+   <td>
+       Spring Recess - no class
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   Programming Assignment 3 Due on Sun Mar 28 at 23:59 hour <br/>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      12
+   </td>
+   <td>
+      Tue Mar 30
+   </td>
+   <td>
+      Data Warehousing 2
+      &nbsp
+   </td>
+   <td>
+      Ch 25.
+      &nbsp
+   </td>
+   <td>
+   Slides <a href="ics421-20100330-dw2.pdf">pdf</a>
+   <a href="ics421-20100330-dw2.pptx">pptx</a><br/>
+   Exercise <a href="ex-20100330-dw.pdf">pdf</a><br/>
+      Post the two DBMS you picked for your project in the Wiki in Laulima
+      <br/>
+
+      Quiz 9
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      12
+   </td>
+   <td>
+      Thu Apr 1
+   </td>
+   <td>
+      Data Warehousing 3
+   </td>
+   <td>
+      Ch 25.
+   &nbsp
+   </td>
+   <td>
+   Slides <a href="ics421-20100401-dw3.pdf">pdf</a>
+   <a href="ics421-20100401-dw3.pptx">pptx</a><br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      13
+   </td>
+   <td>
+      Tue Apr 6
+   </td>
+   <td>
+      Data Mining 1
+   </td>
+   <td>
+      Ch 26.
+   </td>
+   <td>
+      Quiz 10 <br/>
+   Slides <a href="ics421-20100406-datamining1.pdf">pdf</a>
+   <a href="ics421-20100406-datamining1.pptx">pptx</a><br/>
+   Exercise <a href="ex-20100406-assocrules.pdf">pdf</a><br/>
+   Install the <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a> software.
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      13
+   </td>
+   <td>
+      Thu Apr 8
+   </td>
+   <td>
+      Data Mining 2
+   </td>
+   <td>
+Ch 26.
+   </td>
+   <td>
+   Slides <a href="ics421-20100408-datamining2.pdf">pdf</a>
+   <a href="ics421-20100408-datamining2.pptx">pptx</a><br/>
+   Weka Handson <a href="wekatasks.txt">txt</a><br/>
+  
+   Programming Assignment 4 Due on Sunday Apr 11 at 23:59 hour <br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      14
+   </td>
+   <td>
+      Tue Apr 13
+   </td>
+   <td>
+      Performance Tuning 1
+   </td>
+   <td>
+      Ch 20
+      &nbsp
+   </td>
+   <td>
+      Quiz 11
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      14
+   </td>
+   <td>
+      Thu Apr 15
+   </td>
+   &nbsp
+   <td>
+      Performance Tuning 2
+   </td>
+   <td>
+      Ch 20.
+      <a href="http://www.ibm.com/developerworks/data/library/tips/dm-0312yip/index.html">Supplemental reading on DB2 selectivity clause</a>
+   &nbsp
+   </td>
+   <td>
+   Slides <a href="ics421-20100415-tuning.pdf">pdf</a>
+   <a href="ics421-20100415-tuning.pptx">pptx</a><br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      15
+   </td>
+   <td>
+      Tue Apr 20
+   </td>
+   <td>
+      Security & Authorization
+   </td>
+   <td>
+      Ch 21
+      &nbsp
+   </td>
+   <td>
+      Quiz 12<br/>
+   Slides <a href="ics421-20100420-security.pdf">pdf</a>
+   <a href="ics421-20100420-security.pptx">pptx</a><br/>
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      15
+   </td>
+   <td>
+      Thu Apr 22
+   </td>
+   <td>
+      Other types of Databases
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   Slides <a href="ics421-20100422-other.pdf">pdf</a>
+   <a href="ics421-20100422-other.pptx">pptx</a><br/>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      16
+   </td>
+   <td>
+      Tue Apr 27
+   </td>
+   <td>
+       Review
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      16
+   </td>
+   <td>
+      Thu Apr 29
+   </td>
+   <td>
+      Project Presentation
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      17
+   </td>
+   <td>
+      Tue May 4
+   </td>
+   <td>
+      Project Presentation
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   All project deliverables due.
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+<tr>
+   <td>
+      18
+   </td>
+   <td>
+      Tue May 11
+   </td>
+   <td>
+       Final Examination
+   </td>
+   <td>
+   &nbsp
+   </td>
+   <td>
+   &nbsp
+   </td>
+</tr>
+<!-- ------------------------------------ -->
+</table>
+
+<h2>Links & Resources</h2>
+<ul>
+<li>Other data models
+<ul>
+<li>
+<a href="http://cacm.acm.org/blogs/blog-cacm/50678-the-nosql-discussion-has-nothing-to-do-with-sql/fulltext">Michael Stonebraker's blog entry on NOSQL</a> 
+</li>
+<li>
+<a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/labs.google.com/en/us/papers/bigtable-osdi06.pdf">bigtable paper</a>
+</li>
+<li>
+<a href="http://www.amazon.com/Database-Management-Systems-Raghu-Ramakrishnan/dp/0071230572/ref=pd_sim_b_6">textbook</a>
+<a href="http://www.amazon.com/Complete-William-Shakespeare-Wordsworth-Editions/dp/185326895X/ref=sr_1_6?ie=UTF8&s=books&qid=1271884268&sr=1-6">another book</a>
+<a href="http://www.amazon.com/Nikon-S8000-Vibration-Reduction-Black/dp/B0034XIM82/ref=sr_1_3?ie=UTF8&s=photo&qid=1271884028&sr=1-3">Camera</a>
+<a href="http://www.amazon.com/ASICS-GEL-Nimbus-Running-Lightning-Brilliant/dp/B00290R4XA/ref=sr_1_5?ie=UTF8&s=shoes&qid=1271884356&sr=1-5">Shoe</a>
+</li>
+<li>
+<a href="http://www.w3.org/People/Ivan/CorePresentations/SWTutorial/">Ivan's presentation on Semantic web</a>
+</li>
+<li>
+<a href="http://www.rdfabout.com/">rdf:about</a>
+</li>
+<li>
+<a href="http://linkeddata.org/">Linked Open Data</a>
+</li>
+<li>
+<a href="http://www.youtube.com/watch?v=3YcZ3Zqk0a8">Tim Berners-Lee: The year open data went worldwide </a>
+</li>
+<a href="http://www.youtube.com/watch?v=OM6XIICm_qo">Tim Berners-Lee: The next Web of open, linked data</a>
+<li>
+</li>
+</ul>
+
+</li>
+
+<li>Performance Tuning
+<ul>
+  <li><a href="http://www.ibm.com/developerworks/data/library/techarticle/dm-0408hubel/index.html">Intro to Snapshot and Event Monitors </a> </li>
+  <li><a href="http://publib.boulder.ibm.com/infocenter/db2luw/v8/index.jsp?topic=/com.ibm.db2.udb.doc/admin/r0005991.htm">Event monitors for lock contention </a>
+  </li>
+  <li>
+  <a href="http://www.performancewiki.com/db2-event-monitors.html
+">Debugging using event monitors</a>
+  </li>
+</ul>
+</li>
+<li>Data Warehousing
+<ul>
+   <li>
+   <a href="http://www.dbazine.com/oracle/or-articles/jlewis7">bitmap join indexes</a> in Oracle.
+   </li>
+   <li> 
+   <a href="http://www.gartner.com/technology/media-products/reprints/greenplum/173535.html">Gartner Magic Quadrant on Data Warehousing </a>
+   </li>
+   <li>
+   <a href="http://www.youtube.com/watch?v=3WPOrdUGteE">video: Oracle Exadata 2 announcement</a>
+   </li>
+   <li>
+   <a href="http://www.youtube.com/watch?v=mgEugd5kZgk">video: DW Demystified</a>
+   </li>
+   <li>
+   <a href="http://www.youtube.com/watch?v=WgVSu-4Mizs">video: Oracle Exadata Ad</a>
+   </li>
+   <li>
+   <a href="http://www.youtube.com/watch?v=gWb7gqiqIRE">video: Lloyd TSB</a>
+   </li>
+   <li>
+   <a href="http://www.youtube.com/watch?v=ArOFlLzblHo">video: Value of BI</a>
+   </li>
+</ul>
+</li>
+<li>Parallel/Distributed DBMS
+<ul>
+   <li>
+   Paper on Distributed Optimizer in R*.
+   <a href="http://www.sigmod.org/vldb/conf/1986/P149.PDF">pdf</a>
+   </li>
+   <li>
+   Jim Gray's 1995 tutorial on parallel database systems
+   <a href="http://research.microsoft.com/~gray/PDB95.ppt">ppt</a>
+   </li>
+</ul>
+</li>
+<li>
+Query evaluation architectures:
+<ul>
+  <li><a href="http://db.apache.org/derby/papers/derby_arch.html">Derby</a> </li>
+  <li><a href="http://www.sqlite.org/vdbe.html">sqllite</a> </li>
+</ul>
+</li>
+<li>Examples of Big Databases/Datawarehouses
+   <ul>
+     <li><a href="http://gizmodo.com/5309889/how-large-is-a-petabyte">How large is a Petabyte</a>
+     </li>
+     <li><a href="http://www.dbms2.com/2009/04/30/ebays-two-enormous-data-warehouses/">E-Bay's Multi-Petabyte Datawarehouses</a>
+     </li>
+   </ul>
+</li>
+<li> Database Programming
+<ul>
+   <li> Download 
+        <a href="http://java.sun.com/javase/downloads/widget/jdk6.jsp">JDK</a>
+   </li>
+   <li>
+   JDBC <a href="http://java.sun.com/j2se/1.4.2/docs/api/java/sql/package-summary.html">java.sql documentation</a>
+   </li>
+   <li>
+      <a href="https://www6.software.ibm.com/dw/education/dm/db2cert7033/db2_cert7033-pdf.pdf">Tutorial (pdf)</a> on Embedding SQL in C programs for DB2.
+   </li>
+</ul>
+<li>
+   Consider taking part in the <a href="http://dbweb.enst.fr/events/sigmod10contest/">SIGMOD 2010 Programming Contest</a>. The prize is $5000 and a trip to Paris. Moreover, work done for the contest can be used to replace the homework and project requirements of this class.
+</li>
+<li>
+   <a href="http://www.simplyhired.com/a/salary/search/q-Database">Database Job Salaries</a> <a href="http://www.payscale.com/af/calc.aspx?af=2385&src=SH1&job=Database&city=&state=">DBA Job Salaries</a>
+</li>
+<li>
+   <a href="http://www.youtube.com/watch?v=koa0p0sH3sc">video: IBM DB2 & Convergence CT</a>
+</li>
+<li>
+   <a href="http://www.youtube.com/watch?v=8Ol6H8ErL_c">video: Insurance Company Usecase (DB2) </a>
+</li>
+<li>
+   Alternate perspective:
+   <a href="http://cacm.acm.org/blogs/blog-cacm/32212-the-end-of-a-dbms-era-might-be-upon-us/fulltext">
+   Michael Stonebraker's latest article on the doom of DBMS
+   </a>. 
+</li>
+<li>
+<a href="http://www-01.ibm.com/software/data/db2/express/download.html?S_TACT=imdb2luw&S_CMP=ibm_im">Download the free IBM DB2 Express-C</a>. 
+   <ul>
+   <li>In general, you
+should make use of the install documentation (eg. the free <a
+href="http://www.ibm.com/developerworks/wikis/display/DB2/FREE+Book-+Getting+Started+with+DB2+Express-C">Getting
+Started with DB2 Express-C</a> book) and the DB2 forums. There is also
+comprehensive documentation on the DB2 commands etc at the <a
+href="http://publib.boulder.ibm.com/infocenter/db2luw/v9/index.jsp">DB2
+Information Center</a>. Part of learning how to use a DBMS software is navigating the documentation that comes with the software.
+ </li>
+   <li>Mac OS: Note that if you're installing the beta for Mac OS, you should
+check the forum for configuration instructions if the install has
+problems. XCode is required (thanks to Kevin Leong). </li>
+   </ul>
+</li>
+<li>
+<a href="http://manoa.hawaii.edu/records/calendar/spring_2010.html">UHM Spring 2010 Academic Calender</a>
+</li>
+<li>
+<a href="http://manoa.hawaii.edu/records/final_exam/spring_2010.html">UHM Spring 2010 Final Examination Schedule</a>
+</li>
+</ul>
+
+</body>

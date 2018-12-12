@@ -1,0 +1,20 @@
+# follow these steps only if your JDBC connection doesn't work on the default install
+
+db2 get dbm cfg
+
+look for SVCENAME
+
+db2 update dbm cfg using SVCENAME db2c_db2inst1
+
+add to /etc/services
+
+db2c_db2inst1 50004/tcp
+
+db2set DB2COMM=tcpip
+
+db2stop
+
+db2start
+
+check using netstat -tulpan
+

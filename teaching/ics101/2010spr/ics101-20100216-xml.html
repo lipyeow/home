@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+   <TITLE>ICS 101 XML Lecture</TITLE>
+   <meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1"/>
+   <link href="../../lystyle.css" rel="stylesheet" type="text/css" />
+</HEAD>
+
+<body>
+
+<img src="xml.gif" width="60%"/>
+
+<h1>ICS 101 XML Lecture (Spring 2010)</h1>
+
+<h2>What is XML?</h2>
+<ul>
+   <li><a href="http://www.youtube.com/watch?v=-Z3sSQrOSpY&feature=related">Eric Explains XML</a></li>
+   <li><a href="http://www.youtube.com/watch?v=pPKV6dBZ5n0">XML: the basics</a></li>
+   <li><a href="http://www.w3.org/TR/REC-xml/#sec-origin-goals">XML Design Goals</a></li>
+</ul>
+
+<hr/>
+<h2>An Example of an XML Document</h2>
+
+<table border=1>
+<tr>
+<td>
+<pre>
+&lt;xml version="1.0"&gt;
+   &lt;book&gt;
+      &lt;title&gt;A Tale of Two Cities&lt;/title&gt;
+      &lt;author&gt;Charles Dickens&lt;/author&gt;
+   &lt;/book&gt;
+
+   &lt;book&gt;
+      &lt;title&gt;Tom Sawyer&lt;/title&gt;
+      &lt;author&gt;Mark Twain&lt;/author&gt;
+   &lt;/book&gt;
+
+   &lt;book&gt;
+      &lt;title&gt;The Wonderful Wizard of Oz&lt;/title&gt;
+      &lt;author&gt;Lyman Frank Baum&lt;/author&gt;
+   &lt;/book&gt;
+
+&lt;/xml&gt;
+</pre>
+<td>
+</tr>
+</table>
+
+<hr/>
+<h2>XML in Action: RSS</h2>
+
+<ul>
+<li>RSS = Really Simple Syndication</li>
+<li>RSS readers: IE, Firefox, yahoo, google ...</li>
+<li>RSS publishers:
+  <ul>
+    <li> <a href="http://www.cnn.com/services/rss/" >CNN's RSS feeds</a>
+    </li>
+    <li> <a href="http://www.reuters.com/tools/rss">Reuter's RSS feeds</a>
+    </li>
+    <li> <a href="http://help.twitter.com/forums/10711/entries/15361">Twitter feeds</a> </li>
+    <li> <a href="http://twitter.com/ktlink">Twitter:ktlink </a> </li>
+  </ul>
+</li>
+</ul>
+
+<hr/>
+
+<h2>XML in Action: FIXML</h2>
+
+<ul>
+<li><a href="http://www.fixprotocol.org/">FIX</a>: 
+    Financial Information Exchange</li>
+<li>FIXML: XML version of FIX</li>
+<li>Enables communication between financial entities like brokerages, banks etc</li>
+</ul>
+ 
+<table border=1>
+<tr>
+<td>
+<pre>
+&lt;FIXML xmlns="http://www.fixprotocol.org/FIXML-4-4" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.fixprotocol.org/FIXML-4-4  ../../schema/fixml-main-4-4.xsd" 
+          v="4.4" r="20030618" s="20040109"&gt;
+&lt;!-- International Business Machines - FIXML Order sample --&gt;
+    &lt;Order ID="54996" Side="1" TxnTm="2006-10-13T16:35:37-07:00" Typ="4" Px="55.86" Acct="101"&gt;
+       &lt;Hdr Snt="2006-10-13T16:35:37-07:00" PosDup="N" PosRsnd="N" SeqNum="196" SID="BROKERA" TID="BROKERB"/&gt;
+       &lt;!-- Buy 500 shares of "ARMOR HLDGS INC" order type stoplimit --&gt;
+       &lt;Instrmt Sym="AH" ID="43085154" Src="1"/&gt;
+       &lt;OrdQty Qty="500"/&gt;
+   &lt;/Order&gt;
+&lt;/FIXML&gt;
+</pre>
+<td>
+</tr>
+</table>
+
+<hr/>
+
+<h2>XML in Action: FpML</h2>
+
+<ul>
+<li><a href="http://www.fpml.org/">FpML</a>: 
+    Financial Products Markup Language</li>
+<li>Represents contracts of financial products like interest rate derivatives</li>
+<li>Example of complex XML document</li>
+<li><a href="ird_ex01_vanilla_swap.xml">vanilla interest rate swap derivative</a></li>
+</ul>
+ 
+<hr/>
+
+<h2>XML in Action: Microsoft Office Open XML format</h2>
+
+<ul>
+<li>Try unzipping a docx,pptx,xlsx file and examine the contents!</li>
+</ul>
+ 
+<hr/>
+<h2>In Class Exercise</h2>
+
+<p>
+Create an XML document that indicates three cities you would like to visit.
+The XML document should contain a &lt;desitination&gt; container for each of the three cities. Each destination should have the following containers:
+<ul>
+  <li>&lt;name&gt; : name of the city</li>
+  <li>&lt;country&gt; : country of the city</li>
+  <li>&lt;reason&gt; : reason why you would like to visit the city</li>
+  <li>&lt;url&gt; : a url with more information on the city</li>
+</ul>
+
+
+</body>

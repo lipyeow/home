@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML	4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>ICS 421 Programming Assignment</TITLE>
+<meta http-equiv="Content-Type"	content="text/html; charset=iso-8859-1">
+<link href="../../lystyle.css" rel="stylesheet" type="text/css" >
+</HEAD>
+
+<body>
+
+<h1>ICS 421 - Spring 2010 - Programming Assignment 4</h1>
+
+<hr/>
+<p>Updated Mar 12 adding more info to extra credit assignment
+<hr/>
+
+<p>
+You may work in a team of two students, but each student needs to make a
+submission. You are encouraged to engage in general discussions with other
+teams regarding the assignment, but specific details of a solution, including
+the solution itself, must always be the team's own work. You may submit the same
+code as the rest of your team.
+
+<h2>Part 6: Code Integration (100 pts)</h2>
+
+<p>
+Integrate all the code from all the previous programming assignments into one
+program <tt>runSQL</tt>. 
+Fix any defects from previous assignments.
+
+<p> For the load case, if the config file contains <tt>tablename</tt>,
+<tt>runSQL</tt> behaves like a loader and the sqlfile is treated as the csv
+file.
+
+<p> Otherwise, the operation is detected from the SQL statement in sqlfile.
+
+<h2>Part 7: Write Testcases (1 extra percentage pt per test)</h2>
+
+<p>
+Write testcases to test all the functionality (Assignment 1-4) of your final
+program in Part 6.  Each testcase must test a non-trivial feature or code path
+including exception handling. Repeating the same create table statement test
+with different table names is considered trivial. Your testcases need to
+conform to the format of the testcases in
+<tt>/home/db2inst1/tests/program[1-2]/*</tt>. You should name your testcase
+using the format:
+<pre>
+test&lt;assigamentnum&gt;-&lt;username&gt;-&lt;testnum&gt;.{cfg,sql,csv,...}
+</pre>
+
+<p>
+Suppose your user name is jane and your first testcase attempts to test a feature/functionality from Assignment 1, then your testcase would consist of 
+the following files:
+<ul>
+<li>test1-jane-1.cfg : config file</li>
+<li>test1-jane-1.sql : sql or csv file</li>
+<li>test1-jane-1.pre.db2 : sql script that sets up the required tables for the test</li>
+<li>test1-jane-1.post.db2 : sql script that queries the databases after the test</li>
+<li>test1-jane-1.post.db2.exp : expected output of previous sql script </li>
+<li>test1-jane-1.grep : alternative to exp file. the grep file contains a list of patterns that must be present in the output of the program.</li>
+<li>test1-jane-1.txt: a description of what the test is testing.</li>
+</ul>
+Note the use of special strings that will be substituted with the student ID
+(XXTNXX) and password (XXPWXX) during actual test runs (see the tests in
+<tt>/home/db2inst1/tests/</tt> for examples). Once you submit a test to the
+tests directory, your tests will be run on every other students program.
+
+<p>You should develop these tests in your directory without the substitution
+patterns. You can run the tests in your directory using the
+<tt>runtestlocal</tt> command. For the above example, assuming run4.sh is the
+run script, you can run the test by issuing 
+<pre>
+runtestlocal run4.sh test1-jane-1
+</pre>
+
+<p>Once the test is running correctly in your directory, you may introduce the
+substitution patterns and copy the test to the <tt>/home/db2inst1/tests</tt>
+directory. And you can run it using
+<pre>
+runtest run4.sh test1-jane-1
+</pre>
+Note that runtest would copy the testcase from the /home/db2inst1/tests
+directory to your directory after performing the substitutions and then run the
+test.
+
+<p>
+Your test must be correct and non-trivial in order to receive credit. Duplicate
+tests will not receive credit. Some co-ordination is required. So please use
+the wiki in laulima to announce your intention to code a particular
+test. Check the forum that no one else is writing the same test.
+
+<h2>Submission Procedure</h2>
+
+<p>Submit:
+<ul>
+<li>Copy all test files to /home/db2inst1/tests/ </li>
+<li>TBA</li>
+<li>TBA</li>
+</ul>
+
+<p>antlrworks.jar is installed in /home/db2inst1/lib/antlrworks.jar  on the submission machine</p>
+
+</body>

@@ -1,0 +1,12 @@
+intro|Ch 1.| The Worlds of Database Systems
+relmodel|Ch 2.| The Relational Model of Data
+fdnf|Ch 3.{1-4}| Design Theory for Relational Databases
+er|Ch 4.| High-Level Database Models
+ra|Ch 5.| Algebraic and Logical Query Languages
+sql|Ch 6.| The Database Language SQL
+ctvi|Ch 7., Ch 8| Constraints, Triggers, Views and Indexes
+api|Ch 9.| SQL in a Server Environment
+xml|Ch 11.,Ch 12.| The Semi-structured Data Model & Programming Languages for XML
+stridx|Ch 13.{0-2}, Ch 14.{0-2}.| Overview of Storage and Indexing
+qp|Ch 16.1, Ch 15.{0-3}.| Overview of Query Processing
+txn|Ch 18.{0-2}, Ch 17.1.| Overview of Transaction Processing

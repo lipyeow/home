@@ -1,0 +1,5 @@
+naiveLoad orders.tbl
+naiveBufSearchEq 3 F
+naiveSearchGtr 4 20000
+naiveBufSearchEq 3 John
+naiveSearchGtr 2 13

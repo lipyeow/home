@@ -1,0 +1,90 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+\setlength{\textwidth}{6.5in}     
+\setlength{\oddsidemargin}{0in}  
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{8.5in} 
+\setlength{\topmargin}{0in}   
+\setlength{\headheight}{14pt} 
+\setlength{\headsep}{10pt}   
+%\setlength{\footskip}{0in}
+
+%------------------------------------------------
+\newcommand{\homework}[2]{
+\setcounter{section}{#1}
+\section*{ICS621 Homework {\thesection}: {#2} }
+{\markboth{#2}{#2}}
+}
+%------------------------------------------------
+ \addtolength{\parskip}{\baselineskip}
+
+\begin{document}
+% Enter the Homework number and title as arguments to
+% homework
+\homework{2}{Heaps}
+
+%\renewcommand{\baselineskip}{12pt}
+\noindent Choose one of the following.
+
+\noindent
+\textbf{Problem 6-2 from CLRS: Analysis of d-ary heaps.}  
+A \textbf{d-ary heap} is like a binary heap, but (with one
+possible exception) non-leaf nodes have $d$ children instead
+of 2 children.
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+\item How would you represent a $d$-ary heap in an array?
+\item What is the height of a $d$-ary heap of $n$ elements
+in terms of $n$ and $d$ ?
+\item Give an efficient implementation of
+\textsc{Extract-Max} in a $d$-ary max-heap. Analyze its
+running time in terms of $d$ and $n$.
+\item Give an efficient implementation of \textsc{Insert} in
+a $d$-ary max-heap. Analyze its running time in terms of $d$
+and $n$.
+\item Give an efficient implementation of
+\textsc{Increase-Key($A,i,k$)}, which flags and error if
+$k<A[i]$, but otherwise sets $A[i]=k$ and then updates the
+$d$-ary max-heap structure appropriately. Analyze its
+running time in terms of $d$ and $n$.
+\end{enumerate}
+
+\noindent
+\textbf{Problem 6-3 from CLRS: Young tableaus.}  
+An $m\times n$ \textbf{Young tableau} is an $m\times n$
+matrix such that the entries of each row are in sorted order
+from left to right and the entries of each column are in
+sorted order from top to bottom. Some of the entries of a
+Young tableau may be $\infty$, which we treat as nonexistent
+elements. Thus, a Young tableau can be used to hold $r \leq
+mn$ finite numbers.
+\begin{enumerate}[label=\alph*),labelindent=0pt]
+\item Draw a $4 \times 4$ Young tableau containing the
+elements \{9, 16, 3, 2, 4, 8, 5, 14, 12\}.
+\item Argue that an $m\times n$ Young tableau $Y$ is empty
+if $Y[1,1]=\infty$. Argue that $Y$ is full (contains $mn$
+elements) if $Y[m,n] < \infty$.
+\item Give an algorithm to implement \textsc{Extract-Min} on
+a nonempty $m\times n$ Young tableau that runs in $O(m+n)$
+time. Your algorithm should use a recursive subroutine that
+solves an $m\times n$ problem by recursively solving either
+an $(m-1)\times n$ or $m\times (n-1)$ subproblem.
+(\textit{Hint}: Think about \textsc{Max-Heapify}). Define
+$T(p)$, where $p=m+n$, to be the maximum running time of
+\textsc{Extract-Min} on any $m\times n$ Young tableau. Give
+and solve a recurrence for $T(p)$ that yields the $O(m+n)$
+time bound.
+\item Show how to insert a new element into a nonfull
+$m\times n$ Young tableau in $O(m+n)$ time.
+\item Using no other sorting method as a subroutine, show
+how to use an $n\times n$ Young tableau to sort $n^2$
+numbers in $O(n^3)$ time.
+\item Give an $O(m+n)$-time algorithm to determine whether a
+given number is stored in a given $m\times n$ Young tableau. 
+\end{enumerate}
+\end{document}

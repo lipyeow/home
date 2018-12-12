@@ -1,0 +1,34 @@
+1;Mon Jan 9;Course Organization;;slides:ics321-01-org
+1;Wed Jan 11;intro;;slides:ics321-02-intro. ex1-intro. Bring laptops. Setup JDK. Download Assignment 1
+2;Mon Jan 16;MLK Holiday;;Quiz 1 due. Assignment 1 submission 1 2355h.
+2;Wed Jan 18;relmodel;Ch 2.{1-3};slides:ics321-03-relmodel1. ex2-ra.
+3;Mon Jan 23;relmodel;Ch 2.{4-5};Quiz 2 due. Assignment 1 submission 2. slides:ics321-04-relmodel2. link:../2010fall/ex3.html:Exercise 3.
+3;Wed Jan 25;fdnf;Ch 3.{1-2};ex4-fd. slides:ics321-05-fd.
+4;Mon Jan 30;fdnf;Ch 3.{3,5};Quiz 3 due. Assignment 1 submission 3. slides:ics321-06-nf1. ex5-nf1.
+4;Wed Feb 1;fdnf;Ch3.4;slides:ics321-07-nf2. ex6-nf2.
+5;Mon Feb 6;er;;Quiz 4 due. Assignment 1 Final Submission. slides:ics321-08-er. ex7-er.
+5;Wed Feb 8;ra;;slides:ics321-09-bagra. ex8-ra.
+6;Mon Feb 13;ra;;Quiz 5 due. slides:ics321-10-datalog. ex9-datalog.
+6;Wed Feb 15;sql;;slides:ics321-11-sql1. ex10-sql.
+7;Mon Feb 20;President's Day Holiday;;Quiz 6 due. Assignment 2 due on Tue Feb 21 2355h. 
+7;Wed Feb 22;Pre-Midterm Review;;
+8;Mon Feb 27;Midterm Exam;; 
+8;Wed Feb 29;sql;;slides:ics321-12-sql2.
+9;Mon Mar 5;sql;;Quiz 7 due. Project Proposals due. slides:ics321-13-sql3.ex13-sqlagg. link:./data.zip:data (zip).
+9;Wed Mar 7;txn;;slides:ics321-14-txn1. ex14-txn.
+10;Mon Mar 12;txn;;Quiz 8 due. slides:ics321-15-txn2. ex15-txn.
+10;Wed Mar 14;api;;slides:ics321-16-sqlapp1. link:../2011spr/sqc.zip:sqc (zip).
+11;Mon Mar 19;api;;Quiz 9 due. slides:ics321-17-sqlapp2. ex16-sqlapi. link:../2011spr/odbc.zip:odbc (zip). link:../2011spr/jdbc.zip:jdbc (zip).
+11;Wed Mar 21;ctvi;; slides:ics321-18-ctvi. ex17-idxsel.
+12;Mon Mar 26;Spring Break;; 
+12;Wed Mar 28;Spring Break;;
+13;Mon Apr 2;stridx;;Quiz 9 due. slides:ics321-19-storage1. ex18-disk.
+13;Wed Apr 4;stridx;;slides:ics321-20-storage2. ex19-idx. Project progress report due Fri April 6. 
+14;Mon Apr 9;qp;;Quiz 10 due. slides:ics321-21-queryproc. ex20-qopt. Assignment 3 due. 
+14;Wed Apr 11;qp;;ex21-dbmsproc.
+15;Mon Apr 16;xml;;Quiz 11 due. slides:ics321-22-xml.
+15;Wed Apr 18;Special Topics;;slides:ics321-23-other.
+16;Mon Apr 23;Special Topics;;Quiz 12 due. slides:ics321-24-dw. 
+16;Wed Apr 25;Project Presentation;;
+17;Mon Apr 30;Project Presentation;;
+17;Wed May 2;Final Exam Review;;

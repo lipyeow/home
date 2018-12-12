@@ -1,0 +1,29 @@
+Tasks
+=====
+
+1. Run sample JDBC program on your laptop
+
+   a. Download & unzip jdbc.zip from course website
+
+   b. Set the classpath to point to DB2 drivers
+
+   c. Compile the code
+
+   d. Edit the mydb.properties file to point to local DB
+
+   e. Run the code on sample query
+
+   f. Change the properties file to execute on remote DB
+      ec2-174-129-49-13.compute-1.amazonaws.com:50001
+
+   g. Change the code to use prepare statement
+
+2. Run sample java threads program on your laptop
+
+   a. Download & unzip javathreads.zip from course website
+
+   b. Compile & run the code
+
+   c. Add timing code to print out the elapsed time.
+
+3. [Optional] Run sample ODBC program on your laptop

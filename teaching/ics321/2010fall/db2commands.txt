@@ -1,0 +1,9 @@
+db2start
+db2 list db directory
+db2 create db ics321a
+db2 connect to ics321a
+db2 "create table product(model int, maker char(10))"
+db2 list tables
+db2 "select * from product"
+db2 "insert into product values (1233, 'Asus')"
+db2 commit work

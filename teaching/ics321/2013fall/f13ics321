@@ -1,0 +1,32 @@
+;Mon Aug 26;Course Organization;;slides:ics321-01-org.
+1;Wed Aug 28;intro;;slides:ics321-02-intro. ex:1-intro.
+2;Mon Sep 2;Labor Day Holiday;; Quiz 1 due on Tue 1130h
+2;Wed Sep 4;relmodel;;slides:ics321-03-relmodel1. ex:2-ra.
+3;Mon Sep 9;relmodel;;slides:ics321-04-relmodel2. ex:3-ddl. link:../2010fall/ex3.html:(html).
+3;Wed Sep 11;fdnf;;slides:ics321-05-fd. ex:4-fd.
+4;Mon Sep 16;fdnf;;slides:ics321-06-nf1. ex:5-nf1.
+4;Wed Sep 18;fdnf;;slides:ics321-07-nf2. ex:6-nf2.
+5;Mon Sep 23;er;;slides:ics321-08-er. ex:7-er.
+5;Wed Sep 25;ra;;slides:ics321-09-bagra. slides:ics321-10-datalog. ex:8-ra. 
+6;Mon Sep 30;sql;;ex:9-datalog. slides:ics321-11-sql1. ex:10-sql.
+6;Wed Oct 2;Pre-Midterm Review;;
+7;Mon Oct 7;Midterm Exam;;
+7;Wed Oct 9;sql;;slides:ics321-12-sql2. ex:11-sql.
+8;Mon Oct 14;sql;;slides:ics321-13-sql3. ex:12-sqlagg.
+8;Wed Oct 16;api;;slides:ics321-14-sqlapp1. link:sqc.zip:sqc (zip). 
+9;Mon Oct 21;api;;slides:ics321-15-sqlapp2. link:odbc.zip:odbc (zip). link:jdbc.zip:jdbc (zip).
+9;Wed Oct 23;Post-Midterm Review;;
+10;Mon Oct 28;ctvi;;slides:ics321-16-ctvi. ex:14-idxsel.
+10;Wed Oct 30;txn;;slides:ics321-17-txn1. ex:15-txn.
+11;Mon Nov 4;txn;;slides:ics321-18-txn2. ex:16-txn.
+11;Wed Nov 6;stridx;;slides:ics321-19-storage1. 
+12;Mon Nov 11; Veterans Day Holiday;;
+12;Wed Nov 13;stridx;;ex:17-disk.
+13;Mon Nov 18;stridx;;slides:ics321-20-storage2. ex:18-stgidx.
+13;Wed Nov 20;qp;;slides:ics321-21-queryproc. ex:19-qopt.
+14;Mon Nov 25;qp;;ex:20-qcost.
+14;Wed Nov 27;xml;;slides:ics321-22-xml. ex:21-xml.
+15;Mon Dec 2;Data Warehousing & Other Topics;;
+15;Wed Dec 4;Final Exam Review & Project Presentations;;link:mock-final.pdf: mock final (pdf).
+16;Mon Dec 9;Project Presentations;;
+16;Wed Dec 11;Project Presentations;;
