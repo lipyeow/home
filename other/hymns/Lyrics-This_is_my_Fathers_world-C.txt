@@ -1,10 +1,10 @@
-This is my Father's world ( Key: C Chords: C Em F G Am )
+This is my Father's world (Key: C, Chord: C Em F G Am )
 
        C     G        C     C
 1 This is my Father's world,
     F     C         G    G
 And to my listening ears
-    C       F         G        C
+    C      Am         G        C
 All nature sings, and round me rings
     F     G      C       C
 The music of the spheres.
@@ -19,9 +19,9 @@ His hand the wonders wrought.
 
        C     G        C     C
 2 This is my Father's world:
-    F     C       G    G
+    F           C      G    G
 The birds their carols raise,
-    C       F          G    C
+    C       Am         G    C
 The morning light, the lily white,
   F           G       C       C
 Declare their Maker's praise.
