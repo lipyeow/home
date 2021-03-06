@@ -70,7 +70,7 @@ C   G *     Am    G  *
 and whether our tomorrows
 C  G  *        C       F   *
 be filled with good or ill,
-F     Am *    G           C  F
+F     Am *    G           C  *
 we'll triumph through our sorrows
 C   F       *     *   G   *
 and rise to bless you still:
