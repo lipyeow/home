@@ -5,9 +5,9 @@ Hymn lyrics with ukulele chords. Each hymn lives in a plain-text file named
 Some hymns come in more than one key. Variant suffixes include `-2col` (two-column
 layout), `-v2`/`-v3` (revisions) and `-full` (all verses).
 
-Committed files are the hymns that have a published YouTube video. See
-**[published.md](published.md)** for the list of published hymns and when each one
-was first committed.
+The folder holds both published and unpublished hymns.
+**[published.md](published.md)** is the record of which hymns have a published
+YouTube video. When a new video goes up, add the hymn to that list by hand.
 
 ## Other files
 

@@ -1,6 +1,8 @@
 # Published Hymns
 
-Hymns with published YouTube videos, listed by the date their lyrics were first committed.
+Hymns with published YouTube videos, in chronological order. Dates up to 2026-01-25
+are when each hymn's lyrics were first committed, back when only published hymns were
+committed. Add new entries by hand with the publish date.
 
 | # | Date | Hymn | Key(s) |
 |---|------|------|--------|
